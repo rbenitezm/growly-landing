@@ -1,0 +1,73 @@
+import React from "react";
+
+const Facilities = [
+  {
+    id: 1,
+    title: "Ultimate location to kickstart",
+    Baseimage: "./src/assets/images/Features_1.webp",
+    overlay: "./src/assets/images/web-svg-icons/1.svg",
+  },
+  {
+    id: 2,
+    title: "State-of-the-art facilities",
+    Baseimage: "./src/assets/images/Features_2.webp",
+    overlay: "./src/assets/images/web-svg-icons/2.svg",
+  },
+  {
+    id: 3,
+    title: "Expert, Triumph-certified local guides",
+    Baseimage: "./src/assets/images/Features_3.webp",
+    overlay: "./src/assets/images/web-svg-icons/3.svg",
+  },
+  {
+    id: 4,
+    title: "Seamless Booking Experience",
+    Baseimage: "./src/assets/images/Features_4.webp",
+    overlay: "./src/assets/images/web-svg-icons/4.svg",
+  },
+  {
+    id: 5,
+    title: "24/7 customer support",
+    Baseimage: "./src/assets/images/Features_5.webp",
+    overlay: "./src/assets/images/web-svg-icons/5.svg",
+  },
+];
+
+const Features = () => {
+  return (
+    <section className="features w-full h-full flex py-12 lg:py-16 lg:justify-center items-center flex-col gap-2 lg:gap-0 ">
+      <div className="">
+        <img
+          src="./src/assets/images/award.webp"
+          alt=""
+          className="h-56 lg:h-56 "
+        />
+      </div>
+      <div className="w-full lg:w-1/3 text-center">
+        <h1 className="text-Light text-3xl lg:text-4xl">
+          Best Motorcycle Tourism Centre in Europe
+        </h1>
+      </div>
+
+      <div className="flex gap-16 lg:gap-20 flex-col lg:flex-row  mt-16 lg:mt-20">
+        {Facilities.map((facility) => (
+          <div className="relative h-38  lg:w-40 flex flex-col items-center text-center gap-3">
+            <img
+              src={facility.Baseimage}
+              alt=""
+              className="h-40 w-max lg:h-42 lg:w-max"
+            />
+            <span className="text-lg lg:text-base text-Medium">
+              {facility.title}
+            </span>
+            <h1 className="absolute overlay-text text-Heavy text-9xl text-stroke  text-center">
+              {facility.id}
+            </h1>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Features;

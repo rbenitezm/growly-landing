@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "TriumphBrokman-Black";
+  src: url(./TriumphBrokman-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Bold";
+  src: url(./TriumphBrokman-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-DemiBold";
+  src: url(./TriumphBrokman-DemiBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-ExtraBold";
+  src: url(./TriumphBrokman-ExtraBold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Heavy";
+  src: url(./TriumphBrokman-Heavy.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Italic";
+  src: url(./TriumphBrokman-Italic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Light";
+  src: url(./TriumphBrokman-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Medium";
+  src: url(./TriumphBrokman-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Regular";
+  src: url(./TriumphBrokman-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "TriumphBrokman-Thin";
+  src: url(./TriumphBrokman-Thin.otf) format("opentype");
+}
+
+.text-Black {
+  font-family: "TriumphBrokman-Black";
+}
+
+.text-Bold {
+  font-family: "TriumphBrokman-Bold";
+}
+
+.text-DemiBold {
+  font-family: "TriumphBrokman-DemiBold";
+}
+
+.text-ExtraBold {
+  font-family: "TriumphBrokman-ExtraBold";
+}
+
+.text-Heavy {
+  font-family: "TriumphBrokman-Heavy";
+}
+
+.text-Italic {
+  font-family: "TriumphBrokman-Italic";
+}
+
+.text-Light {
+  font-family: "TriumphBrokman-Light";
+}
+
+.text-Medium {
+  font-family: "TriumphBrokman-Medium";
+}
+
+.text-Regular {
+  font-family: "TriumphBrokman-Regular";
+}
+
+.text-Thin {
+  font-family: "TriumphBrokman-Thin";
+}
+

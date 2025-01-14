@@ -1,0 +1,8 @@
+Endpoints:
+/api/form-data (POST): Store form data from Quillforms.
+/api/package (POST): Store selected package, start, and end dates.
+/api/payment (POST): Store payment details.
+/api/admin (GET): Fetch all data for admin panel.
+
+Notes:
+

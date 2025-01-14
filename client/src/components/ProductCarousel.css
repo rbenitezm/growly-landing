@@ -1,0 +1,98 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  position: relative;
+}
+
+.main-image img {
+  width: 500px;
+  height: 30rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.thumbnail-wrapper {
+  padding: 3px;
+  border: 3px solid transparent;
+  transition: border 0.3s ease;
+  border-radius: 5px; /* Rounded corners for thumbnails */
+}
+
+.thumbnail-wrapper.active {
+  border-color: #174a7c; /* Active thumbnail border color */
+}
+
+.thumbnail-wrapper:hover {
+  border-color: #174a7c;
+}
+
+.thumbnail {
+  width: 65px;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  border-radius: 5px; /* Make the thumbnail images rounded */
+}
+
+@media (max-width: 480px) {
+  /* .main-image img {
+	  width: 100%;
+	} */
+  .main-image img {
+    width: 350px;
+    height: 30rem;
+  }
+  .thumbnail-wrapper {
+    padding: 1px;
+    border: 0px solid transparent;
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 20px;
+  }
+
+  .thumbnail {
+    width: 50px;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+}

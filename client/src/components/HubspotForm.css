@@ -1,0 +1,32 @@
+#hubspotForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#hubspotForm form input {
+  border-bottom: black 2px solid;
+}
+
+#hubspotForm label {
+  font-size: 17px;
+}
+.hs-button {
+  background-color: #b5121b;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  #hubspotForm form {
+    gap: 20px;
+  }
+  #hubspotForm form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
