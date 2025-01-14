@@ -18,7 +18,7 @@ const HubspotForm = () => {
           css: "",
           onFormSubmitted: () => {
             setTimeout(() => {
-              navigate("/select-package");
+              navigate("/quiz");
             }, 2000);
           },
         });
