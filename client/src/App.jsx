@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Questionnaire from "./pages/Questionnaire";
 import Calendar from "./pages/Calendar";
 import Question from "./pages/Question";
-import ProductPage from "./pages/productPage";
+import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 
 function App() {
