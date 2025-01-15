@@ -3,27 +3,33 @@ import React from "react";
 const logos = [
   {
     id: 1,
-    imgPath: "./src/assets/images/logos/logo_1.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_1.webp",
   },
   {
     id: 2,
-    imgPath: "./src/assets/images/logos/logo_2.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_2.webp",
   },
   {
     id: 3,
-    imgPath: "./src/assets/images/logos/logo_3.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_3.webp",
   },
   {
     id: 4,
-    imgPath: "./src/assets/images/logos/logo_4.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_4.webp",
   },
   {
     id: 5,
-    imgPath: "./src/assets/images/logos/logo_5.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_5.webp",
   },
   {
     id: 6,
-    imgPath: "./src/assets/images/logos/logo_6.webp",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_6.webp",
   },
 ];
 

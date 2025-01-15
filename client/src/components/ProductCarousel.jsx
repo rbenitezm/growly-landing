@@ -3,12 +3,12 @@ import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
   const images = [
-    "./src/assets/images/productCarousel/Tiger 900 GT PRO.webp",
-    "./src/assets/images/productCarousel/Tiger 900 Rally PRO.webp",
-    "./src/assets/images/productCarousel/Tiger 1200 GT PRO.webp",
-    "./src/assets/images/productCarousel/Tiger 1200 Rally PRO.webp",
-    "./src/assets/images/productCarousel/Tiger Sport 660.webp",
-    "./src/assets/images/productCarousel/Tiger Sport 850.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20900%20GT%20PRO.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20900%20Rally%20PRO.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20GT%20PRO.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20Rally%20PRO.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20Sport%20660.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20Sport%20850.webp",
   ];
 
   const [mainImage, setMainImage] = useState(images[0]);

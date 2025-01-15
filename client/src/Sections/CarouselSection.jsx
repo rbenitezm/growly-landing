@@ -6,30 +6,32 @@ const CarouselData = [
   {
     id: 1,
     title: "Tiger 1200 GT Pro",
-    imagePath: "./src/assets/images/Carouselimages/Tiger-1200-GT-Pro.webp",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Tiger-1200-GT-Pro.webp",
   },
   {
     id: 2,
     title: "Triumph Tiger 850",
-    imagePath: "./src/assets/images/Carouselimages/Triumph-Tiger-850.webp",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-850.webp",
   },
   {
     id: 3,
     title: "Triumph Tiger 900 GT PRO",
     imagePath:
-      "./src/assets/images/Carouselimages/Triumph-Tiger-900-GT-PRO.webp",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-900-GT-PRO.webp",
   },
   {
     id: 4,
     title: "Triumph TIGER 900 RALLY PRO",
     imagePath:
-      "./src/assets/images/Carouselimages/Triumph-TIGER-900-RALLY-PRO.webp",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-TIGER-900-RALLY-PRO.webp",
   },
   {
     id: 5,
     title: "Triumph Tiger 1200 GT PRO",
     imagePath:
-      "./src/assets/images/Carouselimages/Triumph-Tiger-1200-GT-PRO.webp",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-1200-GT-PRO.webp",
   },
 ];
 const CarouselSection = () => {

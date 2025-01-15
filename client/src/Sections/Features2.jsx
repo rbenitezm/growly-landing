@@ -4,42 +4,50 @@ const BubbleData = [
   {
     id: 1,
     title: "Top & Side Cases included",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-09.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-09.svg",
   },
   {
     id: 2,
     title: "24h Road Assistance",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-07.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-07.svg",
   },
   {
     id: 3,
     title: "No Deposit Required",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-06.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-06.svg",
   },
   {
     id: 4,
     title: "Airport Transfer",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-08.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-08.svg",
   },
   {
     id: 5,
     title: "Bikes less than 6 months",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-11.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-11.svg",
   },
   {
     id: 6,
     title: "Gear Rental",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-04.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-04.svg",
   },
   {
     id: 7,
     title: "Free Lockers & Luggage Storage",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-12.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-12.svg",
   },
   {
     id: 8,
     title: "Fully Comprenhesive Insurance",
-    imagePath: "./src/assets/images/web-svg-icons/iconos-triumph-03.svg",
+    imagePath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-03.svg",
   },
 ];
 const Features2 = () => {

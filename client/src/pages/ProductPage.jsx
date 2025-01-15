@@ -20,22 +20,26 @@ const features = [
 const features2 = [
   {
     id: 1,
-    imgPath: "./src/assets/images/Bike.png",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Bike.png",
     text: "Over 1,500 satisfied riders",
   },
   {
     id: 2,
-    imgPath: "./src/assets/images/Check.png",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Check.png",
     text: "Satisfaction Guarantee",
   },
   {
     id: 3,
-    imgPath: "./src/assets/images/Map.png",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Map.png",
     text: "Masterfully crafted Guidebook",
   },
   {
     id: 4,
-    imgPath: "./src/assets/images/ThumbsUp.png",
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ThumbsUp.png",
     text: "Top-of-the-Line Triumph Bikes",
   },
 ];
@@ -60,7 +64,7 @@ const ProductPage = () => {
             </h2>
             <div className="flex items-center gap-1">
               <img
-                src="./src/assets/images/rating-stars.webp"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/rating-stars.webp"
                 alt=""
                 className="h-10"
               />
@@ -147,7 +151,7 @@ const ProductPage = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="./src/assets/images/web-svg-icons/star.svg"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/star.svg"
                   alt="star"
                   className="h-5 lg:h-8"
                 />

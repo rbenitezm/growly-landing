@@ -6,7 +6,11 @@ const ReviewCard = ({ title, content, name, image, rating }) => {
       {/* <h3 className="text-lg font-semibold mb-3">{title}</h3> */}
       <div className="">
         <div className="flex-1">
-          <img src="./src/assets/images/quotes.png" alt="" className="h-6" />
+          <img
+            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
+            alt=""
+            className="h-6"
+          />
         </div>
         <div
           className="text-gray-600 mb-4 mt-6 Arial text-sm"

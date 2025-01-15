@@ -13,7 +13,7 @@ const Reviews = () => {
             {[...Array(5)].map((_, index) => (
               <img
                 key={index}
-                src="./src/assets/images/web-svg-icons/star.svg"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/star.svg"
                 alt="star"
                 className="h-4 lg:h-8"
               />
@@ -35,10 +35,15 @@ const Reviews = () => {
               width="640"
               height="360"
               controlsList="nodownload"
-              poster="./src/assets/images/reviewPoster1.webp"
+              loading="lazy"
+              poster="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewPoster1.webp"
               className="rounded-xl w-full h-auto"
             >
-              <source src="./src/assets/Videos/review_1.mp4" type="video/mp4" />
+              {/* <source src="./src/assets/Videos/review_1.mp4" type="video/mp4" /> */}
+              <source
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/main/Videos/review_1.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className=" flex flex-col gap-1 mt-4">
@@ -46,7 +51,7 @@ const Reviews = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="./src/assets/images/icons8-star-90.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons8-star-90.png"
                   alt="star"
                   className="h-4 "
                 />
@@ -67,7 +72,7 @@ const Reviews = () => {
             <div className="flex">
               <div className="flex-1">
                 <img
-                  src="./src/assets/images/quotes.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
                   alt=""
                   className="h-6"
                 />
@@ -83,7 +88,7 @@ const Reviews = () => {
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="./src/assets/images/reviewer1.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png"
                   alt=""
                   className="h-12"
                 />
@@ -92,7 +97,7 @@ const Reviews = () => {
               </div>
 
               <img
-                src="./src/assets/images/GoogleLogo.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/GoogleLogo.png"
                 alt=""
                 className=" h-8 w-8"
               />
@@ -104,7 +109,7 @@ const Reviews = () => {
             <div className="flex">
               <div className="flex-1">
                 <img
-                  src="./src/assets/images/quotes.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
                   alt=""
                   className="h-6"
                 />
@@ -119,7 +124,7 @@ const Reviews = () => {
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="./src/assets/images/reviewer2.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png"
                   alt=""
                   className="h-12"
                 />
@@ -128,7 +133,7 @@ const Reviews = () => {
               </div>
 
               <img
-                src="./src/assets/images/GoogleLogo.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/GoogleLogo.png"
                 alt=""
                 className=" h-8 w-8"
               />
@@ -140,7 +145,7 @@ const Reviews = () => {
             <div className="flex ">
               <div className="flex-1">
                 <img
-                  src="./src/assets/images/quotes.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
                   alt=""
                   className="h-6"
                 />
@@ -157,7 +162,7 @@ const Reviews = () => {
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="./src/assets/images/reviewer3.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
                   alt=""
                   className="h-12"
                 />
@@ -166,7 +171,7 @@ const Reviews = () => {
               </div>
 
               <img
-                src="./src/assets/images/GoogleLogo.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/GoogleLogo.png"
                 alt=""
                 className=" h-8 w-8"
               />
@@ -182,10 +187,13 @@ const Reviews = () => {
               width="640"
               height="360"
               controlsList="nodownload"
-              poster="./src/assets/images/reviewPoster2.webp"
+              poster="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewPoster2.webp"
               className="rounded-xl w-full h-auto"
             >
-              <source src="./src/assets/Videos/review_2.mp4" type="video/mp4" />
+              <source
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/main/Videos/review_2.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className=" flex flex-col gap-1 mt-4">
@@ -193,7 +201,7 @@ const Reviews = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="./src/assets/images/icons8-star-90.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons8-star-90.png"
                   alt="star"
                   className="h-4 "
                 />
@@ -212,7 +220,7 @@ const Reviews = () => {
           <div className="flex">
             <div className="flex-1">
               <img
-                src="./src/assets/images/quotes.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
                 alt=""
                 className="h-6"
               />
@@ -229,7 +237,7 @@ const Reviews = () => {
           <div className="flex items-center ">
             <div className="flex-3 flex items-center gap-2 ">
               <img
-                src="./src/assets/images/reviewer3.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
                 alt=""
                 className="h-12"
               />
@@ -238,7 +246,7 @@ const Reviews = () => {
             </div>
 
             <img
-              src="./src/assets/images/GoogleLogo.png"
+              src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/GoogleLogo.png"
               alt=""
               className=" h-8 w-8"
             />
@@ -253,10 +261,13 @@ const Reviews = () => {
               width="640"
               height="360"
               controlsList="nodownload"
-              poster="./src/assets/images/reviewPoster3.webp"
+              poster="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewPoster3.webp"
               className="rounded-xl w-full h-auto"
             >
-              <source src="./src/assets/Videos/review_3.mp4" type="video/mp4" />
+              <source
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/main/Videos/review_3.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className=" flex flex-col gap-1 mt-4">
@@ -264,7 +275,7 @@ const Reviews = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="./src/assets/images/icons8-star-90.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons8-star-90.png"
                   alt="star"
                   className="h-4 "
                 />
@@ -279,7 +290,7 @@ const Reviews = () => {
           <div className="flex">
             <div className="flex-1">
               <img
-                src="./src/assets/images/quotes.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/quotes.png"
                 alt=""
                 className="h-6"
               />
@@ -296,7 +307,7 @@ const Reviews = () => {
           <div className="flex items-center ">
             <div className="flex-3 flex items-center gap-2 ">
               <img
-                src="./src/assets/images/reviewer3.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
                 alt=""
                 className="h-12"
               />
@@ -305,7 +316,7 @@ const Reviews = () => {
             </div>
 
             <img
-              src="./src/assets/images/GoogleLogo.png"
+              src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/GoogleLogo.png"
               alt=""
               className=" h-8 w-8"
             />

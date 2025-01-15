@@ -20,7 +20,8 @@ export default {
           " rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;",
       },
       backgroundImage: {
-        ContactImage: "url('./src/assets/images/ContactBG.webp')",
+        ContactImage:
+          "url('https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ContactBG.webp')",
       },
     },
   },

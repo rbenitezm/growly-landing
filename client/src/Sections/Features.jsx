@@ -4,31 +4,36 @@ const Facilities = [
   {
     id: 1,
     title: "Ultimate location to kickstart",
-    Baseimage: "./src/assets/images/Features_1.webp",
+    Baseimage:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_1.webp",
     overlay: "./src/assets/images/web-svg-icons/1.svg",
   },
   {
     id: 2,
     title: "State-of-the-art facilities",
-    Baseimage: "./src/assets/images/Features_2.webp",
+    Baseimage:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_2.webp",
     overlay: "./src/assets/images/web-svg-icons/2.svg",
   },
   {
     id: 3,
     title: "Expert, Triumph-certified local guides",
-    Baseimage: "./src/assets/images/Features_3.webp",
+    Baseimage:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_3.webp",
     overlay: "./src/assets/images/web-svg-icons/3.svg",
   },
   {
     id: 4,
     title: "Seamless Booking Experience",
-    Baseimage: "./src/assets/images/Features_4.webp",
+    Baseimage:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_4.webp",
     overlay: "./src/assets/images/web-svg-icons/4.svg",
   },
   {
     id: 5,
     title: "24/7 customer support",
-    Baseimage: "./src/assets/images/Features_5.webp",
+    Baseimage:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_5.webp",
     overlay: "./src/assets/images/web-svg-icons/5.svg",
   },
 ];
@@ -38,7 +43,7 @@ const Features = () => {
     <section className="features w-full h-full flex py-12 lg:py-16 lg:justify-center items-center flex-col gap-2 lg:gap-0 ">
       <div className="">
         <img
-          src="./src/assets/images/award.webp"
+          src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/award.webp"
           alt=""
           className="h-56 lg:h-56 "
         />

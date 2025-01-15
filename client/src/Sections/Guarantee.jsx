@@ -12,9 +12,9 @@ const Guarantee = () => {
       </div>
 
       <img
-        src="./src/assets/images/guarantee.jpg"
+        src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/guarantee.webp"
         alt=""
-        className="h-[15rem] lg:h-[25rem] bg-red-300	"
+        className="h-[15rem] lg:h-[25rem]	"
       />
 
       <p className="text-Regular text-center text-xl  lg:text-xl mt-2 lg:mt-4">

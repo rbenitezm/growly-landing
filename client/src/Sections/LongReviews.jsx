@@ -19,7 +19,8 @@ const reviews = [
 <p>First class service from a first class team!!</p>
 	  `,
     name: "Simon Rees",
-    image: "./src/assets/images/reviewer1.png", // Replace with actual profile image URL
+    image:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png", // Replace with actual profile image URL
     rating: 5,
   },
   {
@@ -36,7 +37,8 @@ const reviews = [
 		<p>I highly recommend Triumph Adventure Experience Spain’s rental service for anyone looking to explore Spain on a top-quality Triumph motorcycle. It’s a fantastic way to experience</p>
 	  `,
     name: "Aurora Verdejo",
-    image: "./src/assets/images/reviewer2.png", // Replace with actual profile image URL
+    image:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png", // Replace with actual profile image URL
     rating: 5,
   },
   {
@@ -54,7 +56,8 @@ const reviews = [
 	  <p>I highly recommend Triumph Adventure Experience Spain’s rental service for anyone looking to explore Spain on a top-quality Triumph motorcycle. It’s a fantastic way to experience</p>
 	`,
     name: "Martine Campens",
-    image: "./src/assets/images/reviewer3.png", // Replace with actual profile image URL
+    image:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png", // Replace with actual profile image URL
     rating: 5,
   },
 ];
