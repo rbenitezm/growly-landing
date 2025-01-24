@@ -7,12 +7,14 @@ const packages = [
   {
     id: 1,
     name: "A2",
+    title: "Adventure pack for A2 Riders",
     price: "788€",
     crossedPrice: "896€",
   },
   {
     id: 2,
     name: "A",
+    title: "Adventure pack for A Riders",
     price: "788€",
     crossedPrice: "896€",
   },

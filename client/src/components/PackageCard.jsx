@@ -24,7 +24,7 @@ const PackageCard = ({ packageData, isSelected, onSelect }) => {
       onClick={() => onSelect(packageData.id)}
     >
       <div className="">
-        <h4 className="text-Bold text-xs lg:text-sm">{packageData.name}</h4>
+        <h4 className="text-Bold text-xs lg:text-base">{packageData.title}</h4>
         <span className="px-5 py-1 rounded-xl bg-triumph-red text-white text-[8px] lg:text-[10px] font-medium Arial tracking-wider">
           Limited-Time discount
         </span>
@@ -36,7 +36,7 @@ const PackageCard = ({ packageData, isSelected, onSelect }) => {
             {packageData.crossedPrice}
           </span>
         </p>
-        <p className="text-xs">Adventure Guarantee included</p>
+        <p className="text-sm text-DemiBold ">Adventure Guarantee included</p>
       </div>
     </div>
   );

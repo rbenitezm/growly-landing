@@ -44,6 +44,24 @@ const features2 = [
   },
 ];
 
+const Images = [
+  {
+    id: 1,
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_1.webp",
+  },
+  {
+    id: 2,
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_2.webp",
+  },
+  {
+    id: 3,
+    imgPath:
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_3.webp",
+  },
+];
+
 const ProductPage = () => {
   return (
     <div className="productPage  w-full min-h-screen  pt-12 lg:pt-16 ">
@@ -76,7 +94,7 @@ const ProductPage = () => {
           {/* Description and points */}
           <div className="desc flex gap-4 flex-col">
             <p
-              className="Arial leading-5 text-base lg:text-sm text-justify
+              className="Arial leading-5 text-base lg:text-sm text-left md:text-justify
             "
             >
               A transformative experience that will forever change the way you
@@ -137,6 +155,30 @@ const ProductPage = () => {
           guidebook packed with every detail to make your journey seamless and
           unforgettable, with a Limited-Time Discount!{" "}
         </span>
+      </section>
+
+      {/* Before you know it// */}
+
+      <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
+        <h2 className="text-Heavy text-2xl lg:text-3xl">
+          Before you know it...
+        </h2>
+
+        <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row gap-0 lg:gap-32">
+          {Images.map((img) => (
+            <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
+              <div className="flex">
+                <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
+                  Before
+                </span>
+                <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
+                  After
+                </span>
+              </div>
+              <img src={img.imgPath} alt="" className=" lg:w-96" />
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Reviews */}

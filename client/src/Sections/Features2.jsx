@@ -5,49 +5,49 @@ const BubbleData = [
     id: 1,
     title: "Top & Side Cases included",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-09.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-09%201.png",
   },
   {
     id: 2,
     title: "24h Road Assistance",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-07.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-07%201.png",
   },
   {
     id: 3,
     title: "No Deposit Required",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-06.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-06%201.png",
   },
   {
     id: 4,
     title: "Airport Transfer",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-08.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-08%201.png",
   },
   {
     id: 5,
     title: "Bikes less than 6 months",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-11.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-11%201.png",
   },
   {
     id: 6,
     title: "Gear Rental",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-04.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-04%201.png",
   },
   {
     id: 7,
     title: "Free Lockers & Luggage Storage",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-12.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-12%201.png",
   },
   {
     id: 8,
     title: "Fully Comprenhesive Insurance",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/iconos-triumph-03.svg",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Other/iconos-triumph-03%201.png",
   },
 ];
 const Features2 = () => {
