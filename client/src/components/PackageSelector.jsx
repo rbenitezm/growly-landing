@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PackageCard from "./PackageCard";
 import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
+import { trackEvent } from "../api/FacebookPixel";
 
 const packages = [
   {
@@ -25,6 +26,10 @@ const PackageSelector = () => {
   const [isModalOpen, setisModalOpen] = useState(false);
 
   const openModal = () => {
+    trackEvent("AdventureInAClick_Click", {
+      label: "Adventure in a Click",
+      page: "Product Page",
+    });
     setisModalOpen(true);
   };
 

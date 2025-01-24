@@ -2,6 +2,8 @@ import React from "react";
 import Carousel from "../components/Carousel";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import { trackEvent } from "../api/FacebookPixel";
+
 const CarouselData = [
   {
     id: 1,
@@ -38,6 +40,10 @@ const CarouselSection = () => {
   const navigate = useNavigate();
 
   function dummyFunction() {
+    trackEvent("ApplyToParticipate_Click", {
+      label: "Apply Form",
+      page: "Home",
+    });
     setTimeout(() => {
       navigate("/select-package");
     }, 1000);

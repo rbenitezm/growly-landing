@@ -8,6 +8,7 @@ import Button from "./Button";
 import { add } from "../redux/cartSlice";
 import { submitCartData } from "../api";
 import { useNavigate } from "react-router-dom";
+import { trackEvent } from "../api/FacebookPixel";
 
 const SevenDayRangePicker = ({ selectedPackage }) => {
   const dispatch = useDispatch();
@@ -116,6 +117,11 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
         },
       },
     };
+
+    trackEvent("BuyNow_Click", {
+      label: "Buy Now",
+      page: "Product Page",
+    });
 
     try {
       await submitCartData(cartData);

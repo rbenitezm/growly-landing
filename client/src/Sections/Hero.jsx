@@ -4,6 +4,7 @@ import HubspotForm from "../components/HubspotForm";
 import Modal from "../components/Modal";
 import { useNavigate } from "react-router-dom";
 import VideoEmbed from "../components/VideoEmbed";
+import { trackEvent } from "../api/FacebookPixel";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -12,6 +13,11 @@ const Hero = () => {
 
   const openModal = () => {
     setModalOpen(true);
+
+    trackEvent("DetailsPricing_Click", {
+      label: "Details & Pricing Modal",
+      page: "Home",
+    });
   };
 
   const closeModal = () => {
@@ -19,6 +25,10 @@ const Hero = () => {
   };
 
   function takeToForm() {
+    trackEvent("ApplyToParticipate_Click", {
+      label: "Apply Form",
+      page: "Home",
+    });
     setTimeout(() => {
       navigate("/quiz");
     }, 500);
@@ -49,20 +59,6 @@ const Hero = () => {
         ></iframe>
       </div> */}
       <VideoEmbed />
-
-      {/* <div
-        // style="padding:56.25% 0 0 0;position:relative;"
-        style={{ paddingTop: "56.25%", position: "relative" }}
-      >
-        <iframe
-          src="https://player.vimeo.com/video/1049614632?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="7-Day Adventure Pack"
-        ></iframe> 
-      </div>  */}
-      {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
 
       <div className="w-full flex gap-8 lg:gap-40 justify-center ">
         <Button title="DETAILS & PRICING" func={openModal} />
