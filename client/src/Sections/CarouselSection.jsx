@@ -45,7 +45,7 @@ const CarouselSection = () => {
       page: "Home",
     });
     setTimeout(() => {
-      navigate("/select-package");
+      navigate("/quiz");
     }, 1000);
   }
 

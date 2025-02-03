@@ -88,7 +88,7 @@ const Reviews = () => {
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png"
                   alt=""
                   className="h-12"
                 />
@@ -124,7 +124,7 @@ const Reviews = () => {
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png"
                   alt=""
                   className="h-12"
                 />
@@ -152,22 +152,21 @@ const Reviews = () => {
               </div>
               <div className="flex-4">
                 <span className="block text-sm tracking-tight">
-                  Excellent service from the team at Triumph Adventure
-                  Experience in Malaga. We hired a GT Pro and had a fabulous 2
-                  weeks exploring Andalucia. The bike hire, pickup and drop off
-                  were seamless.
+                  Many thanks to all the Triumph staff for the excellent service
+                  and attentiveness, especially to Marta and Antonio. The bike
+                  was excellent—I really enjoyed it!
                 </span>
               </div>
             </div>
             <div className="flex items-center ">
               <div className="flex-3 flex items-center gap-2 ">
                 <img
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer4.webp"
                   alt=""
                   className="h-12"
                 />
 
-                <span className="text-Bold text-sm">Mark Sherwood</span>
+                <span className="text-Bold text-sm">Federico Ricci</span>
               </div>
 
               <img
@@ -227,22 +226,22 @@ const Reviews = () => {
             </div>
             <div className="flex-4">
               <span className="block text-sm tracking-tight">
-                Excellent service from the team at Triumph Adventure Experience
-                in Malaga. We hired a GT Pro and had a fabulous 2 weeks
-                exploring Andalucia. The bike hire, pickup and drop off were
-                seamless.
+                I had a wonderful experience renting a motorcycle from this
+                shop. The bike was new and capable. I had a chance to visit many
+                cool places in Andalusia. The stuff in the shop was nice and
+                helpful. Many thanks :)
               </span>
             </div>
           </div>
           <div className="flex items-center ">
             <div className="flex-3 flex items-center gap-2 ">
               <img
-                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer5.webp"
                 alt=""
                 className="h-12"
               />
 
-              <span className="text-Bold text-sm">Mark Sherwood</span>
+              <span className="text-Bold text-sm">Alex Zolotov</span>
             </div>
 
             <img
@@ -297,22 +296,21 @@ const Reviews = () => {
             </div>
             <div className="flex-4">
               <span className="block text-sm tracking-tight">
-                Excellent service from the team at Triumph Adventure Experience
-                in Malaga. We hired a GT Pro and had a fabulous 2 weeks
-                exploring Andalucia. The bike hire, pickup and drop off were
-                seamless.
+                Excellent service, with Antonio being friendly, professional,
+                and knowledgeable. The bike and gear were top-notch, exceeding
+                my expectations. I'll definitely use the company again.
               </span>
             </div>
           </div>
           <div className="flex items-center ">
             <div className="flex-3 flex items-center gap-2 ">
               <img
-                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png"
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer6.webp"
                 alt=""
                 className="h-12"
               />
 
-              <span className="text-Bold text-sm">Mark Sherwood</span>
+              <span className="text-Bold text-sm">Zdravko Zdravkov</span>
             </div>
 
             <img

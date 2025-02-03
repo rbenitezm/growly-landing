@@ -30,9 +30,11 @@ const HubspotForm = () => {
   return (
     <div className="bg-white p-12 rounded-lg w-5/6 lg:w-max">
       <div className="text-triumph-red text-center">
-        <h1 className="text-ExtraBold  text-3xl">The time is now.</h1>
+        <h1 className="text-ExtraBold  text-3xl">
+          Discover the Perfect Adventure
+        </h1>
         <span className="text-Regular text-lg">
-          Stop dreaming of the open road and start living it.
+          Get all the important info about the experience
         </span>
       </div>
       <div id="hubspotForm" className="mt-10 text-Medium "></div>

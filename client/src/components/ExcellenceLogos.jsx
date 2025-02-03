@@ -14,7 +14,7 @@ const logos = [
   {
     id: 3,
     imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/logo_3.webp",
+      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/RiDE.webp",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const ExcellenceLogos = () => {
     <div className=" flex lg:flex-row md:flex-row justify-center items-center flex-col gap-12 lg:gap-20">
       {logos.map((img) => (
         <div className="" key={img.id}>
-          <img src={img.imgPath} alt="" className="h-20 md:h-14 lg:h-24" />
+          <img src={img.imgPath} alt="" className="h-20 md:h-14 lg:h-20" />
         </div>
       ))}
     </div>
