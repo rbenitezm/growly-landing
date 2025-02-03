@@ -164,7 +164,7 @@ const ProductPage = () => {
           Before you know it...
         </h2>
 
-        <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row gap-0 lg:gap-32">
+        <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
           {Images.map((img) => (
             <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
               <div className="flex">
