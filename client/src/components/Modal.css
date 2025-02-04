@@ -60,9 +60,17 @@
 
 /* Larger Mobile (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
+  .modal-content {
+    padding: 2rem 2rem;
+    margin: 2rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  .modal-content {
+    padding: 1rem 1rem;
+    margin: 2rem;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {

@@ -15,6 +15,8 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
+  const [userEmail, setUserEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
 
   const HUBSPOT_PORTAL_ID = import.meta.env.VITE_HUBSPOT_PORTAL_ID;
   const FORM_GUID_A = import.meta.env.VITE_FORM_GUID_A;
@@ -29,6 +31,17 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const packageData = () => {
     // console.log("Selected package is ", selectedPackage);
     // console.log("Data from formData Store", formData);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    const email = e.target.value;
+    setUserEmail(email);
+    setIsEmailValid(validateEmail(email));
   };
 
   const sanitizeDate = (isoDate) => {
@@ -50,22 +63,26 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${formGUID}`;
 
     try {
-      const response = await Promise.all([
-        axios.post(endpoint, payload, {
-          headers: { "Content-Type": "application/json" },
-        }),
-      ]);
+      // const response = await Promise.all([
+      //   axios.post(endpoint, payload, {
+      //     headers: { "Content-Type": "application/json" },
+      //   }),
+      // ]);
 
       // const response = await axios.post(endpoint, payload, {
       //   headers: { "Content-Type": "application/json" },
       // });
       // console.log("HubSpot response:", response);
-      console.log("Hubspot success");
 
-      if (response[0].data) {
+      const response = await axios.post(endpoint, payload, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log("Hubspot success", response.data);
+
+      if (response.data) {
         // console.log(response[0].data);
-        // window.location.href = response[0].data.redirectUri;
-        window.location.replace(response[0].data.redirectUri);
+        window.location.href = response.data.redirectUri;
+        // window.location.replace(response[0].data.redirectUri);
         // window.open(response[0].data.redirectUri, "_blank");
         // window.close();
 
@@ -80,9 +97,10 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   };
 
   const handleAddtoCart = async () => {
+    if (!isEmailValid) return;
     const cartData = {
       name: formData.name,
-      email: formData.email,
+      email: userEmail,
       packageType: selectedPackage.name,
       price: selectedPackage.price,
       startDate: sanitizeDate(startDate.toISOString()),
@@ -92,8 +110,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
 
     const updatedFormData = {
       fields: [
-        { name: "name", value: formData.name },
-        { name: "email", value: formData.email },
+        { name: "email", value: cartData.email },
         {
           name: "fecha_inicio_alquiler",
           value: sanitizeDate(startDate.toISOString()),
@@ -102,7 +119,6 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
           name: "fecha_fin_alquiler",
           value: sanitizeDate(endDate.toISOString()),
         },
-        { name: "package_type", value: selectedPackage.name },
       ],
       context: {
         pageUri: window.location.href,
@@ -146,14 +162,35 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <div
-        className="h-max lg:min-h-48 w-full
-	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-6 md:gap-10 lg:gap-2 py-3 lg:px-12 lg:py-6 bg-gray-200/60 shadow-2xl rounded-2xl "
+        className="m-4 h-max lg:min-h-48 w-full
+	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-6 md:gap-10 lg:gap-2 py-3 lg:px-12 lg:py-6 bg-gray-200/60  shadow-2xl rounded-2xl "
       >
         <div className="w-full flex flex-col justify-center text-center">
           <h2 className="text-3xl lg:text-2xl font-semibold text-gray-800">
             BOOK NOW!
           </h2>
           <span className="uppercase">Best price guaranteed</span>
+        </div>
+
+        <div className="flex flex-col w-full  px-4 lg:px-0">
+          <label
+            htmlFor=""
+            className="text-DemiBold uppercase text-triumph-red text-sm"
+          >
+            Enter your email*
+          </label>
+
+          <input
+            type="email"
+            className="mt-1 w-full p-1 bg-transparent border-b-2 border-triumph-red focus:border-1 rounded-sm focus:border-triumph-red-hover focus:outline focus:outline-triumph-red-hover "
+            onChange={handleEmailChange}
+            value={userEmail}
+          />
+          {!isEmailValid && userEmail && (
+            <span className="text-red-500 text-sm">
+              Please enter a valid email.
+            </span>
+          )}
         </div>
 
         <DatePicker
@@ -196,9 +233,25 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
               </div>
             </div>
             <div className="">
-              <button
+              {/* <button
                 className="btn w-full px-6 py-1  lg:py-3 rounded-lg tracking-wider bg-triumph-red text-white  hover:bg-triumph-red-hover hover:scale-105 text-lg lg:text-xl text-Medium transition-all ease-in-out duration-300 shadow-3xl"
                 onClick={handleAddtoCart}
+                disabled={!isEmailValid}
+              >
+                Buy Now!
+              </button> */}
+              <button
+                className={`btn w-full px-6 py-1 lg:py-3 rounded-lg tracking-wider 
+    ${
+      userEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)
+        ? "bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 cursor-pointer"
+        : "bg-gray-400 text-gray-700 cursor-not-allowed"
+    } 
+    text-lg lg:text-xl text-Medium transition-all ease-in-out duration-300 shadow-3xl`}
+                onClick={handleAddtoCart}
+                disabled={
+                  !userEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)
+                }
               >
                 Buy Now!
               </button>
