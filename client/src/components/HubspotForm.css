@@ -5,11 +5,11 @@
 }
 
 #hubspotForm form input {
-  border-bottom: black 2px solid;
+  border-bottom: black 1px solid;
 }
 
 #hubspotForm label {
-  font-size: 17px;
+  font-size: 16px;
 }
 .hs-button {
   background-color: #b5121b;

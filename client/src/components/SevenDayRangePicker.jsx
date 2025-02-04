@@ -147,7 +147,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <div
         className="h-max lg:min-h-48 w-full
-	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-8 md:gap-10 lg:gap-2 py-10 lg:px-12 lg:py-6 bg-gray-200/60 shadow-2xl rounded-2xl "
+	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-6 md:gap-10 lg:gap-2 py-3 lg:px-12 lg:py-6 bg-gray-200/60 shadow-2xl rounded-2xl "
       >
         <div className="w-full flex flex-col justify-center text-center">
           <h2 className="text-3xl lg:text-2xl font-semibold text-gray-800">
@@ -172,20 +172,24 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
 
         {startDate && endDate && (
           <>
-            <div className="lg:w-80 mt-4 text-center bg-white p-4 rounded-md shadow">
+            <div className="lg:w-80 mt-4 text-center bg-white p-2 rounded-md shadow">
               <h3 className="text-lg font-semibold">Selected Dates:</h3>
 
               <div className="lg:mt-3 flex justify-center gap-5">
                 <div className="">
-                  <span className="uppercase ">Start Date:</span>
-                  <span className="block lg:text-2xl text-Bold text-triumph-red">
+                  <span className="uppercase text-sm lg:text-2xl">
+                    Start Date:
+                  </span>
+                  <span className="block text-sm lg:text-2xl text-Bold text-triumph-red">
                     {startDate.format("DD-MM-YYYY")}
                   </span>
                 </div>
-                <br />
+
                 <div className="">
-                  <span className="uppercase ">End Date:</span>
-                  <span className="block lg:text-2xl text-Bold text-triumph-red">
+                  <span className="uppercase text-sm lg:text-2xl">
+                    End Date:
+                  </span>
+                  <span className="block text-sm lg:text-2xl text-Bold text-triumph-red">
                     {endDate.format("DD-MM-YYYY")}
                   </span>
                 </div>
@@ -193,7 +197,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
             </div>
             <div className="">
               <button
-                className="btn w-full px-8 py-4 rounded-xl tracking-wider bg-triumph-red text-white  hover:bg-triumph-red-hover hover:scale-105 text-xl text-Medium transition-all ease-in-out duration-300 shadow-3xl"
+                className="btn w-full px-6 py-1  lg:py-3 rounded-lg tracking-wider bg-triumph-red text-white  hover:bg-triumph-red-hover hover:scale-105 text-lg lg:text-xl text-Medium transition-all ease-in-out duration-300 shadow-3xl"
                 onClick={handleAddtoCart}
               >
                 Buy Now!

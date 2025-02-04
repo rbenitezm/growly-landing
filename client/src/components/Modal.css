@@ -21,7 +21,7 @@
 
 .modal-content {
   /* background: white; */
-  padding: 5rem 3rem;
+
   border-radius: 8px;
   /* max-width: 500px; */
   width: 100%;
@@ -53,7 +53,7 @@
 
 @media (max-width: 480px) {
   .modal-content {
-    padding: 2rem 3rem;
+    padding: 1rem 1rem;
     margin: 2rem;
   }
 }

@@ -36,7 +36,7 @@ const reviews = [
 		<br />
 		<p>I highly recommend Triumph Adventure Experience Spain’s rental service for anyone looking to explore Spain on a top-quality Triumph motorcycle. It’s a fantastic way to experience</p>
 	  `,
-    name: "Aurora Verdejo",
+    name: "Brown Williams",
     image:
       "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png", // Replace with actual profile image URL
     rating: 5,
@@ -45,15 +45,12 @@ const reviews = [
     title:
       "Review of Triumph Adventure Experience Spain – Triumph Scrambler 400 Rental",
     content: `
-	  <p>Review of Triumph Adventure Experience Spain – Triumph Scrambler 400 Rental</p>
-    <br />
-    <p>I recently rented a Triumph Scrambler 400 from Triumph Adventure Experience Spain, and it was the perfect choice for exploring Spain’s stunning roads! The entire rental process was straightforward and efficient. The team was welcoming and made sure I was set up with everything I needed, including a well-maintained bike and all the necessary gear.</p>
-    <br />
-    <p>The Scrambler 400 was an absolute pleasure to ride. Its lightweight build and agile handling made it ideal for navigating the winding mountain roads and scenic coastal routes. The bike’s performance was impressive, offering smooth acceleration and a comfortable riding position for longer journeys. I felt confident and connected to the road throughout the ride, and it handled curves and straights with ease.</p>
-    <br />
-    <p>The staff at Triumph Adventure Experience Spain went above and beyond, sharing valuable tips on local routes and must-see spots. Their passion for motorcycling was evident, and it enhanced my overall experience. Renting the Scrambler 400 allowed me to see Spain in a unique way, with the added thrill of riding a beautifully crafted Triumph bike.</p>
-    <br />
-    For anyone looking to explore Spain on two wheels, I highly recommend the Scrambler 400 from Triumph Adventure Experience Spain. It’s a fantastic choice for road-focused adventures, backed by a friendly and knowledgeable team dedicated to delivering an unforgettable experience.</p>
+	  <p>Renting a motorcycle from Triumph Adventure Experience Spain was one of the highlights of my trip! The whole process was straightforward and well-organized, making it easy to get on the road without any hassle. The staff were incredibly helpful, ensuring that I had the right bike and gear for my adventure.</p>
+    <br/>
+<p>The selection of Triumph motorcycles was fantastic, with each bike in top-notch condition and ready for action. The one I chose handled beautifully across different terrains, whether cruising on smooth roads or tackling more rugged trails. It was clear that these bikes are maintained with great care.</p>
+<br/>
+<p>Beyond just renting a bike, the team provided excellent recommendations for scenic routes and must-see spots. Their local knowledge made a huge difference, helping me discover incredible places I wouldn’t have found on my own.
+If you’re considering exploring Spain on two wheels, this is the place to go. Professional service, great bikes, and an experience you won’t forget!</p>
 	`,
     name: "Martine Campens",
     image:

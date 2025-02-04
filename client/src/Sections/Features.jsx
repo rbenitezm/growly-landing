@@ -45,7 +45,7 @@ const Features = () => {
         <img
           src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/award.webp"
           alt=""
-          className="h-56 lg:h-56 "
+          className="h-40 lg:h-56 "
         />
       </div>
       <div className="w-full lg:w-1/3 text-center">
@@ -60,9 +60,9 @@ const Features = () => {
             <img
               src={facility.Baseimage}
               alt=""
-              className="h-40 w-max lg:h-42 lg:w-max"
+              className="h-36 w-max lg:h-42 lg:w-max"
             />
-            <span className="text-lg lg:text-base text-Medium">
+            <span className="text-base lg:text-base text-Medium">
               {facility.title}
             </span>
             <h1 className="absolute overlay-text text-Heavy text-9xl text-stroke  text-center">

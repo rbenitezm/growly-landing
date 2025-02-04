@@ -59,14 +59,14 @@ const Features2 = () => {
         </h1>
       </div>
 
-      <div className="bubbles mt-12 lg:mt-20 flex flex-col gap-12 lg:grid grid-rows-2 grid-cols-4 lg:gap-x-20 lg:gap-y-6">
+      <div className="bubbles mt-12 lg:mt-20 flex flex-col gap-4 lg:grid grid-rows-2 grid-cols-4 lg:gap-x-20 lg:gap-y-6">
         {BubbleData.map((bubble) => (
           <div
-            className="lg:w-40 flex flex-col items-center gap-4 "
+            className="lg:w-40 flex flex-col items-center gap-1 md:gap-4 "
             key={bubble.id}
           >
-            <img src={bubble.imagePath} alt="" className="h-36 lg:h-24" />
-            <span className="text-Medium text-center text-lg">
+            <img src={bubble.imagePath} alt="" className="h-24 lg:h-24" />
+            <span className="text-Medium text-center text-base md:text-lg">
               {bubble.title}
             </span>
           </div>

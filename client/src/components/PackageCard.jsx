@@ -25,7 +25,7 @@ const PackageCard = ({ packageData, isSelected, onSelect }) => {
     >
       <div className="">
         <h4 className="text-Bold text-xs lg:text-base">{packageData.title}</h4>
-        <span className="px-5 py-1 rounded-xl bg-triumph-red text-white text-[8px] lg:text-[10px] font-medium Arial tracking-wider">
+        <span className="px-2 md:px-5 py-1 rounded-xl bg-triumph-red text-white text-[9px] lg:text-[10px] font-medium Arial tracking-wider">
           Limited-Time discount
         </span>
       </div>
