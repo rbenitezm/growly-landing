@@ -51,7 +51,7 @@ const Reviews = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons8-star-90.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/yellow-star.webp"
                   alt="star"
                   className="h-4 "
                 />
@@ -200,7 +200,7 @@ const Reviews = () => {
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons8-star-90.png"
+                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/yellow-star.webp"
                   alt="star"
                   className="h-4 "
                 />

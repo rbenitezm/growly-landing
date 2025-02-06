@@ -17,7 +17,7 @@ const Guarantee = () => {
         className="h-[15rem] lg:h-[25rem]	"
       />
 
-      <p className="text-Regular text-center text-xl  lg:text-xl mt-2 lg:mt-4">
+      <p className="text-Regular text-center text-xl  lg:text-xl mt-2 lg:mt-4 uppercase">
         If your adventure doesn’t exceed expectations, we’ll <br />
         refund you—no questions asked.
       </p>

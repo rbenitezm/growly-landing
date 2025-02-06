@@ -5,6 +5,7 @@ import ExcellenceLogos from "../components/ExcellenceLogos";
 import Footer from "../Sections/Footer";
 import LongReviews from "../Sections/LongReviews";
 import AccordionSection from "../Sections/AccordionSection";
+import Excellence from "../Sections/Excellence";
 
 const features = [
   "10 minutes from Málaga Airport.",
@@ -126,9 +127,11 @@ const ProductPage = () => {
       <AccordionSection />
 
       {/* Awards Logos */}
-      <section className="py-8 lg:py-16 flex  justify-center gap-2 ">
+      {/* <section className="py-8 lg:py-16 flex  justify-center gap-2 ">
         <ExcellenceLogos />
-      </section>
+      </section> */}
+
+      <Excellence />
 
       {/* Features 2 */}
       <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">

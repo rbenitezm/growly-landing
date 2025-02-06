@@ -198,6 +198,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
           value={startDate}
           onChange={handleStartDateChange}
           disablePast
+          format="DD-MM-YYYY"
           renderInput={(params) => (
             <input
               {...params.inputProps}

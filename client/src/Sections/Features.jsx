@@ -49,7 +49,7 @@ const Features = () => {
         />
       </div>
       <div className="w-full lg:w-1/3 text-center">
-        <h1 className="text-Light text-3xl lg:text-4xl">
+        <h1 className="text-Light text-3xl lg:text-4xl uppercase">
           Best Motorcycle Tourism Centre in Europe
         </h1>
       </div>
