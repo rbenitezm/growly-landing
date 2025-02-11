@@ -67,7 +67,7 @@ const Reviews = () => {
         </div>
         {/* Div 2 */}
 
-        <div className="div2 h-full gap-6  flex flex-col items-center justify-between">
+        <div className="div2 h-full gap-4   flex flex-col items-center justify-between">
           <div class=" grid-divs flex flex-col justify-between gap-2">
             <div className="flex">
               <div className="flex-1">
