@@ -85,11 +85,11 @@
   grid-area: 2 / 3 / 3 / 4;
 }
 .grid-divs {
-  @apply w-5/6 md:w-60 lg:w-72 h-full bg-white shadow-lg p-4 lg:px-4 lg:py-4 rounded-2xl;
+  @apply w-5/6 md:w-60 lg:w-72 h-max bg-white shadow-lg p-4 lg:px-4 lg:py-4 rounded-2xl;
 }
 
 .grid-divs-rectangle {
-  @apply w-5/6 md:w-60 lg:w-72 h-full bg-white shadow-lg p-4 lg:p-4 rounded-2xl;
+  @apply w-5/6 md:w-60 lg:w-72 h-max bg-white shadow-lg p-4 lg:p-4 rounded-2xl;
 }
 /* .review {
   font-size: 12px;
@@ -123,4 +123,9 @@
   border-color: rgb(199, 199, 199);
   background-color: white;
   transition: all 0.2s ease-in-out;
+}
+
+.reviewParent {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
 }

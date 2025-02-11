@@ -10,6 +10,7 @@ import Question from "./pages/Question";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 import { initMetaPixel, trackPageView } from "./api/FacebookPixel";
+import ReviewPage from "./pages/ReviewPage";
 
 const WrappedApp = () => {
   const location = useLocation();
@@ -32,6 +33,7 @@ const WrappedApp = () => {
 
           <Route path="/quiz" element={<Question />}></Route>
           <Route path="/select-package" element={<ProductPage />}></Route>
+          <Route path="/reviews" element={<ReviewPage />}></Route>
         </>
       </Routes>
     </div>

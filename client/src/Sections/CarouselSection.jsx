@@ -45,6 +45,7 @@ const CarouselSection = () => {
       page: "Home",
     });
     setTimeout(() => {
+      window.scrollTo(0, 0);
       navigate("/quiz");
     }, 1000);
   }

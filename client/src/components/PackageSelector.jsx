@@ -60,6 +60,16 @@ const PackageSelector = () => {
       </div>
 
       <div className="">
+        <div className="mb-2 ">
+          <a
+            href="./Condiciones_generales_7-Day_ADV_Pack_(EN).pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-500 uppercase text-sm"
+          >
+            *Terms and conditions of the daily rental agreement*
+          </a>
+        </div>
         <button
           className={`btn w-full py-4 rounded-xl tracking-wider ${
             selectedPackage
