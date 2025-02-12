@@ -10,12 +10,14 @@
 
 .main-image img {
   width: 500px;
-  height: 30rem;
+  height: 32rem;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
+
   transition: opacity 0.5s ease;
   opacity: 1;
+  padding: 5px 50px;
 }
 
 .fade {
@@ -68,8 +70,10 @@
 	} */
   .main-image img {
     width: 350px;
-    height: 30rem;
+    height: 25rem;
+    padding: 0px 0px;
   }
+
   .thumbnail-wrapper {
     padding: 1px;
     border: 0px solid transparent;

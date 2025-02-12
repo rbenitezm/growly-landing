@@ -75,7 +75,7 @@ const ProductPage = () => {
         </div>
 
         {/* Title and Description */}
-        <div className="right px-6 lg:px-12 flex-1 flex flex-col lg:flex-col gap-4 ">
+        <div className="right px-6 lg:px-12 flex-1 flex flex-col lg:flex-col gap-2 ">
           {/* Title and stars */}
           <div className="">
             <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-wider">
@@ -109,7 +109,7 @@ const ProductPage = () => {
             <div className="ml-6 lg:ml-10">
               <ul className="Arial list-disc leading-tight">
                 {features.map((feature) => (
-                  <li key={feature.id - 1} className="text-[14px] font-medium">
+                  <li key={feature.id - 1} className="text-[13px] font-medium">
                     {feature}
                   </li>
                 ))}

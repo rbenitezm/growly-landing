@@ -194,7 +194,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
         </div>
 
         <DatePicker
-          label="Start Date"
+          label="Adventure Start Date"
           value={startDate}
           onChange={handleStartDateChange}
           disablePast

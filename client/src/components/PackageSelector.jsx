@@ -9,8 +9,8 @@ const packages = [
     id: 1,
     name: "A2",
     title: "Adventure pack for A2 Riders",
-    price: "788€",
-    crossedPrice: "896€",
+    price: "749€",
+    crossedPrice: "850€",
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const PackageSelector = () => {
   };
 
   return (
-    <div className="flex gap-6 flex-col px-0 lg:px-6">
+    <div className="flex gap-4 flex-col px-0 lg:px-6">
       <div className="flex flex-col gap-2">
         <h2 className="">Select a Package:</h2>
         {/* Package Cards */}
@@ -65,22 +65,44 @@ const PackageSelector = () => {
             href="./Condiciones_generales_7-Day_ADV_Pack_(EN).pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-blue-500 uppercase text-sm"
+            className="underline text-blue-500 uppercase text-xs"
           >
             *Terms and conditions of the daily rental agreement*
           </a>
         </div>
-        <button
-          className={`btn w-full py-4 rounded-xl tracking-wider ${
-            selectedPackage
-              ? "bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105"
-              : "bg-gray-300 text-gray-500 cursor-not-allowed"
-          } text-xl text-bold transition-all ease-in-out duration-300 shadow-3xl`}
-          onClick={selectedPackage ? openModal : null}
-          disabled={!selectedPackage}
-        >
-          Adventure in a click
-        </button>
+
+        <div className="">
+          <button
+            className={`btn w-full py-4 rounded-xl tracking-wider ${
+              selectedPackage
+                ? "bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105"
+                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            } text-xl text-bold transition-all ease-in-out duration-300 shadow-3xl`}
+            onClick={selectedPackage ? openModal : null}
+            disabled={!selectedPackage}
+          >
+            Adventure in a click
+          </button>
+
+          <div className="flex justify-between mt-3 px-5">
+            <span className="text-xs ">
+              <img
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Deposit.webp"
+                alt=""
+                className="mr-2  h-4 w-4 inline "
+              />
+              No Deposit Required
+            </span>
+            <span className="text-xs ">
+              <img
+                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Tick.webp"
+                alt=""
+                className="mr-2 h-4 w-4 inline "
+              />
+              Money Back Guarantee
+            </span>
+          </div>
+        </div>
       </div>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>

@@ -7,8 +7,8 @@ const ProductCarousel = () => {
     "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20900%20Rally%20PRO.webp",
     "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20GT%20PRO.webp",
     "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20Rally%20PRO.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20Sport%20660.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20Sport%20850.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/New%20Images/Tiger-Sport-660.webp",
+    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/New%20Images/Tiger-Sport-850.webp",
   ];
 
   const [mainImage, setMainImage] = useState(images[0]);
