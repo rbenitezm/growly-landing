@@ -3,11 +3,17 @@ import Footer from "../Sections/Footer";
 import Stars from "../components/Stars";
 import ImgReview from "../components/ImgReview";
 import { useNavigate } from "react-router-dom";
+import { trackEvent } from "../api/FacebookPixel";
 
 const ReviewPage = () => {
   const navigate = useNavigate();
 
   function navigateFn() {
+    trackEvent("AdventureInAClickReview_Click", {
+      labek: "Adventure in a Click!",
+      page: "ReviewPage",
+    });
+
     setTimeout(() => {
       window.scrollTo(0, 0);
       navigate("/select-package");
