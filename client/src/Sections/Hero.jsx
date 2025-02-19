@@ -38,7 +38,7 @@ const Hero = () => {
   //   alert("Button Clicked");
   // }
   return (
-    <section className="hero w-full h-max flex py-8 lg:py-16 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-10 ">
+    <section className="hero w-full h-max flex py-8 lg:py-16 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
       <h2 className="w-5/6 lg:w-2/4 text-Heavy mt-20 lg:mt-14 text-xl lg:text-4xl font-bold  text-center ">
         FULL IMMERSION WITH OUR DOCUMENTARY
         <br />
@@ -61,8 +61,16 @@ const Hero = () => {
       <VideoEmbed />
 
       <div className="w-full flex gap-8 lg:gap-40 justify-center ">
-        <Button title="DETAILS & PRICING" func={openModal} />
-        <Button title="APPLY TO PARTICIPATE" func={takeToForm} />
+        <Button
+          title="DETAILS & PRICING"
+          func={openModal}
+          id="detailsAndpricing"
+        />
+        <Button
+          title="APPLY TO PARTICIPATE"
+          func={takeToForm}
+          id="applyToParticipate"
+        />
       </div>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>

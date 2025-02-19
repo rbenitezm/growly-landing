@@ -261,6 +261,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
                 disabled={
                   !userEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)
                 }
+                id="buyNow"
               >
                 Buy Now!
               </button>

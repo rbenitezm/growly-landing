@@ -274,6 +274,15 @@ const Question = () => {
                 label: "What's your Name?",
               },
             },
+            {
+              name: "short-text",
+              id: "phone01",
+              attributes: {
+                classnames: "first-block",
+                required: true,
+                label: "Enter your Phone Number?",
+              },
+            },
           ],
 
           theme: {
@@ -324,11 +333,13 @@ const Question = () => {
                 },
                 { name: "email", value: data.answers.email01.value },
                 { name: "firstname", value: data.answers.name01.value },
+                { name: "phone", value: data.answers.phone01.value },
               ],
 
               formData: {
                 name: data.answers.name01.value,
                 email: data.answers.email01.value,
+                phone: data.answers.phone01.value,
                 motorbikeLicense: data.answers.licenceType.value[0],
                 motorbikeModel: data.answers.bikeModel.value[0],
                 equipment: data.answers.gearReq.value[0],

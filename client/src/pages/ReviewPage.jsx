@@ -552,6 +552,7 @@ const ReviewPage = () => {
           <button
             className="btn w-max px-10 py-4 rounded-xl tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 text-xl text-bold transition-all ease-in-out duration-300 shadow-3xl uppercase"
             onClick={navigateFn}
+            id="advInaClickReview"
           >
             Adventure in a click
           </button>

@@ -61,8 +61,14 @@ const PackageSelector = () => {
 
       <div className="">
         <div className="mb-2 ">
-          <a
+          {/* <a
             href="./Condiciones_generales_7-Day_ADV_Pack_(EN).pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-500 uppercase text-xs"
+          > */}
+          <a
+            href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline text-blue-500 uppercase text-xs"
@@ -80,6 +86,7 @@ const PackageSelector = () => {
             } text-xl text-bold transition-all ease-in-out duration-300 shadow-3xl`}
             onClick={selectedPackage ? openModal : null}
             disabled={!selectedPackage}
+            id="advInaClick"
           >
             Adventure in a click
           </button>

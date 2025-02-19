@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  phone: {
+    type: Number,
+    required: true,
+  },
   motorbikeLicense: {
     type: String,
     required: true,
