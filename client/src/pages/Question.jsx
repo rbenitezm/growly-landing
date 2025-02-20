@@ -210,7 +210,7 @@ const Question = () => {
                     value: "Tiger Sport 850",
                   },
                   {
-                    label: "Triumph Tiger 900 GT Pro (A2 licence)",
+                    label: "Triumph Tiger 900 GT Pro (A licence)",
                     value: "Tiger 900 GT PRO",
                   },
                   {
