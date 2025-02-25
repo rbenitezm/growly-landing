@@ -129,3 +129,18 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
 }
+
+.popUp {
+  background-image: url("https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/popUpImg.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* background-repeat: no-repeat; */
+.text-Black {
+  color: black;
+}
+
+.text-White {
+  color: white;
+}

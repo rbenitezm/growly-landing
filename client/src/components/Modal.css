@@ -32,6 +32,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  border: 3px solid white;
 }
 .Modal-text {
   text-align: center;
@@ -53,16 +54,18 @@
 
 @media (max-width: 480px) {
   .modal-content {
-    padding: 1rem 1rem;
+    /* padding: 20px; */
     margin: 2rem;
+    border: 1px solid white;
   }
 }
 
 /* Larger Mobile (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
   .modal-content {
-    padding: 2rem 2rem;
+    /* padding: 1rem 1rem; */
     margin: 2rem;
+    border: 1px solid white;
   }
 }
 

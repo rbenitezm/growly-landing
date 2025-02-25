@@ -163,7 +163,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <div
         className="m-4 h-max lg:min-h-48 w-full
-	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-5 md:gap-10 lg:gap-2 py-3 lg:px-12 lg:py-6 bg-gray-200/60  shadow-2xl rounded-2xl "
+	   lg:w-5/6 flex flex-col  justify-between items-center space-y-0 lg:space-y-6  gap-5 md:gap-10 lg:gap-2 px-10 py-10 lg:px-12 lg:py-6 bg-gray-200/60  shadow-2xl rounded-2xl "
       >
         <div className="w-full flex flex-col justify-center text-center">
           <h2 className="text-3xl lg:text-2xl font-semibold text-gray-800">

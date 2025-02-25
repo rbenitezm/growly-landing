@@ -112,7 +112,7 @@ const PackageSelector = () => {
         </div>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
         <SevenDayRangePicker selectedPackage={packages[selectedPackage - 1]} />
       </Modal>
     </div>

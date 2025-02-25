@@ -20,7 +20,7 @@ const PackageCard = ({ packageData, isSelected, onSelect }) => {
     <div
       className={` ${
         isSelected ? "selected" : "not-selected"
-      } border-2 border-spacing-1 border-solid p-2 rounded-xl cursor-pointer flex  justify-between items-center hover:scale-105 transition-all ease-in-out duration-300`}
+      } border-2 border-spacing-1 border-solid p-2 rounded-xl cursor-pointer flex  justify-between items-center hover:scale-102 transition-all ease-in-out duration-300`}
       onClick={() => onSelect(packageData.id)}
     >
       <div className="">

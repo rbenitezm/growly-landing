@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCarousel from "../components/ProductCarousel";
 import PackageSelector from "../components/PackageSelector";
 import ExcellenceLogos from "../components/ExcellenceLogos";
@@ -6,6 +6,8 @@ import Footer from "../Sections/Footer";
 import LongReviews from "../Sections/LongReviews";
 import AccordionSection from "../Sections/AccordionSection";
 import Excellence from "../Sections/Excellence";
+import Modal from "../components/Modal";
+import Button from "../components/Button";
 
 const features = [
   "10 minutes from Málaga Airport.",
@@ -64,6 +66,23 @@ const Images = [
 ];
 
 const ProductPage = () => {
+  const [isModalOpen, setisModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      openModal();
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const openModal = () => {
+    setisModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setisModalOpen(false);
+  };
+
   return (
     <div className="productPage  w-full min-h-screen  pt-12 lg:pt-16 ">
       {/* Product Section */}
@@ -214,6 +233,28 @@ const ProductPage = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="white">
+        <div className="p-6 md:p-0 lg:p-0 popUp lg:h-[350px] lg:w-[500px]  flex flex-col justify-center items-center text-center gap-6 lg:gap-6 text-white uppercase rounded-lg">
+          <h1 className="text-Heavy text-2xl lg:text-3xl ">
+            7 days too much?
+            <br /> Make it yours!
+          </h1>
+          <p className="w-full md:w-3/5 lg:w-3/5  text-Medium text-sm lg:text-lg">
+            Rent from 1 to 30 days and ride your own adventure, your way
+          </p>
+
+  
+          <a
+            className="btn w-max py-3 px-4 rounded-xl tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 e text-bold transition-all ease-in-out duration-300 shadow-3xl text-sm lg:text-base "
+            id="CreateYOAdv"
+            href="https://triumphadventure.es/en/motorcycle-rental/"
+            target="_blank"
+          >
+            CREATE YOUR OWN ADVENTURE
+          </a>
+        </div>
+      </Modal> */}
     </div>
   );
 };

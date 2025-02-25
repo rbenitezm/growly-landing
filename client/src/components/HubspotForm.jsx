@@ -28,14 +28,14 @@ const HubspotForm = () => {
   }, []);
 
   return (
-    <div className="bg-white w-max p-8 flex flex-col justify-center items-center md:p-12 rounded-lg  lg:w-max">
+    <div className="bg-white   p-8 flex flex-col  justify-center items-center md:p-12 rounded-lg  w-[350px] lg:w-[650px]">
       <div className="text-triumph-red text-center">
-        <h1 className="text-ExtraBold  md:text-3xl">
+        <h1 className="text-ExtraBold  text-2xl md:text-3xl">
           Discover the Perfect Adventure
         </h1>
-        <span className="text-Regular  text-sm md:text-lg">
-          Get all the important info <br />
-          about the experience
+
+        <span className="text-Regular  text-base md:text-lg">
+          Get all the important info about the experience
         </span>
       </div>
       <div id="hubspotForm" className="w-max mt-10 text-Medium "></div>

@@ -1,7 +1,11 @@
+#hubspotForm {
+  width: 90%;
+}
 #hubspotForm form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* background-color: aqua; */
 }
 
 #hubspotForm form input {
@@ -19,6 +23,15 @@
   font-size: 1rem;
   border-radius: 5px;
 }
+
+.hs-input select {
+  font-size: 12px;
+  margin: 10px 0px;
+  color: #b5121b;
+}
+
+/* .hs-fieldtype-phonenumber {
+} */
 
 @media (max-width: 480px) {
   #hubspotForm form {

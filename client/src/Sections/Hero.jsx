@@ -44,20 +44,7 @@ const Hero = () => {
         <br />
         <span className="text-Regular">“7-DAY ADVENTURE PACK”</span>
       </h2>
-      {/* <div
-        className="max-w-[90vw] h-max md:h-auto md:w-5/6 lg:w-full lg:max-w-[70vw] flex justify-center items-center box-border "
-        style={{ width: "90%" }}
-      >
-        <iframe
-          src="https://www.youtube.com/embed/pShXJyvadxU?si=Yzvu6klz8z45z1cb"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          className="w-full p-0 h-[25vh] md:h-80 md:w-5/6 lg:w-full max-w-[90vw] lg:max-w-[45vw] lg:h-[50vh] rounded-xl overflow-hidden"
-        ></iframe>
-      </div> */}
+
       <VideoEmbed />
 
       <div className="w-full flex gap-8 lg:gap-40 justify-center ">
@@ -73,7 +60,7 @@ const Hero = () => {
         />
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
         <HubspotForm />
       </Modal>
     </section>

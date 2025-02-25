@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, btnColor }) => {
   const [visible, setVisible] = useState(false);
 
   // Handle the animation when the modal is opening or closing
@@ -19,7 +19,12 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div className={`modal-overlay  ${isOpen ? "show " : ""} `}>
       <div className="modal-content max-w-max bg-white flex justify-center items-center">
-        <button className="close-btn" onClick={onClose}>
+        <button
+          className={`close-btn ${
+            btnColor === "black" ? "text-Black" : "text-White"
+          }`}
+          onClick={onClose}
+        >
           &times;
         </button>
         {/* <div className="Modal-text">
