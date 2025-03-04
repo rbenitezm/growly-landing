@@ -1,44 +1,103 @@
 import React, { useState } from "react";
 import PackageCard from "./PackageCard";
+import ExpandablePackageCard from "./ExpandablePackageCard";
 import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
 import { trackEvent } from "../api/FacebookPixel";
 
-// const packages = [
-//   {
-//     id: 1,
-//     name: "A2",
-//     title: "Adventure pack for A2 Riders",
-//     price: "749€",
-//     crossedPrice: "850€",
-//   },
-//   {
-//     id: 2,
-//     name: "A",
-//     title: "Adventure pack for A Riders",
-//     price: "788€",
-//     crossedPrice: "896€",
-//   },
-// ];
-
 const packages = [
   {
     id: 1,
-    name: "7-Day",
-    duration: 7,
-    title: "7-Day Adventure Pack",
-    price: "788€",
-    crossedPrice: "898€",
+    name: "A2",
+    title: "Adventure pack for A2 Riders",
+    price: "749€",
+    crossedPrice: "850€",
   },
   {
     id: 2,
-    name: "3-Day",
-    duration: 3,
-    title: "3-Day Adventure Pack",
-    price: "389€",
-    crossedPrice: "489€",
+    name: "A",
+    title: "Adventure pack for A Riders",
+    price: "788€",
+    crossedPrice: "896€",
   },
 ];
+
+// const packages = [
+//   {
+//     id: 1,
+//     name: "7-Day",
+//     duration: 7,
+//     title: "7-Day Adventure Pack",
+//     price: "788€",
+//     crossedPrice: "898€",
+//     content: "Covering the best landscapes over a full week!",
+//   },
+//   {
+//     id: 2,
+//     name: "3-Day",
+//     duration: 3,
+//     title: "3-Day Adventure Pack",
+//     price: "389€",
+//     crossedPrice: "489€",
+//     content: "A thrilling short escape, perfect for a long weekend ride!",
+//   },
+// ];
+
+// const PackageSelector = () => {
+//   const [selectedPackage, setSelectedPackage] = useState(null);
+//   const [isModalOpen, setisModalOpen] = useState(false);
+
+//   const openModal = () => {
+//     trackEvent("AdventureInAClick_Click", {
+//       label: "Adventure in a Click",
+//       page: "Product Page",
+//     });
+//     setisModalOpen(true);
+//   };
+
+//   const closeModal = () => {
+//     setisModalOpen(false);
+//   };
+
+//   const handleSelectPackage = (id) => {
+//     setSelectedPackage(id === selectedPackage ? null : id);
+//   };
+
+//   return (
+//     <div className="flex flex-col gap-4 px-0 lg:px-6">
+//       <h2>Select a Package:</h2>
+//       <div className="package-selector flex flex-col gap-4">
+//         {packages.map((pkg) => (
+//           <ExpandablePackageCard
+//             key={pkg.id}
+//             packageData={pkg}
+//             isSelected={selectedPackage === pkg.id}
+//             onSelect={handleSelectPackage}
+//             isExpanded={selectedPackage === pkg.id}
+//           />
+//         ))}
+//       </div>
+//       <button
+//         className={`btn w-full py-4 rounded-xl ${
+//           selectedPackage
+//             ? "bg-triumph-red text-white"
+//             : "bg-gray-300 text-gray-500 cursor-not-allowed"
+//         } transition-all duration-300 shadow-3xl`}
+//         onClick={selectedPackage ? openModal : null}
+//         disabled={!selectedPackage}
+//       >
+//         Adventure in a Click
+//       </button>
+//       <Modal isOpen={isModalOpen} onClose={closeModal}>
+//         <SevenDayRangePicker
+//           selectedPackage={packages.find((p) => p.id === selectedPackage)}
+//         />
+//       </Modal>
+//     </div>
+//   );
+// };
+
+// export default PackageSelector;
 
 const PackageSelector = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -138,12 +197,3 @@ const PackageSelector = () => {
 };
 
 export default PackageSelector;
-
-{
-  /* <button
-  className="btn w-full py-4 rounded-xl tracking-wider bg-triumph-red text-white text-xl text-Bold hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-3xl"
-  onClick={openModal}
->
-  Adventure in a click
-</button>; */
-}

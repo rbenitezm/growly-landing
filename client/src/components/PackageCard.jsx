@@ -1,20 +1,5 @@
 import React from "react";
 
-// const packages = [
-//   {
-//     id: 1,
-//     name: "Adventure pack for A2 Riders",
-//     price: "788€",
-//     crossedPrice: "896€",
-//   },
-//   {
-//     id: 2,
-//     name: "Adventure pack for A Riders",
-//     price: "788€",
-//     crossedPrice: "896€",
-//   },
-// ];
-
 const PackageCard = ({ packageData, isSelected, onSelect }) => {
   return (
     <div
