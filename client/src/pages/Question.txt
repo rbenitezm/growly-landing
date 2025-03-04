@@ -12,8 +12,7 @@ import { setFormDataReducer } from "../redux/formDataSlice";
 const Question = () => {
   const [formData, setFormData] = useState({});
   const HUBSPOT_PORTAL_ID = "20102221";
-  // const HUBSPOT_FORM_GUID = "eacfabb0-75e0-4416-8532-de300564026c";
-  const HUBSPOT_FORM_GUID = "81b13a3b-ac72-4afa-8a81-a7c341dff40c";
+  const HUBSPOT_FORM_GUID = "eacfabb0-75e0-4416-8532-de300564026c";
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -77,30 +76,40 @@ const Question = () => {
               id: "jg1401r",
               attributes: {
                 label: "Questionnaire",
-                description: "Ready for the Ride of a Lifetime? 🚀",
+                description: "Tailored for Your Perfect Adventure",
               },
             },
 
             {
               name: "multiple-choice",
-              id: "preference01",
+              id: "excites01",
               attributes: {
                 required: true,
-                multiple: false,
+                multiple: true,
                 verticalAlign: true,
-                label: "How do you prefer to ride?",
+                label: "What excites you the most about riding in Andalusia?",
                 choices: [
                   {
-                    label: "Solo 🚀",
-                    value: "Beginner",
+                    label:
+                      "Exploring breathtaking landscapes (mountains, coasts, and hidden gems).",
+                    value:
+                      "Exploring breathtaking landscapes (mountains, coasts, and hidden gems).",
                   },
                   {
-                    label: "With a group 🏍️🏍️",
-                    value: "Intermediate",
+                    label: "Feeling the thrill of the open road and freedom.",
+                    value: "Feeling the thrill of the open road and freedom.",
                   },
                   {
-                    label: "Either works for me! 🤙",
-                    value: "Advanced",
+                    label:
+                      "Discovering Andalusia’s culture, food, and local secrets.",
+                    value:
+                      "Discovering Andalusia’s culture, food, and local secrets.",
+                  },
+                  {
+                    label:
+                      "Meeting other riders and sharing unique experiences.",
+                    value:
+                      "Meeting other riders and sharing unique experiences.",
                   },
                 ],
               },
@@ -110,74 +119,54 @@ const Question = () => {
               id: "experience01",
               attributes: {
                 required: true,
-                multiple: false,
+                multiple: true,
                 verticalAlign: true,
-                label: "How would you describe your riding experience?",
+                label: "How experienced are you as a rider?",
                 choices: [
                   {
-                    label: "New to adventure riding 🌱",
-                    value: "New to adventure riding 🌱",
+                    label:
+                      "Beginner (I’ve ridden less than a year or occasionally).",
+                    value: "Beginner",
                   },
                   {
-                    label: "Confident on-road, curious off-road 🛣️",
-                    value: "Confident on-road, curious off-road 🛣️",
+                    label:
+                      "Intermediate (I ride regularly and have a good handle on diverse terrains).",
+                    value: "Intermediate",
                   },
                   {
-                    label: "Experienced on all terrains 🌍",
-                    value: "Experienced on all terrains 🌍",
+                    label:
+                      "Advanced (I’m highly skilled and enjoy challenging roads and off-road trails).",
+                    value: "Advanced",
                   },
                 ],
               },
             },
             {
               name: "multiple-choice",
-              id: "excites01",
+              id: "ride01",
               attributes: {
                 required: true,
-                multiple: false,
+                multiple: true,
                 verticalAlign: true,
-                label: "What excites you most about this adventure?",
+                label: " What kind of riding experience are you looking for?",
                 choices: [
                   {
-                    label: "Epic routes & landscapes 🏔️",
-                    value: "Epic routes & landscapes 🏔️",
+                    label:
+                      "Smooth and scenic rides through picturesque landscapes.",
+                    value:
+                      "Smooth and scenic rides through picturesque landscapes.",
                   },
                   {
-                    label: "Riding a top-spec Triumph 🏍️",
-                    value: "Riding a top-spec Triumph 🏍️",
+                    label:
+                      "Challenging and technical routes for skilled riders.",
+                    value:
+                      "Challenging and technical routes for skilled riders.",
                   },
                   {
-                    label: "Meeting like-minded riders 🤝",
-                    value: "Meeting like-minded riders 🤝",
-                  },
-                  {
-                    label: "All of it! 🔥",
-                    value: "All of it! 🔥",
-                  },
-                ],
-              },
-            },
-
-            {
-              name: "multiple-choice",
-              id: "oftenRide01",
-              attributes: {
-                required: true,
-                multiple: false,
-                verticalAlign: true,
-                label: "How often do you ride?",
-                choices: [
-                  {
-                    label: "Every chance I get! 🏍️",
-                    value: "Every chance I get! 🏍️",
-                  },
-                  {
-                    label: "A few times a month 🗓️",
-                    value: "A few times a month 🗓️",
-                  },
-                  {
-                    label: "Occasionally, but I want more! 😎",
-                    value: "Occasionally, but I want more! 😎",
+                    label:
+                      "A bit of everything—scenery, culture, and adrenaline.",
+                    value:
+                      "A bit of everything—scenery, culture, and adrenaline.",
                   },
                 ],
               },
@@ -187,50 +176,84 @@ const Question = () => {
               id: "licenceType",
               attributes: {
                 required: true,
-                multiple: false,
+                multiple: true,
                 verticalAlign: true,
-                label: ". Do you have a full A license or an A2 license?",
+                label: "Do you currently hold an A2 licence?",
                 choices: [
                   {
-                    label: "A License ✅ ",
-                    value: "A",
+                    label: "Yes, I require an A2-adapted motorcycle.",
+                    value: "A2",
                   },
                   {
-                    label: "A2 License ✅ ",
-                    value: "A2",
+                    label: "No, I’m fully licensed for standard models.",
+                    value: "A",
                   },
                 ],
               },
             },
             {
               name: "multiple-choice",
-              id: "idealTrip01",
+              id: "bikeModel",
               attributes: {
                 required: true,
-                multiple: false,
+                multiple: true,
                 verticalAlign: true,
-                label: "What’s your ideal trip length?",
+                label:
+                  "Which Triumph model excites you the most for your adventure?",
                 choices: [
                   {
-                    label: "A full week of adventure (7 days) 🏕️",
-                    value: "A full week of adventure (7 days)",
+                    label: "Triumph Tiger Sport 660 (A2 licence)",
+                    value: "Tiger Sport 660",
                   },
                   {
-                    label: "A long weekend (3-4 days) 🏁",
-                    value: "A long weekend (3-4 days)",
+                    label: "Triumph Tiger 850 Sport (A2 licence)",
+                    value: "Tiger Sport 850",
+                  },
+                  {
+                    label: "Triumph Tiger 900 GT Pro (A licence)",
+                    value: "Tiger 900 GT PRO",
+                  },
+                  {
+                    label: "Triumph Tiger 1200 GT Pro (A licence)",
+                    value: "Tiger 1200 GT PRO",
+                  },
+                  {
+                    label: "Triumph Tiger 900 Rally Pro (A licence)",
+                    value: "Tiger 900 Rally PRO",
+                  },
+                  {
+                    label: "Triumph Tiger 1200 Rally Pro (A licence)",
+                    value: "Tiger 1200 Rally PRO",
                   },
                 ],
               },
             },
             {
-              name: "short-text",
-              id: "city01",
+              name: "multiple-choice",
+              id: "gearReq",
               attributes: {
-                classnames: "first-block",
                 required: true,
-                label: "Where are you based?",
-                placeholder:
-                  "So we can suggest the best travel options for you.",
+                multiple: true,
+                verticalAlign: true,
+                label:
+                  "How important is premium equipment and support to your adventure?",
+                choices: [
+                  {
+                    label:
+                      "Essential—I want top-notch gear and support for a seamless experience.",
+                    value: "básico",
+                  },
+                  {
+                    label:
+                      "Somewhat important—I can manage with fewer frills if the riding is great.",
+                    value: "completo",
+                  },
+                  {
+                    label:
+                      "Not very important—I’m all about the road and the bike.",
+                    value: "sin equipamiento",
+                  },
+                ],
               },
             },
             {
@@ -240,7 +263,24 @@ const Question = () => {
                 classnames: "first-block",
                 required: true,
                 label: "What's your e-mail address?",
-                placeholder: "So we can send you all the details!",
+              },
+            },
+            {
+              name: "short-text",
+              id: "name01",
+              attributes: {
+                classnames: "first-block",
+                required: true,
+                label: "What's your Name?",
+              },
+            },
+            {
+              name: "short-text",
+              id: "phone01",
+              attributes: {
+                classnames: "first-block",
+                required: true,
+                label: "Enter your Phone Number?",
               },
             },
           ],
@@ -269,72 +309,43 @@ const Question = () => {
             console.log(data);
 
             const updatedFormData = {
-              // fields: [
-              //   {
-              //     name: "excites_rider",
-              //     value: data.answers.excites01.value[0],
-              //   },
-              //   {
-              //     name: "experienced_rider",
-              //     value: data.answers.experience01.value[0],
-              //   },
-              //   {
-              //     name: "typeOf_ride",
-              //     value: data.answers.ride01.value[0],
-              //   },
-              //   {
-              //     name: "tipo_de_carnet_de_moto",
-              //     value: data.answers.licenceType.value[0],
-              //   },
-              //   { name: "equipamiento", value: data.answers.gearReq.value[0] },
-              //   {
-              //     name: "motorcycle_model",
-              //     value: data.answers.bikeModel.value[0],
-              //   },
-              //   { name: "email", value: data.answers.email01.value },
-              //   { name: "firstname", value: data.answers.name01.value },
-              //   { name: "phone", value: data.answers.phone01.value },
-              // ],
-
               fields: [
                 {
-                  name: "experienced_rider",
-                  value: data.answers.preference01.value[0],
-                },
-
-                {
-                  name: "riding_experience",
-                  value: data.answers.experience01.value[0],
-                },
-                {
-                  name: "excites_adventure",
+                  name: "excites_rider",
                   value: data.answers.excites01.value[0],
                 },
                 {
-                  name: "often_ride",
-                  value: data.answers.oftenRide01.value[0],
+                  name: "experienced_rider",
+                  value: data.answers.experience01.value[0],
+                },
+                {
+                  name: "typeOf_ride",
+                  value: data.answers.ride01.value[0],
                 },
                 {
                   name: "tipo_de_carnet_de_moto",
                   value: data.answers.licenceType.value[0],
                 },
+                { name: "equipamiento", value: data.answers.gearReq.value[0] },
                 {
-                  name: "ideal_trip",
-                  value: data.answers.idealTrip01.value[0],
+                  name: "motorcycle_model",
+                  value: data.answers.bikeModel.value[0],
                 },
-                { name: "city", value: data.answers.city01.value },
                 { name: "email", value: data.answers.email01.value },
+                { name: "firstname", value: data.answers.name01.value },
+                { name: "phone", value: data.answers.phone01.value },
               ],
 
               formData: {
+                name: data.answers.name01.value,
                 email: data.answers.email01.value,
-                city: data.answers.city01.value,
-                riderExperience: data.answers.preference01.value[0],
-                ridingExperience: data.answers.experience01.value[0],
-                excitesAdventure: data.answers.excites01.value[0],
-                oftenRide: data.answers.oftenRide01.value[0],
+                phone: data.answers.phone01.value,
                 motorbikeLicense: data.answers.licenceType.value[0],
-                idealTrip: data.answers.idealTrip01.value[0],
+                motorbikeModel: data.answers.bikeModel.value[0],
+                equipment: data.answers.gearReq.value[0],
+                riderExperience: data.answers.experience01.value[0],
+                expectedExperience: data.answers.ride01.value[0],
+                excites: data.answers.excites01.value[0],
               },
               context: {
                 pageUri: window.location.href,
@@ -354,7 +365,6 @@ const Question = () => {
             setFormData(updatedFormData);
 
             // console.log(updatedFormData);
-
             sendDataToApi(updatedFormData);
 
             setIsSubmitting(false);

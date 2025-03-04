@@ -38,13 +38,6 @@ const Accordion = () => {
             className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold bg-triumph-bg-gray hover:bg-gray-100 focus:outline-none text-DemiBold"
             onClick={() => toggleAccordion(index)}
           >
-            {/* <span
-              className={` lg:text-base ${
-                activeIndex === index
-                  ? "text-triumph-red lg:text-base"
-                  : "text-black text-sm"
-              }`}
-            ></span> */}
             <span
               className={`text-sm lg:text-base  ${
                 activeIndex === index ? "text-triumph-red " : "text-black "

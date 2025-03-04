@@ -15,14 +15,14 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 8090;
 
-//comment out to make it work normally
+// comment out to make it work normally
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "..", "client", "dist")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "client", "dist", "index.html"));
 });
-//till here
+// till here
 
 app.use(cors());
 app.use(express.json());

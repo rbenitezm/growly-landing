@@ -4,26 +4,50 @@ import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
 import { trackEvent } from "../api/FacebookPixel";
 
+// const packages = [
+//   {
+//     id: 1,
+//     name: "A2",
+//     title: "Adventure pack for A2 Riders",
+//     price: "749€",
+//     crossedPrice: "850€",
+//   },
+//   {
+//     id: 2,
+//     name: "A",
+//     title: "Adventure pack for A Riders",
+//     price: "788€",
+//     crossedPrice: "896€",
+//   },
+// ];
+
 const packages = [
   {
     id: 1,
-    name: "A2",
-    title: "Adventure pack for A2 Riders",
-    price: "749€",
-    crossedPrice: "850€",
+    name: "7-Day",
+    duration: 7,
+    title: "7-Day Adventure Pack",
+    price: "788€",
+    crossedPrice: "898€",
   },
   {
     id: 2,
-    name: "A",
-    title: "Adventure pack for A Riders",
-    price: "788€",
-    crossedPrice: "896€",
+    name: "3-Day",
+    duration: 3,
+    title: "3-Day Adventure Pack",
+    price: "389€",
+    crossedPrice: "489€",
   },
 ];
 
 const PackageSelector = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   const openModal = () => {
     trackEvent("AdventureInAClick_Click", {
@@ -61,12 +85,6 @@ const PackageSelector = () => {
 
       <div className="">
         <div className="mb-2 ">
-          {/* <a
-            href="./Condiciones_generales_7-Day_ADV_Pack_(EN).pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-blue-500 uppercase text-xs"
-          > */}
           <a
             href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
             target="_blank"
