@@ -34,9 +34,6 @@ const Hero = () => {
     }, 500);
   }
 
-  // function dummyFunction() {
-  //   alert("Button Clicked");
-  // }
   return (
     <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
       <h2 className="w-5/6 lg:w-2/4 text-Heavy mt-20 lg:mt-14 text-xl lg:text-4xl font-bold  text-center ">

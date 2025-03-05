@@ -10,14 +10,22 @@ import Modal from "../components/Modal";
 import Button from "../components/Button";
 
 const features = [
-  "10 minutes from Málaga Airport.",
-  "No deposits, no hassle—just book, arrive, and ride.",
-  "From boots to helmets, top-quality gear is available.",
-  "Bikes always under six months old.",
-  "Top & Side Cases included.",
+  // "10 minutes from Málaga Airport.",
+  // "No deposits, no hassle—just book, arrive, and ride.",
+  // "From boots to helmets, top-quality gear is available.",
+  // "Bikes always under six months old.",
+  // "Top & Side Cases included.",
+  // "24/7 roadside assistance.",
+  // "Fully Comprehensive Insurance",
+  // "Free lockers & luggage storage.",
+
+  "Just 10 minutes from Málaga Airport.",
+  "No deposits, no hassle—simply book, arrive, and ride.",
+  "From boots to helmets, premium gear available.",
+  "Top & side cases included.",
   "24/7 roadside assistance.",
-  "Fully Comprehensive Insurance",
-  "Free lockers & luggage storage.",
+  "Fully comprehensive insurance.",
+  "Free lockers & luggage storage.",
 ];
 
 const features2 = [
@@ -114,21 +122,24 @@ const ProductPage = () => {
           {/* Description and points */}
           <div className="desc flex gap-4 flex-col">
             <p
-              className="Arial leading-5 text-base lg:text-sm text-left md:text-justify
+              className="Arial md:leading-6 lg:leading-5 text-base md:text-xl lg:text-sm text-left md:text-justify
             "
             >
               A transformative experience that will forever change the way you
-              explore Andalusia. Over 7 magical days, we bring together the
-              majestic Triumph Tiger, ready to take you into the unknown, plus
-              our master guide, crafted by a team of experts with over 10 years
-              of experience, revealing every secret, every curve, and every
-              hidden treasure of this land.
+              explore Andalusia. Choose between 3 or 7 magical days aboard the
+              majestic Triumph Tiger, ready to take you into the unknown,
+              together with our master guide, crafted by a team of experts with
+              over 10 years of experience, revealing every secret, every curve,
+              and every hidden treasure of this land.
             </p>
 
             <div className="ml-6 lg:ml-10">
               <ul className="Arial list-disc leading-tight">
                 {features.map((feature) => (
-                  <li key={feature.id - 1} className="text-[13px] font-medium">
+                  <li
+                    key={feature.id - 1}
+                    className=" text-[13px] md:text-[18px] lg:text-[13px] font-medium"
+                  >
                     {feature}
                   </li>
                 ))}

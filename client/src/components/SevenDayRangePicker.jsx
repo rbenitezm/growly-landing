@@ -19,8 +19,8 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const [isEmailValid, setIsEmailValid] = useState(false);
 
   const HUBSPOT_PORTAL_ID = import.meta.env.VITE_HUBSPOT_PORTAL_ID;
-  const FORM_GUID_A = import.meta.env.VITE_FORM_GUID_A;
-  const FORM_GUID_A2 = import.meta.env.VITE_FORM_GUID_A2;
+  const FORM_GUID_7DAY = import.meta.env.VITE_FORM_GUID_7DAY;
+  const FORM_GUID_3DAY = import.meta.env.VITE_FORM_GUID_3DAY;
 
   // console.log(HUBSPOT_PORTAL_ID);
   // console.log(FORM_GUID_A);
@@ -31,6 +31,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const packageData = () => {
     // console.log("Selected package is ", selectedPackage);
     // console.log("Data from formData Store", formData);
+    console.log("Duration ", selectedPackage.duration);
   };
 
   const validateEmail = (email) => {
@@ -49,16 +50,17 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
     return formattedDate;
   };
 
-  const handleStartDateChange = (date) => {
+  const handleStartDateChange = (date, duration) => {
     if (date) {
       setStartDate(date);
-      setEndDate(date.add(6, "day")); // Automatically calculate the 7-day range
+      setEndDate(date.add(selectedPackage.duration - 1, "day")); // Automatically calculate the 7-day range
     }
     packageData();
   };
 
   const handleHubspotSubmission = async (payload) => {
-    const formGUID = selectedPackage.name === "A" ? FORM_GUID_A : FORM_GUID_A2;
+    const formGUID =
+      selectedPackage.name === "7-Day" ? FORM_GUID_7DAY : FORM_GUID_3DAY;
 
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${formGUID}`;
 
@@ -80,13 +82,11 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
       console.log("Hubspot success", response.data);
 
       if (response.data) {
-        // console.log(response[0].data);
+        // console.log(response.data);
         window.location.href = response.data.redirectUri;
         // window.location.replace(response[0].data.redirectUri);
         // window.open(response[0].data.redirectUri, "_blank");
         // window.close();
-
-        // console.log("data is here");
       }
     } catch (error) {
       console.error(
@@ -141,8 +141,6 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
 
     try {
       await submitCartData(cartData);
-      // console.log(cartData);
-      // console.log("Data added to the DB");
 
       dispatch(add(cartData));
       // console.log("Data added to the Cart(Redux)");
@@ -213,7 +211,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
             <div className=" flex flex-col justify-center items-center">
               <div className="px-4 py-1 rounded-lg bg-white shadow-xl">
                 <span className="text-triumph-red text-sm lg:text-lg text-Bold">
-                  7-Day Period
+                  {selectedPackage.duration}-Day Period
                 </span>
               </div>
               <div className="lg:w-80 mt-4 text-center bg-white p-2 rounded-md shadow">
