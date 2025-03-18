@@ -4,6 +4,24 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { trackEvent } from "../api/FacebookPixel";
 
+const translations = {
+  en: {
+    heading: "Explore Andalusia",
+    brokenHeading: "Top-tier range of Triumph models",
+    text: "Book your adventure today! Limited spots available.",
+    subText: "Apply to participate now and claim your Limited-Time discount!",
+    participateBtn: "APPLY TO PARTICIPATE",
+  },
+  de: {
+    heading: "Entdecken Sie Andalusien",
+    brokenHeading: "Top-Auswahl an Triumph-Modellen",
+    text: "Buchen Sie noch heute Ihr Abenteuer! Begrenzte Plätze verfügbar",
+    subText:
+      "Bewerben Sie sich jetzt und sichern Sie sich Ihren zeitlich begrenzten Rabatt!",
+    participateBtn: "JETZT BEWERBEN",
+  },
+};
+
 const CarouselData = [
   {
     id: 1,
@@ -36,7 +54,7 @@ const CarouselData = [
       "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-1200-GT-PRO.webp",
   },
 ];
-const CarouselSection = () => {
+const CarouselSection = ({ lang }) => {
   const navigate = useNavigate();
 
   function dummyFunction() {
@@ -45,8 +63,13 @@ const CarouselSection = () => {
       page: "Home",
     });
     setTimeout(() => {
-      window.scrollTo(0, 0);
-      navigate("/quiz");
+      if (lang == "de") {
+        window.scrollTo(0, 0);
+        navigate("/de/quiz");
+      } else {
+        window.scrollTo(0, 0);
+        navigate("/quiz");
+      }
     }, 1000);
   }
 
@@ -54,8 +77,12 @@ const CarouselSection = () => {
     <section className="carousel-section w-full h-max flex px-10 py-12 lg:py-16 lg:justify-center items-center flex-col gap-6 ">
       <div className="w-full  lg:w-3/4 text-center">
         <h1 className="headings text-Heavy">
-          Explore Andalusia <br />
-          Top-tier range of Triumph models
+          {/* Explore Andalusia */}
+          {translations[lang]?.heading || translations["en"].heading}
+          <br />
+          {/* Top-tier range of Triumph models */}
+          {translations[lang]?.brokenHeading ||
+            translations["en"].brokenHeading}
         </h1>
       </div>
 
@@ -76,12 +103,21 @@ const CarouselSection = () => {
       </div>
 
       <p className="text-Regular text-center text-lg lg:text-lg mt-4">
-        Book your adventure today! Limited spots available. <br />
-        Apply to participate now and claim your Limited-Time discount!
+        {/* Book your adventure today! Limited spots available.  */}
+        {translations[lang]?.text || translations["en"].text}
+        <br />
+        {/* Apply to participate now and claim your Limited-Time discount! */}
+        {translations[lang]?.subText || translations["en"].subText}
       </p>
 
       <div className="">
-        <Button title="APPLY TO PARTICIPATE" func={dummyFunction} />
+        <Button
+          title={
+            translations[lang]?.participateBtn ||
+            translations["en"].participateBtn
+          }
+          func={dummyFunction}
+        />
       </div>
     </section>
   );

@@ -5,6 +5,13 @@
 .Arial {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.Sans {
+  font-family: "DM Sans", sans-serif;
+}
+.rotate {
+  rotate: 180;
+}
 .carousel-section > div > h1,
 .features > div > h1 {
   line-height: 1.2;

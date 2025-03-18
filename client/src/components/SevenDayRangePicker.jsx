@@ -10,7 +10,7 @@ import { submitCartData } from "../api";
 import { useNavigate } from "react-router-dom";
 import { trackEvent } from "../api/FacebookPixel";
 
-const SevenDayRangePicker = ({ selectedPackage }) => {
+const SevenDayRangePicker = ({ selectedPackage, lang }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(null);
@@ -22,6 +22,9 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const FORM_GUID_7DAY = import.meta.env.VITE_FORM_GUID_7DAY;
   const FORM_GUID_3DAY = import.meta.env.VITE_FORM_GUID_3DAY;
 
+  const FORM_GUID_7DAY_GERMAN = import.meta.env.VITE_FORM_GUID_7DAY_GERMAN;
+  const FORM_GUID_3DAY_GERMAN = import.meta.env.VITE_FORM_GUID_3DAY_GERMAN;
+
   // console.log(HUBSPOT_PORTAL_ID);
   // console.log(FORM_GUID_A);
   // console.log(FORM_GUID_A2);
@@ -31,7 +34,7 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   const packageData = () => {
     // console.log("Selected package is ", selectedPackage);
     // console.log("Data from formData Store", formData);
-    console.log("Duration ", selectedPackage.duration);
+    // console.log("Duration ", selectedPackage.duration);
   };
 
   const validateEmail = (email) => {
@@ -59,8 +62,25 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
   };
 
   const handleHubspotSubmission = async (payload) => {
+    // let formGUID = "";
+    // if (lang === "de") {
+    //   formGUID =
+    //     selectedPackage.name === "7-Day"
+    //       ? FORM_GUID_7DAY_GERMAN
+    //       : FORM_GUID_3DAY_GERMAN;
+    // } else {
+    //   formGUID =
+    //     selectedPackage.name === "7-Day" ? FORM_GUID_7DAY : FORM_GUID_3DAY;
+    // }
+
     const formGUID =
-      selectedPackage.name === "7-Day" ? FORM_GUID_7DAY : FORM_GUID_3DAY;
+      lang === "de"
+        ? selectedPackage.name === "7-Day"
+          ? FORM_GUID_7DAY_GERMAN
+          : FORM_GUID_3DAY_GERMAN
+        : selectedPackage.name === "7-Day"
+        ? FORM_GUID_7DAY
+        : FORM_GUID_3DAY;
 
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${formGUID}`;
 
@@ -79,7 +99,8 @@ const SevenDayRangePicker = ({ selectedPackage }) => {
       const response = await axios.post(endpoint, payload, {
         headers: { "Content-Type": "application/json" },
       });
-      console.log("Hubspot success", response.data);
+      // console.log("Hubspot success", response.data);
+      console.log("Hubspot success");
 
       if (response.data) {
         // console.log(response.data);

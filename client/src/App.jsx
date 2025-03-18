@@ -11,9 +11,13 @@ import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 import { initMetaPixel, trackPageView } from "./api/FacebookPixel";
 import ReviewPage from "./pages/ReviewPage";
+import QuestionDe from "./pages/QuestionDe";
+import NotFound from "./pages/NotFound";
 
 const WrappedApp = () => {
   const location = useLocation();
+  const isGerman = location.pathname.startsWith("/de");
+  const lang = isGerman ? "de" : "en";
 
   useEffect(() => {
     initMetaPixel();
@@ -25,15 +29,36 @@ const WrappedApp = () => {
 
   return (
     <div className="App w-full h-screen">
-      <NavBar />
+      <NavBar lang={lang} />
       <Routes>
         <>
-          <Route path="/" element={<Home />}></Route>
-          {/* <Route path="/" element={<Home />}></Route> */}
+          {/* Home page routes */}
+          <Route path="/" element={<Home lang={lang} />}></Route>
+          <Route path="/de" element={<Home lang={lang} />}></Route>
 
-          <Route path="/quiz" element={<Question />}></Route>
-          <Route path="/select-package" element={<ProductPage />}></Route>
-          <Route path="/reviews" element={<ReviewPage />}></Route>
+          {/* Questionnaire Routes */}
+          <Route path="/quiz" element={<Question lang={lang} />}></Route>
+          <Route path="/de/quiz" element={<QuestionDe lang={lang} />}></Route>
+          {/* Product Page Routes */}
+          <Route
+            path="/select-package"
+            element={<ProductPage lang={lang} />}
+          ></Route>
+          <Route
+            path="/de/select-package"
+            element={<ProductPage lang={lang} />}
+          ></Route>
+
+          {/* Review Page Routes */}
+          <Route path="/reviews" element={<ReviewPage lang={lang} />}></Route>
+
+          <Route
+            path="/de/reviews"
+            element={<ReviewPage lang={lang} />}
+          ></Route>
+
+          {/* Default Route Handler */}
+          <Route path="*" element={<NotFound lang={lang} />} />
         </>
       </Routes>
     </div>

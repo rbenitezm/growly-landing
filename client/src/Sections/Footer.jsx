@@ -8,7 +8,7 @@ const Footer = () => {
       </span> */}
       <div className="logo">
         <img
-          src="./images/LOGO_white.png"
+          src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/LOGO_white.png"
           alt=""
           className=" w-full h-10 lg:h-12"
         />

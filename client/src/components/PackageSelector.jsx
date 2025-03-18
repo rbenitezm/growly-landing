@@ -22,32 +22,82 @@ import { trackEvent } from "../api/FacebookPixel";
 //   },
 // ];
 
-const packages = [
-  {
-    id: 1,
-    name: "7-Day",
-    duration: 7,
-    title: "7-Day Adventure Pack",
-    price: "788€",
-    crossedPrice: "898€",
-    content: "Covering the best landscapes over a full week!",
-    imglink:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/7daypack.webp",
-  },
-  {
-    id: 2,
-    name: "3-Day",
-    duration: 3,
-    title: "3-Day Adventure Pack",
-    price: "389€",
-    crossedPrice: "489€",
-    content: "A thrilling short escape, perfect for a long weekend ride!",
-    imglink:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/3daypack.webp",
-  },
-];
+const packages = {
+  en: [
+    {
+      id: 1,
+      name: "7-Day",
+      duration: 7,
+      title: "7-Day Adventure Pack",
+      price: "788€",
+      crossedPrice: "898€",
+      content: "Covering the best landscapes over a full week!",
+      advGuarantee: "Adventure Guarantee included",
+      discount: "Limited-Time discount",
+      imglink:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/7daypack.webp",
+    },
+    {
+      id: 2,
+      name: "3-Day",
+      duration: 3,
+      title: "3-Day Adventure Pack",
+      price: "389€",
+      crossedPrice: "489€",
+      content: "A thrilling short escape, perfect for a long weekend ride!",
+      advGuarantee: "Adventure Guarantee included",
+      discount: "Limited-Time discount",
+      imglink:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/3daypack.webp",
+    },
+  ],
+  de: [
+    {
+      id: 1,
+      name: "7-Day",
+      duration: 7,
+      title: "7-Day Adventure Pack",
+      price: "788€",
+      crossedPrice: "898€",
+      content: "Eine ganze Woche lang die schönsten Landschaften erkunden!",
+      advGuarantee: "Abenteuergarantie inklusive.",
+      discount: "Zeitlich begrenzter Rabatt",
+      imglink:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/7daypack.webp",
+    },
+    {
+      id: 2,
+      name: "3-Day",
+      duration: 3,
+      title: "3-Day Adventure Pack",
+      price: "389€",
+      crossedPrice: "489€",
+      content:
+        "Ein aufregender Kurztrip, perfekt für eine lange Wochenendfahrt!",
+      advGuarantee: "Abenteuergarantie inklusive.",
+      discount: "Zeitlich begrenzter Rabatt",
+      imglink:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/3daypack.webp",
+    },
+  ],
+};
 
-const PackageSelector = () => {
+const translations = {
+  en: {
+    termsText: "Terms and conditions of the daily rental agreement",
+    depositText: "No Deposit Required",
+    guaranteeText: "Money Back Guarantee",
+    btnText: "Adventure in a click",
+  },
+  de: {
+    termsText: "Allgemeine Geschäftsbedingungen des Tagesmietvertrags",
+    depositText: "Keine Kaution erforderlich",
+    guaranteeText: "Geld-zurück-Garantie",
+    btnText: "Abenteuer auf Knopfdruck",
+  },
+};
+
+const PackageSelector = ({ lang }) => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
 
@@ -65,16 +115,18 @@ const PackageSelector = () => {
 
   const handleSelectPackage = (id) => {
     setSelectedPackage(id === selectedPackage ? null : id);
-    console.log(packages[id - 1]);
+    // console.log(packages[id - 1]);
+
+    // console.log(packages[lang][id - 1]);
   };
 
   return (
-    <div className="flex flex-col gap-4 px-0 lg:px-6">
+    <div className="flex flex-col gap-4 lg:gap-2  px-0 lg:px-6">
       <h2 className="text-Bold text-xl md:text-2xl lg:text-lg">
         Select a Package:
       </h2>
       <div className="package-selector flex flex-col gap-4">
-        {packages.map((pkg) => (
+        {packages[lang].map((pkg) => (
           <ExpandablePackageCard
             key={pkg.id}
             packageData={pkg}
@@ -84,6 +136,19 @@ const PackageSelector = () => {
           />
         ))}
       </div>
+
+      <div className="mb-2 lg:mb-0 ">
+        <a
+          href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-blue-500 uppercase text-xs"
+        >
+          {/* *Terms and conditions of the daily rental agreement* */}*
+          {translations[lang]?.termsText || translations["en"].termsText}*
+        </a>
+      </div>
+
       <button
         className={`btn w-full py-4 rounded-xl ${
           selectedPackage
@@ -93,11 +158,36 @@ const PackageSelector = () => {
         onClick={selectedPackage ? openModal : null}
         disabled={!selectedPackage}
       >
-        Adventure in a Click
+        {/* Adventure in a Click */}
+        {translations[lang]?.btnText || translations["en"].btnText}*
       </button>
+
+      <div className="flex justify-between mt-3 px-5">
+        <span className="text-xs ">
+          <img
+            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Deposit.webp"
+            alt=""
+            className="mr-2  h-4 w-4 inline "
+          />
+          {/* No Deposit Required */}
+          {translations[lang]?.depositText || translations["en"].depositText}
+        </span>
+        <span className="text-xs ">
+          <img
+            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Tick.webp"
+            alt=""
+            className="mr-2 h-4 w-4 inline "
+          />
+          {/* Money Back Guarantee */}
+          {translations[lang]?.guaranteeText ||
+            translations["en"].guaranteeText}
+        </span>
+      </div>
+
       <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
         <SevenDayRangePicker
-          selectedPackage={packages.find((p) => p.id === selectedPackage)}
+          selectedPackage={packages[lang].find((p) => p.id === selectedPackage)}
+          lang={lang}
         />
       </Modal>
     </div>

@@ -14,35 +14,35 @@ import Footer from "../Sections/Footer";
 import Excellence from "../Sections/Excellence";
 import Guarantee from "../Sections/Guarantee";
 
-const Home = () => {
+const Home = ({ lang }) => {
   return (
     <div className="w-full h-max ">
       {/* Hero Section */}
-      <Hero />
+      <Hero lang={lang} />
 
       {/* Divider */}
-      <Divider />
+      <Divider lang={lang} />
 
       {/* Features Section */}
-      <Features />
+      <Features lang={lang} />
 
       {/* Excellence */}
-      <Excellence />
+      <Excellence lang={lang} />
 
       {/* Features 2 Section */}
-      <Features2 />
+      <Features2 lang={lang} />
 
       {/* Guarantee */}
-      <Guarantee />
+      <Guarantee lang={lang} />
 
       {/* Carousel */}
-      <CarouselSection />
+      <CarouselSection lang={lang} />
 
       {/* Reviews */}
-      <Reviews />
+      <Reviews lang={lang} />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection lang={lang} />
 
       {/* Footer */}
       <Footer />

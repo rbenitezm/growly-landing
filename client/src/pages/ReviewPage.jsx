@@ -4,9 +4,12 @@ import Stars from "../components/Stars";
 import ImgReview from "../components/ImgReview";
 import { useNavigate } from "react-router-dom";
 import { trackEvent } from "../api/FacebookPixel";
+import { reviewPageContent } from "../content/ReviewPage/ReviewPageContent";
 
-const ReviewPage = () => {
+const ReviewPage = ({ lang }) => {
   const navigate = useNavigate();
+
+  const translations = reviewPageContent;
 
   function navigateFn() {
     trackEvent("AdventureInAClickReview_Click", {
@@ -15,17 +18,27 @@ const ReviewPage = () => {
     });
 
     setTimeout(() => {
-      window.scrollTo(0, 0);
-      navigate("/select-package");
+      if (lang == "de") {
+        window.scrollTo(0, 0);
+        navigate("/de/select-package");
+      } else {
+        window.scrollTo(0, 0);
+        navigate("/select-package");
+      }
     }, 1000);
   }
   return (
     <div className="reviewPage  w-full min-h-screen  pt-12 lg:pt-12 ">
       <section className="reviews bg-triumph-beige w-full h-max flex py-12 lg:py-16 lg:justify-center items-center flex-col gap-6 ">
         <div className="w-3/4 text-center">
-          <h1 className="text-Heavy text-2xl lg:text-5xl leading-tight lg:leading-tight text-triumph-red">
-            Real people, real results
-            <br /> What our riders say
+          <h1
+            className="text-Heavy text-2xl lg:text-5xl leading-tight lg:leading-tight text-triumph-red"
+            dangerouslySetInnerHTML={{
+              __html: translations[lang]?.heading || translations["en"].heading,
+            }}
+          >
+            {/* Real people, real results
+            <br /> What our riders say */}
           </h1>
 
           <div className=" flex items-center justify-center gap-2 lg:gap-6 mt-4">
@@ -40,7 +53,8 @@ const ReviewPage = () => {
               ))}
             </div>
             <p className="text-medium text-lg lg:text-3xl">
-              Based on 342 reviews
+              {/* Based on 342 reviews */}
+              {translations[lang]?.subheading || translations["en"].subheading}
             </p>
           </div>
         </div>
@@ -74,8 +88,10 @@ const ReviewPage = () => {
                 <span className="text-Bold">Lee S Fielding</span>
 
                 <span className="block text-xs tracking-tight review">
-                  Now is the time to live this adventure—riding with Triumph ADV
-                  Spain is pure joy!
+                  {/* Now is the time to live this adventure—riding with Triumph ADV
+                  Spain is pure joy! */}
+                  {translations[lang]?.reviews.leeSFielding ||
+                    translations["en"].reviews.leeSFielding}
                 </span>
               </div>
             </div>
@@ -92,10 +108,12 @@ const ReviewPage = () => {
                 </div>
                 <div className="flex-4">
                   <span className="block text-xs tracking-tight">
-                    I had a wonderful experience renting a motorcycle from this
+                    {/* I had a wonderful experience renting a motorcycle from this
                     shop. The bike was new and capable. I had a chance to visit
                     many cool places in Andalusia. The stuff in the shop was
-                    nice and helpful. Many thanks :)
+                    nice and helpful. Many thanks :) */}
+                    {translations[lang]?.reviews.alexZolotov ||
+                      translations["en"].reviews.alexZolotov}
                   </span>
                 </div>
               </div>
@@ -121,8 +139,15 @@ const ReviewPage = () => {
             {/* Div 3  MC-Jalle */}
             <div class="grid-divs flex flex-col justify-between gap-6">
               <div className="flex">
-                <span className="block text-xs tracking-tight">
-                  Here you are given the opportunity to develop as a driver with
+                <span
+                  className="block text-xs tracking-tight"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      translations[lang]?.reviews.mcJalle ||
+                      translations["en"].reviews.mcJalle,
+                  }}
+                >
+                  {/* Here you are given the opportunity to develop as a driver with
                   the help of skilled instructors. <br />
                   <br />
                   Their service is top notch, and they offer new motorcycles
@@ -130,7 +155,7 @@ const ReviewPage = () => {
                   <br />
                   The staff is super nice and their facility is new and fresh.{" "}
                   <br />
-                  <br />I give them five stars!
+                  <br />I give them five stars! */}
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -170,8 +195,11 @@ const ReviewPage = () => {
                 </div>
                 <div className="flex-4">
                   <span className="block text-xs tracking-tight">
-                    Perfect Service, extremely nice and helpful staff,
-                    motorcycles in very good shape. Highly recommended.
+                    {/* Perfect Service, extremely nice and helpful staff,
+                    motorcycles in very good shape. Highly recommended. */}
+
+                    {translations[lang]?.reviews.andyAndrej ||
+                      translations["en"].reviews.andyAndrej}
                   </span>
                 </div>
               </div>
@@ -212,10 +240,12 @@ const ReviewPage = () => {
                 </div>
                 <div className="flex-4 ">
                   <span className="block text-xs tracking-tight">
-                    Very professional rental experience - 3 days on a 400X
+                    {/* Very professional rental experience - 3 days on a 400X
                     Scrambler in the mountains around Malaga.Thoroughly
                     recommend these guys, the communication is first class with
-                    very helpful and knowledgable staff.
+                    very helpful and knowledgable staff. */}
+                    {translations[lang]?.reviews.andywilliams ||
+                      translations["en"].reviews.andywilliams}
                   </span>
 
                   <div className="flex items-center ">
@@ -270,8 +300,15 @@ const ReviewPage = () => {
                 />
               </div>
               <div className="flex">
-                <span className="block text-xs tracking-tight">
-                  As someone new to motorcycle rentals, I wasn’t quite sure what
+                <span
+                  className="block text-xs tracking-tight"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      translations[lang]?.reviews.michaelJockey ||
+                      translations["en"].reviews.michaelJockey,
+                  }}
+                >
+                  {/* As someone new to motorcycle rentals, I wasn’t quite sure what
                   to expect, but Triumph Adventure Experience Spain made the
                   entire process seamless and enjoyable! From the start, the
                   team was incredibly professional and welcoming. They took the
@@ -299,7 +336,7 @@ const ReviewPage = () => {
                   highly recommend their rental service to anyone, whether
                   you’re a seasoned rider or someone new to renting motorcycles
                   for a big adventure. Their passion for riding and commitment
-                  to customer satisfaction make them a standout choice!
+                  to customer satisfaction make them a standout choice! */}
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -339,8 +376,11 @@ const ReviewPage = () => {
               </div>
               <div className="flex">
                 <span className="block text-xs tracking-tight">
-                  Excellent service, super friendly staff, and bikes in perfect
-                  condition. Highly recommended!
+                  {/* Excellent service, super friendly staff, and bikes in perfect
+                  condition. Highly recommended! */}
+
+                  {translations[lang]?.reviews.barthThomas ||
+                    translations["en"].reviews.barthThomas}
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -392,8 +432,12 @@ const ReviewPage = () => {
                 <span className="text-Bold">Besat Ulrich Locher</span>
 
                 <span className="block text-xs tracking-tight review">
-                  Thanks to the Triumph team, especially Marta and Antonio, for
+                  {/* Thanks to the Triumph team, especially Marta and Antonio, for
                   the great service. The bike was amazing!
+                                  */}
+
+                  {translations[lang]?.reviews.besatUlrich ||
+                    translations["en"].reviews.besatUlrich}
                 </span>
               </div>
             </div>
@@ -410,10 +454,13 @@ const ReviewPage = () => {
                 </div>
                 <div className="flex-4">
                   <span className="block text-xs tracking-tight">
-                    Excellent service, with Antonio being friendly,
+                    {/* Excellent service, with Antonio being friendly,
                     professional, and knowledgeable. The bike and gear were
                     top-notch, exceeding my expectations. I'll definitely use
-                    the company again.
+                    the company again. */}
+
+                    {translations[lang]?.reviews.zdravko ||
+                      translations["en"].reviews.zdravko}
                   </span>
                 </div>
               </div>
@@ -446,8 +493,16 @@ const ReviewPage = () => {
                 />
               </div>
               <div className="flex">
-                <span className="block text-xs tracking-tight">
-                  Renting a motorcycle from Triumph Adventure Experience Spain
+                <span
+                  className="block text-xs tracking-tight"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      translations[lang]?.reviews.martineCampens ||
+                      translations["en"].reviews.martineCampens,
+                  }}
+                >
+                  {}
+                  {/* Renting a motorcycle from Triumph Adventure Experience Spain
                   was one of the highlights of my trip! The whole process was
                   straightforward and well-organized, making it easy to get on
                   the road without any hassle. The staff were incredibly
@@ -468,7 +523,7 @@ const ReviewPage = () => {
                   incredible places I wouldn’t have found on my own. If you’re
                   considering exploring Spain on two wheels, this is the place
                   to go. Professional service, great bikes, and an experience
-                  you won’t forget!
+                  you won’t forget! */}
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -505,8 +560,15 @@ const ReviewPage = () => {
                 />
               </div>
               <div className="flex">
-                <span className="block text-xs tracking-tight">
-                  I can’t thank the Triumph team enough for their incredible
+                <span
+                  className="block text-xs tracking-tight"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      translations[lang]?.reviews.robIor ||
+                      translations["en"].reviews.robIor,
+                  }}
+                >
+                  {/* I can’t thank the Triumph team enough for their incredible
                   service and attention to every detail. From start to finish,
                   everything was perfectly organized, and Marta and Antonio
                   stood out for their friendliness and professionalism. <br />
@@ -515,7 +577,7 @@ const ReviewPage = () => {
                   handled beautifully, and made every moment of the journey an
                   unforgettable experience. <br />
                   <br /> I would absolutely recommend Triumph ADV Spain to
-                  anyone looking for an amazing adventure on two wheels!
+                  anyone looking for an amazing adventure on two wheels! */}
                 </span>
               </div>
               <div className="flex items-center justify-between">
@@ -542,11 +604,19 @@ const ReviewPage = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center gap-5 md:gap-7 text-center  my-10 lg:my-20">
-          <h2 className="text-Heavy text-2xl md:text-4xl ">
-            Book your adventure today! <br /> Limited spots available.
+          <h2
+            className="text-Heavy text-2xl md:text-4xl "
+            dangerouslySetInnerHTML={{
+              __html:
+                translations[lang]?.bottomHeading ||
+                translations["en"].bottomHeading,
+            }}
+          >
+            {/* Book your adventure today! <br /> Limited spots available. */}
           </h2>
           <p className="text-Medium text-base px-12 md:px-0 md:text-2xl">
-            Apply to participate now and claim your Limited-Time discount!
+            {translations[lang]?.bottomsubText ||
+              translations["en"].bottomsubText}
           </p>
 
           <button
@@ -554,7 +624,7 @@ const ReviewPage = () => {
             onClick={navigateFn}
             id="advInaClickReview"
           >
-            Adventure in a click
+            {translations[lang]?.btnText || translations["en"].btnText}
           </button>
         </div>
       </section>

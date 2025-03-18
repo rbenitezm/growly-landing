@@ -9,51 +9,81 @@ import Excellence from "../Sections/Excellence";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
 
-const features = [
-  // "10 minutes from Málaga Airport.",
-  // "No deposits, no hassle—just book, arrive, and ride.",
-  // "From boots to helmets, top-quality gear is available.",
-  // "Bikes always under six months old.",
-  // "Top & Side Cases included.",
-  // "24/7 roadside assistance.",
-  // "Fully Comprehensive Insurance",
-  // "Free lockers & luggage storage.",
+const features = {
+  en: [
+    "Just 10 minutes from Málaga Airport.",
+    "No deposits, no hassle—simply book, arrive, and ride.",
+    "From boots to helmets, premium gear available.",
+    "Top & side cases included.",
+    "24/7 roadside assistance.",
+    "Fully comprehensive insurance.",
+    "Free lockers & luggage storage.",
+  ],
+  de: [
+    "10 Minuten vom Flughafen Málaga entfernt.",
+    "Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
+    "Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
+    "Top- & Seitenkoffer inklusive.",
+    "24/7 Pannenhilfe.",
+    "Vollkaskoversicherung.",
+    "Kostenlose Schließfächer & Gepäckaufbewahrung.",
+  ],
+};
 
-  "Just 10 minutes from Málaga Airport.",
-  "No deposits, no hassle—simply book, arrive, and ride.",
-  "From boots to helmets, premium gear available.",
-  "Top & side cases included.",
-  "24/7 roadside assistance.",
-  "Fully comprehensive insurance.",
-  "Free lockers & luggage storage.",
-];
-
-const features2 = [
-  {
-    id: 1,
-    imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Bike.png",
-    text: "Over 1,500 satisfied riders",
-  },
-  {
-    id: 2,
-    imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Check.png",
-    text: "Satisfaction Guarantee",
-  },
-  {
-    id: 3,
-    imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Map.png",
-    text: "Masterfully crafted Guidebook",
-  },
-  {
-    id: 4,
-    imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ThumbsUp.png",
-    text: "Top-of-the-Line Triumph Bikes",
-  },
-];
+const features2 = {
+  en: [
+    {
+      id: 1,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Bike.png",
+      text: "Over 1,500 satisfied riders",
+    },
+    {
+      id: 2,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Check.png",
+      text: "Satisfaction Guarantee",
+    },
+    {
+      id: 3,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Map.png",
+      text: "Masterfully crafted Guidebook",
+    },
+    {
+      id: 4,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ThumbsUp.png",
+      text: "Top-of-the-Line Triumph Bikes",
+    },
+  ],
+  de: [
+    {
+      id: 1,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Bike.png",
+      text: "Mehr als 1.500 zufriedene Fahrer",
+    },
+    {
+      id: 2,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Check.png",
+      text: "Zufriedenheitsgarantie",
+    },
+    {
+      id: 3,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Map.png",
+      text: "Meisterhaft gestaltetes Handbuch",
+    },
+    {
+      id: 4,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ThumbsUp.png",
+      text: "Top-Modelle von Triumph-Motorrädern",
+    },
+  ],
+};
 
 const Images = [
   {
@@ -73,7 +103,33 @@ const Images = [
   },
 ];
 
-const ProductPage = () => {
+const translations = {
+  en: {
+    headDesc:
+      "A transformative experience that will forever change the way you explore Andalusia. Choose between 3 or 7 magical days aboard the majestic Triumph Tiger, ready to take you into the unknown, together with our master guide, crafted by a team of experts with over 10 years of experience, revealing every secret, every curve, and every hidden treasure of this land.",
+    bannerText:
+      "Seven unforgettable days with a Triumph Tiger, plus our incredible guidebook packed with every detail to make your journey seamless and unforgettable, with a Limited-Time Discount! ",
+    beforeAfter: "Before you know it...",
+    before: "Before",
+    after: "After",
+    reviewHeading: " Real people, real results  What our customers say",
+    reviewSubTextL: " Based on 342 reviews",
+  },
+  de: {
+    headDesc:
+      "Eine transformative Erfahrung, die für immer deine Art, Andalusien zu entdecken, verändern wird. Wähle zwischen 3 oder 7 magischen Tagen auf der majestätischen Triumph Tiger, bereit, dich ins Unbekannte zu führen – begleitet von unserem Meister-Guide, entwickelt von einem Expertenteam mit über 10 Jahren Erfahrung, das dir jedes Geheimnis, jede Kurve und jeden verborgenen Schatz dieses Landes enthüllt.",
+    bannerText:
+      "Sieben unvergessliche Tage mit einer Triumph Tiger, plus unser unglaubliches Handbuch, vollgepackt mit allen Details, um deine Reise nahtlos und unvergesslich zu machen – mit einem zeitlich begrenzten Rabatt!",
+    beforeAfter: "Bevor du es merkst...",
+    before: "Bevor",
+    after: "Nach",
+    reviewHeading:
+      "Echte Menschen, echte Ergebnisse <br/> Was unsere Fahrer sagen",
+    reviewSubTextL: "Basierend auf 342 Bewertungen",
+  },
+};
+
+const ProductPage = ({ lang }) => {
   const [isModalOpen, setisModalOpen] = useState(false);
 
   useEffect(() => {
@@ -95,18 +151,19 @@ const ProductPage = () => {
     <div className="productPage  w-full min-h-screen  pt-12 lg:pt-16 ">
       {/* Product Section */}
 
-      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 ">
+      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
         {/* Carousel */}
         <div className="left flex-1 ">
           <ProductCarousel />
         </div>
 
         {/* Title and Description */}
-        <div className="right px-6 lg:px-12 flex-1 flex flex-col lg:flex-col gap-2 ">
+        <div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
           {/* Title and stars */}
           <div className="">
-            <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-wider">
-              7-Day Adventure Pack
+            <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
+              {/* 7-Day Adventure Pack */}
+              Triumph Adventure Packs
             </h2>
             <div className="flex items-center gap-1">
               <img
@@ -125,17 +182,18 @@ const ProductPage = () => {
               className="Arial md:leading-6 lg:leading-5 text-base md:text-xl lg:text-sm text-left md:text-justify
             "
             >
-              A transformative experience that will forever change the way you
+              {/* A transformative experience that will forever change the way you
               explore Andalusia. Choose between 3 or 7 magical days aboard the
               majestic Triumph Tiger, ready to take you into the unknown,
               together with our master guide, crafted by a team of experts with
               over 10 years of experience, revealing every secret, every curve,
-              and every hidden treasure of this land.
+              and every hidden treasure of this land. */}
+              {translations[lang]?.headDesc || translations["en"].headDesc}
             </p>
 
             <div className="ml-6 lg:ml-10">
               <ul className="Arial list-disc leading-tight">
-                {features.map((feature) => (
+                {features[lang].map((feature) => (
                   <li
                     key={feature.id - 1}
                     className=" text-[13px] md:text-[18px] lg:text-[13px] font-medium"
@@ -148,24 +206,24 @@ const ProductPage = () => {
           </div>
 
           <div className="package ">
-            <PackageSelector />
+            <PackageSelector lang={lang} />
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <AccordionSection />
+      <AccordionSection lang={lang} />
 
       {/* Awards Logos */}
       {/* <section className="py-8 lg:py-16 flex  justify-center gap-2 ">
         <ExcellenceLogos />
       </section> */}
 
-      <Excellence />
+      <Excellence lang={lang} />
 
       {/* Features 2 */}
       <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
-        {features2.map((feat) => (
+        {features2[lang].map((feat) => (
           <div className=" flex flex-col text-center items-center gap-4">
             <div className="img">
               <img src={feat.imgPath} alt="" className="h-10" />
@@ -184,9 +242,10 @@ const ProductPage = () => {
           7-Day Adventure Pack
         </h2>
         <span className="text-Medium text-lg lg:text-xl ">
-          Seven unforgettable days with a Triumph Tiger, plus our incredible
+          {/* Seven unforgettable days with a Triumph Tiger, plus our incredible
           guidebook packed with every detail to make your journey seamless and
-          unforgettable, with a Limited-Time Discount!{" "}
+          unforgettable, with a Limited-Time Discount!{" "} */}
+          {translations[lang]?.bannerText || translations["en"].bannerText}
         </span>
       </section>
 
@@ -194,7 +253,8 @@ const ProductPage = () => {
 
       <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
         <h2 className="text-Heavy text-2xl lg:text-3xl">
-          Before you know it...
+          {/* Before you know it... */}
+          {translations[lang]?.beforeAfter || translations["en"].beforeAfter}
         </h2>
 
         <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
@@ -202,10 +262,13 @@ const ProductPage = () => {
             <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
               <div className="flex">
                 <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
-                  Before
+                  {/* Before */}
+                  {translations[lang]?.before || translations["en"].before}
                 </span>
                 <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
-                  After
+                  {translations[lang]?.after || translations["en"].after}
+
+                  {/* After */}
                 </span>
               </div>
               <img src={img.imgPath} alt="" className=" lg:w-96" />
@@ -217,9 +280,16 @@ const ProductPage = () => {
       {/* Reviews */}
       <section className="lg:mt-5 py-10 lg:py-16 lg:px-56 flex flex-col justify-center items-center  gap-5 ">
         <div className=" w-max">
-          <h1 className="text-3xl lg:text-6xl text-Heavy text-triumph-red text-center">
-            Real people, real results <br />
-            What our customers say
+          <h1
+            className="text-2xl lg:text-6xl text-Heavy text-triumph-red text-center"
+            dangerouslySetInnerHTML={{
+              __html:
+                translations[lang]?.reviewHeading ||
+                translations["en"].reviewSubTextL,
+            }}
+          >
+            {/* {translations[lang]?.reviewHeading ||
+              translations["en"].reviewHeading} */}
           </h1>
           <div className=" flex items-center justify-center gap-2 lg:gap-6 mt-5">
             <div className="stars flex gap-1 lg:gap-2">
@@ -233,12 +303,14 @@ const ProductPage = () => {
               ))}
             </div>
             <p className="text-medium text-base lg:text-3xl">
-              Based on 342 reviews
+              {/* Based on 342 reviews */}
+              {translations[lang]?.reviewSubTextL ||
+                translations["en"].reviewSubTextL}
             </p>
           </div>
         </div>
         <div className="">
-          <LongReviews />
+          <LongReviews lang={lang} />
         </div>
       </section>
 

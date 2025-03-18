@@ -9,11 +9,13 @@ registerCoreBlocks();
 import { useDispatch } from "react-redux";
 import { setFormDataReducer } from "../redux/formDataSlice";
 
-const Question = ({ lang }) => {
+const QuestionDe = ({ lang }) => {
   const [formData, setFormData] = useState({});
   const HUBSPOT_PORTAL_ID = "20102221";
+
   // const HUBSPOT_FORM_GUID = "eacfabb0-75e0-4416-8532-de300564026c";
-  const HUBSPOT_FORM_GUID = "81b13a3b-ac72-4afa-8a81-a7c341dff40c";
+  // const HUBSPOT_FORM_GUID = "81b13a3b-ac72-4afa-8a81-a7c341dff40c";
+  const HUBSPOT_FORM_GUID = "25775c2d-883a-4631-b56e-73b2630317ff";
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -41,7 +43,11 @@ const Question = ({ lang }) => {
       console.log("All responses success");
 
       setTimeout(() => {
-        navigate("/select-package");
+        if (lang == "de") {
+          navigate("/de/select-package");
+        } else {
+          navigate("/select-package");
+        }
       }, 500);
     } catch (error) {
       console.error("Error occurred while submitting data:", error.message);
@@ -67,17 +73,17 @@ const Question = ({ lang }) => {
         formId="1"
         formObj={{
           customCSS: `
-      input,button {
-        color:"#CD192D"
-      }
-    `,
+	  input,button {
+		color:"#CD192D"
+	  }
+	`,
           blocks: [
             {
               name: "welcome-screen",
               id: "jg1401r",
               attributes: {
-                label: "Questionnaire",
-                description: "Ready for the Ride of a Lifetime? 🚀",
+                label: "Fragebogen",
+                description: "Bereit für die Fahrt Ihres Lebens? 🚀",
               },
             },
 
@@ -88,18 +94,18 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: "How do you prefer to ride?",
+                label: "Wie fahren Sie am liebsten?",
                 choices: [
                   {
-                    label: "Solo 🚀",
+                    label: "Allein 🚀",
                     value: "Beginner",
                   },
                   {
-                    label: "With a group 🏍️🏍️",
+                    label: "Mit einer Gruppe 🏍️🏍️",
                     value: "Intermediate",
                   },
                   {
-                    label: "Either works for me! 🤙",
+                    label: "Für mich geht beides! 🤙",
                     value: "Advanced",
                   },
                 ],
@@ -112,18 +118,19 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: "How would you describe your riding experience?",
+                label: "Wie würden Sie Ihr Fahrerlebnis beschreiben?",
                 choices: [
                   {
-                    label: "New to adventure riding 🌱",
+                    label: "Neu beim Abenteuer Reiten 🌱",
                     value: "New to adventure riding 🌱",
                   },
                   {
-                    label: "Confident on-road, curious off-road 🛣️",
+                    label:
+                      "Selbstbewusst auf der Straße, neugierig im Gelände 🛣️",
                     value: "Confident on-road, curious off-road 🛣️",
                   },
                   {
-                    label: "Experienced on all terrains 🌍",
+                    label: "Erfahren auf allen Terrains 🌍",
                     value: "Experienced on all terrains 🌍",
                   },
                 ],
@@ -136,22 +143,23 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: "What excites you most about this adventure?",
+                label:
+                  "Was reizt dich am meisten an diesem Abenteuer? (Wähle eines aus)",
                 choices: [
                   {
-                    label: "Epic routes & landscapes 🏔️",
+                    label: "Epische Routen und Landschaften 🏔️",
                     value: "Epic routes & landscapes 🏔️",
                   },
                   {
-                    label: "Riding a top-spec Triumph 🏍️",
+                    label: "Eine Triumph in Top-Ausstattung fahren 🏍️",
                     value: "Riding a top-spec Triumph 🏍️",
                   },
                   {
-                    label: "Meeting like-minded riders 🤝",
-                    value: "Meeting like-minded riders 🤝",
+                    label: "Treffen mit gleichgesinnten Reitern 🤝",
+                    value: "⬜ Meeting like-minded riders 🤝",
                   },
                   {
-                    label: "All of it! 🔥",
+                    label: "Alles davon! 🔥",
                     value: "All of it! 🔥",
                   },
                 ],
@@ -165,18 +173,18 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: "How often do you ride?",
+                label: "Wie oft fahren Sie?",
                 choices: [
                   {
-                    label: "Every chance I get! 🏍️",
+                    label: "Bei jeder sich bietenden Gelegenheit! 🏍️",
                     value: "Every chance I get! 🏍️",
                   },
                   {
-                    label: "A few times a month 🗓️",
+                    label: "Ein paar Mal im Monat 🗓️",
                     value: "A few times a month 🗓️",
                   },
                   {
-                    label: "Occasionally, but I want more! 😎",
+                    label: "Gelegentlich, aber ich will mehr! 😎",
                     value: "Occasionally, but I want more! 😎",
                   },
                 ],
@@ -189,7 +197,7 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: ". Do you have a full A license or an A2 license?",
+                label: "Haben Sie eine volle A-Lizenz oder eine A2-Lizenz?",
                 choices: [
                   {
                     label: "A License ✅ ",
@@ -209,15 +217,15 @@ const Question = ({ lang }) => {
                 required: true,
                 multiple: false,
                 verticalAlign: true,
-                label: "What’s your ideal trip length?",
+                label: "Was ist Ihre ideale Reisedauer?",
                 choices: [
                   {
-                    label: "A full week of adventure (7 days) 🏕️",
-                    value: "A full week of adventure (7 days)",
+                    label: "Eine ganze Woche voller Abenteuer (7 Tage) 🏕️",
+                    value: "A full week of adventure (7 days) 🏕️",
                   },
                   {
-                    label: "A long weekend (3-4 days) 🏁",
-                    value: "A long weekend (3-4 days)",
+                    label: "Ein langes Wochenende (3-4 Tage) 🏁",
+                    value: "A long weekend (3-4 days) 🏁",
                   },
                 ],
               },
@@ -228,9 +236,9 @@ const Question = ({ lang }) => {
               attributes: {
                 classnames: "first-block",
                 required: true,
-                label: "Where are you based?",
+                label: "Wo sind Sie ansässig?",
                 placeholder:
-                  "So we can suggest the best travel options for you.",
+                  "So können wir Ihnen die besten Reisemöglichkeiten vorschlagen.",
               },
             },
             {
@@ -239,8 +247,9 @@ const Question = ({ lang }) => {
               attributes: {
                 classnames: "first-block",
                 required: true,
-                label: "What's your e-mail address?",
-                placeholder: "So we can send you all the details!",
+                label: "Wie lautet Ihre E-Mail?",
+                placeholder:
+                  "So können wir Ihnen alle Details zukommen lassen!",
               },
             },
           ],
@@ -366,23 +375,4 @@ const Question = ({ lang }) => {
   );
 };
 
-export default Question;
-
-// const sendDataToApi = async (updatedFormData) => {
-//   try {
-//     const response = await axios.post(endpoint, updatedFormData, {
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     });
-//     console.log("Form submitted successfully:", response.data);
-//   } catch (error) {
-//     console.error(
-//       "Error submitting form:",
-//       error.response?.data || error.message
-//     );
-//   }
-//   setTimeout(() => {
-//     navigate("/select-package");
-//   }, 1000);
-// };
+export default QuestionDe;
