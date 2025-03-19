@@ -35,7 +35,9 @@ const VideoEmbed = () => {
       ></iframe> */}
 
       <iframe
-        src="https://fast.wistia.net/embed/iframe/7ilkqh3alv"
+        // src="https://fast.wistia.net/embed/iframe/7ilkqh3alv"
+        src="https://fast.wistia.net/embed/iframe/hfxtljjzo3"
+        // src="https://marketing-triumphadventure.wistia.com/medias/hfxtljjzo3?embedType=web_component&seo=true&videoWidth=960"
         title="Wistia Video"
         allow="autoplay; fullscreen"
         allowFullScreen
