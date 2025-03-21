@@ -11,22 +11,37 @@ import Button from "../components/Button";
 
 const features = {
   en: [
-    "Just 10 minutes from Málaga Airport.",
-    "No deposits, no hassle—simply book, arrive, and ride.",
-    "From boots to helmets, premium gear available.",
-    "Top & side cases included.",
-    "24/7 roadside assistance.",
-    "Fully comprehensive insurance.",
-    "Free lockers & luggage storage.",
+    // "Just 10 minutes from Málaga Airport.",
+    // "No deposits, no hassle—simply book, arrive, and ride.",
+    // "From boots to helmets, premium gear available.",
+    // "Top & side cases included.",
+    // "24/7 roadside assistance.",
+    // "Fully comprehensive insurance.",
+    // "Free lockers & luggage storage.",
+
+    "✅ Just 10 minutes from Málaga Airport.",
+    "✅ No deposits, no hassle—simply book, arrive, and ride.",
+    "✅ Top & side cases included.",
+    "✅ Free lockers & luggage storage.",
+    "✅ 24/7 roadside assistance.",
+    "✅ Fully comprehensive insurance.",
+    "✅ From boots to helmets, premium gear available.",
   ],
   de: [
-    "10 Minuten vom Flughafen Málaga entfernt.",
-    "Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
-    "Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
-    "Top- & Seitenkoffer inklusive.",
-    "24/7 Pannenhilfe.",
-    "Vollkaskoversicherung.",
-    "Kostenlose Schließfächer & Gepäckaufbewahrung.",
+    // "10 Minuten vom Flughafen Málaga entfernt.",
+    // "Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
+    // "Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
+    // "Top- & Seitenkoffer inklusive.",
+    // "24/7 Pannenhilfe.",
+    // "Vollkaskoversicherung.",
+    // "Kostenlose Schließfächer & Gepäckaufbewahrung.",
+    "✅ 10 Minuten vom Flughafen Málaga entfernt.",
+    "✅ Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
+    "✅ Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
+    "✅ Top- & Seitenkoffer inklusive.",
+    "✅ 24/7 Pannenhilfe.",
+    "✅ Vollkaskoversicherung.",
+    "✅ Kostenlose Schließfächer & Gepäckaufbewahrung.",
   ],
 };
 
@@ -107,6 +122,7 @@ const translations = {
   en: {
     headDesc:
       "A transformative experience that will forever change the way you explore Andalusia. Choose between 3 or 7 magical days aboard the majestic Triumph Tiger, ready to take you into the unknown, together with our master guide, crafted by a team of experts with over 10 years of experience, revealing every secret, every curve, and every hidden treasure of this land.",
+    boldPoint: " Master Guide Travelbook",
     bannerText:
       "Seven unforgettable days with a Triumph Tiger, plus our incredible guidebook packed with every detail to make your journey seamless and unforgettable, with a Limited-Time Discount! ",
     beforeAfter: "Before you know it...",
@@ -118,6 +134,7 @@ const translations = {
   de: {
     headDesc:
       "Eine transformative Erfahrung, die für immer deine Art, Andalusien zu entdecken, verändern wird. Wähle zwischen 3 oder 7 magischen Tagen auf der majestätischen Triumph Tiger, bereit, dich ins Unbekannte zu führen – begleitet von unserem Meister-Guide, entwickelt von einem Expertenteam mit über 10 Jahren Erfahrung, das dir jedes Geheimnis, jede Kurve und jeden verborgenen Schatz dieses Landes enthüllt.",
+    boldPoint: " Master Guide Reisebuch",
     bannerText:
       "Sieben unvergessliche Tage mit einer Triumph Tiger, plus unser unglaubliches Handbuch, vollgepackt mit allen Details, um deine Reise nahtlos und unvergesslich zu machen – mit einem zeitlich begrenzten Rabatt!",
     beforeAfter: "Bevor du es merkst...",
@@ -177,7 +194,7 @@ const ProductPage = ({ lang }) => {
           </div>
 
           {/* Description and points */}
-          <div className="desc flex gap-4 flex-col">
+          <div className="desc flex gap-3 flex-col">
             <p
               className="Arial md:leading-6 lg:leading-5 text-base md:text-xl lg:text-sm text-left md:text-justify
             "
@@ -190,13 +207,20 @@ const ProductPage = ({ lang }) => {
               and every hidden treasure of this land. */}
               {translations[lang]?.headDesc || translations["en"].headDesc}
             </p>
-
-            <div className="ml-6 lg:ml-10">
-              <ul className="Arial list-disc leading-tight">
+            {/* ml-6 lg:ml-10 */}
+            <div className="ml-0 lg:ml-6">
+              <li className=" list-none text-[14px] md:text-[18px] lg:text-[14px] text-Bold">
+                ✅
+                <span className="text-[16px] md:text-[18px] lg:text-[16px] text-Bold">
+                  {translations[lang]?.boldPoint ||
+                    translations["en"].boldPoint}
+                </span>
+              </li>
+              <ul className="Arial list-none  leading-tight">
                 {features[lang].map((feature) => (
                   <li
                     key={feature.id - 1}
-                    className=" text-[13px] md:text-[18px] lg:text-[13px] font-medium"
+                    className="text-[14px] md:text-[18px] lg:text-[14px] font-medium"
                   >
                     {feature}
                   </li>
@@ -205,7 +229,7 @@ const ProductPage = ({ lang }) => {
             </div>
           </div>
 
-          <div className="package ">
+          <div className="package mt-2 lg:mt-2">
             <PackageSelector lang={lang} />
           </div>
         </div>

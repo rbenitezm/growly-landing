@@ -2,7 +2,7 @@ import React from "react";
 
 const translations = {
   en: {
-    heading: "Why follow when you can lead?",
+    heading: "Book with confidence,",
     brokenHeading: "Backed by our Adventure Guarantee",
     text: " If your adventure doesn’t exceed expectations, we’ll refund you—no questions asked.",
   },
@@ -12,6 +12,9 @@ const translations = {
     text: "Wenn Ihr Abenteuer nicht Ihre Erwartungen übertrifft, erstatten wir Ihnen den Betrag—ohne Rückfragen.",
   },
 };
+
+// Book with confidence,
+// Backed by our Adventure Guarantee
 
 const Guarantee = ({ lang }) => {
   return (

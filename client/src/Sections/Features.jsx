@@ -79,7 +79,7 @@ const Facilities = {
 
 const translations = {
   en: {
-    text: "why follow when you can lead?",
+    text: "Best Motorcycle Tourism Centre in Europe",
   },
   de: {
     text: "Bestes Zentrum für Motorradtourismus in Europa",
