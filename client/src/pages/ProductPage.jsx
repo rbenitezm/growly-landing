@@ -11,21 +11,22 @@ import Button from "../components/Button";
 
 const features = {
   en: [
-    // "Just 10 minutes from Málaga Airport.",
-    // "No deposits, no hassle—simply book, arrive, and ride.",
-    // "From boots to helmets, premium gear available.",
-    // "Top & side cases included.",
-    // "24/7 roadside assistance.",
-    // "Fully comprehensive insurance.",
-    // "Free lockers & luggage storage.",
-
-    "✅ Just 10 minutes from Málaga Airport.",
-    "✅ No deposits, no hassle—simply book, arrive, and ride.",
-    "✅ Top & side cases included.",
-    "✅ Free lockers & luggage storage.",
-    "✅ 24/7 roadside assistance.",
-    "✅ Fully comprehensive insurance.",
-    "✅ From boots to helmets, premium gear available.",
+    "✅ Designed for parents of children aged 2 to 12.",
+    "✅ Practical tools you can apply from day one.",
+    "✅ Step-by-step guidance from certified mentors.",
+    "✅ Online content accessible anytime, anywhere.",
+    "✅ Community of like-minded families for support.",
+    "✅ Emotionally safe parenting—no punishments or yelling.",
+    "✅ Proven method with hundreds of family success stories."
+  ],
+  es: [
+    "✅ Diseñado para madres y padres con hijos de 2 a 12 años.",
+    "✅ Herramientas prácticas para aplicar desde el primer día.",
+    "✅ Acompañamiento paso a paso con mentores certificados.",
+    "✅ Acceso online desde cualquier lugar, en cualquier momento.",
+    "✅ Comunidad de familias con los mismos valores.",
+    "✅ Crianza emocionalmente segura—sin castigos ni gritos.",
+    "✅ Método probado con cientos de historias de éxito familiar."
   ],
   de: [
     // "10 Minuten vom Flughafen Málaga entfernt.",
@@ -119,17 +120,25 @@ const Images = [
 ];
 
 const translations = {
-  en: {
-    headDesc:
-      "A transformative experience that will forever change the way you explore Andalusia. Choose between 3 or 7 magical days aboard the majestic Triumph Tiger, ready to take you into the unknown, together with our master guide, crafted by a team of experts with over 10 years of experience, revealing every secret, every curve, and every hidden treasure of this land.",
-    boldPoint: " Master Guide Travelbook",
-    bannerText:
-      "Seven unforgettable days with a Triumph Tiger, plus our incredible guidebook packed with every detail to make your journey seamless and unforgettable, with a Limited-Time Discount! ",
+  "en": {
+    headDesc: "A transformative experience that will forever change the way you connect with your children. Choose a 6-month guided path to strengthen your family bond, through the proven Growly method—created by experts in positive discipline and emotional education.",
+    boldPoint: " Step-by-Step Family Guide",
+    bannerText: "Six powerful months to create harmony, understanding, and trust at home. With practical tools, expert mentoring, and a method that really works—for a limited-time only!",
     beforeAfter: "Before you know it...",
-    before: "Before",
-    after: "After",
-    reviewHeading: " Real people, real results  What our customers say",
-    reviewSubTextL: " Based on 342 reviews",
+    before: "Before: You feel lost, overwhelmed, and disconnected.",
+    after: "After: You lead with love and clarity, building a lifelong bond with your child.",
+    reviewHeading: "Real families, real change – What our parents are saying",
+    reviewSubTextL: "Based on 342 verified transformations"
+  },
+  es: {
+    "headDesc": "Una experiencia transformadora que cambiará para siempre la forma en la que educas y te relacionas con tus hijos. Recorre un camino de 6 meses guiado paso a paso, con el método Growly, diseñado por expertos en disciplina positiva y educación emocional.",
+    "boldPoint": " Guía Familiar Paso a Paso",
+    "bannerText": "Seis meses para transformar tu hogar con herramientas prácticas, acompañamiento experto y un método probado. Todo con un descuento por tiempo limitado.",
+    "beforeAfter": "Antes de que te des cuenta...",
+    "before": "Antes: Te sentías perdido, agotado y desconectado.",
+    "after": "Después: Lideras con amor y claridad, construyendo un vínculo que dura toda la vida.",
+    "reviewHeading": "Familias reales, cambios reales – Lo que dicen los padres",
+    "reviewSubTextL": "Basado en 342 transformaciones verificadas"
   },
   de: {
     headDesc:
@@ -143,7 +152,7 @@ const translations = {
     reviewHeading:
       "Echte Menschen, echte Ergebnisse <br/> Was unsere Fahrer sagen",
     reviewSubTextL: "Basierend auf 342 Bewertungen",
-  },
+  },  
 };
 
 const ProductPage = ({ lang }) => {
@@ -179,8 +188,8 @@ const ProductPage = ({ lang }) => {
           {/* Title and stars */}
           <div className="">
             <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
-              {/* 7-Day Adventure Pack */}
-              Triumph Adventure Packs
+              {/* Pack Infalible */}
+              Growly - Pack Infalible de Natacha Foss
             </h2>
             <div className="flex items-center gap-1">
               <img
@@ -263,7 +272,7 @@ const ProductPage = ({ lang }) => {
 
       <section className="mt-5 py-16 px-8 lg:px-56 flex flex-col justify-center items-center gap-5 bg-triumph-black text-white text-center ">
         <h2 className="text-Heavy text-2xl lg:text-3xl">
-          7-Day Adventure Pack
+          6 Meses Pack Infalible
         </h2>
         <span className="text-Medium text-lg lg:text-xl ">
           {/* Seven unforgettable days with a Triumph Tiger, plus our incredible

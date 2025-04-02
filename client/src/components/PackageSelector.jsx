@@ -5,23 +5,6 @@ import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
 import { trackEvent } from "../api/FacebookPixel";
 
-// const packages = [
-//   {
-//     id: 1,
-//     name: "A2",
-//     title: "Adventure pack for A2 Riders",
-//     price: "749€",
-//     crossedPrice: "850€",
-//   },
-//   {
-//     id: 2,
-//     name: "A",
-//     title: "Adventure pack for A Riders",
-//     price: "788€",
-//     crossedPrice: "896€",
-//   },
-// ];
-
 const packages = {
   en: [
     {
@@ -84,10 +67,16 @@ const packages = {
 
 const translations = {
   en: {
-    termsText: "Terms and conditions of the daily rental agreement",
-    depositText: "No Deposit Required",
-    guaranteeText: "Money Back Guarantee",
-    btnText: "Adventure in a click",
+    "termsText": "Terms and conditions of the Growly family transformation program",
+    "depositText": "No Commitment Upfront",
+    "guaranteeText": "100% Satisfaction Guarantee",
+    "btnText": "Start Transforming Today"
+  },
+  es: {
+    "termsText": "Términos y condiciones del programa de transformación familiar Growly",
+    "depositText": "Sin compromiso inicial",
+    "guaranteeText": "Garantía de satisfacción 100%",
+    "btnText": "Empieza tu transformación hoy"
   },
   de: {
     termsText: "Allgemeine Geschäftsbedingungen des Tagesmietvertrags",
@@ -122,9 +111,6 @@ const PackageSelector = ({ lang }) => {
 
   return (
     <div className="flex flex-col gap-4 lg:gap-2  px-0 lg:px-6">
-      <h2 className="text-Bold text-xl md:text-2xl lg:text-lg">
-        Select a Package:
-      </h2>
       <div className="package-selector flex flex-col gap-4">
         {packages[lang].map((pkg) => (
           <ExpandablePackageCard
