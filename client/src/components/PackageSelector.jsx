@@ -9,30 +9,30 @@ const packages = {
   en: [
     {
       id: 1,
-      name: "7-Day",
-      duration: 7,
-      title: "7-Day Adventure Pack",
-      price: "788€",
-      crossedPrice: "898€",
-      content: "Covering the best landscapes over a full week!",
-      advGuarantee: "Adventure Guarantee included",
+      name: "6-Month",
+      duration: 6,
+      title: "Natacha Foss' Foolproof 6-Month Pack",
+      price: "188€",
+      crossedPrice: "249€",
+      content: "Step-by-step method to build emotional connection and positive discipline at home.",
+      advGuarantee: "Satisfaction Guarantee included",
       discount: "Limited-Time discount",
-      imglink:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/7daypack.webp",
-    },
+      imglink: "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/logos/growly-pack-en.png"
+    }
+  ],
+  es: [
     {
-      id: 2,
-      name: "3-Day",
-      duration: 3,
-      title: "3-Day Adventure Pack",
-      price: "389€",
-      crossedPrice: "489€",
-      content: "A thrilling short escape, perfect for a long weekend ride!",
-      advGuarantee: "Adventure Guarantee included",
-      discount: "Limited-Time discount",
-      imglink:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/3daypack.webp",
-    },
+      id: 1,
+      name: "6 Meses",
+      duration: 6,
+      title: "Pack Infalible de Disciplina Positiva en 6 Meses",
+      price: "189$",
+      crossedPrice: "500$",
+      content: "Un método paso a paso para crear conexión emocional y disciplina positiva en casa.",
+      advGuarantee: "Incluye Garantía de Satisfacción",
+      discount: "Descuento por tiempo limitado",
+      imglink: "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/logos/growly-pack.png"
+    }
   ],
   de: [
     {
@@ -47,36 +47,23 @@ const packages = {
       discount: "Zeitlich begrenzter Rabatt",
       imglink:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/7daypack.webp",
-    },
-    {
-      id: 2,
-      name: "3-Day",
-      duration: 3,
-      title: "3-Day Adventure Pack",
-      price: "389€",
-      crossedPrice: "489€",
-      content:
-        "Ein aufregender Kurztrip, perfekt für eine lange Wochenendfahrt!",
-      advGuarantee: "Abenteuergarantie inklusive.",
-      discount: "Zeitlich begrenzter Rabatt",
-      imglink:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/packageimgs/3daypack.webp",
-    },
+    }
+    // TODO: Cambiar el logo de Growly Transformation
   ],
 };
 
 const translations = {
   en: {
-    "termsText": "Terms and conditions of the Growly family transformation program",
-    "depositText": "No Commitment Upfront",
-    "guaranteeText": "100% Satisfaction Guarantee",
-    "btnText": "Start Transforming Today"
+    termsText: "Terms and conditions of the Growly family transformation program",
+    depositText: "No Commitment Upfront",
+    guaranteeText: "100% Satisfaction Guarantee",
+    btnText: "Start Transforming Today"
   },
   es: {
-    "termsText": "Términos y condiciones del programa de transformación familiar Growly",
-    "depositText": "Sin compromiso inicial",
-    "guaranteeText": "Garantía de satisfacción 100%",
-    "btnText": "Empieza tu transformación hoy"
+    termsText: "Términos y condiciones del programa de transformación familiar Growly",
+    depositText: "Sin compromiso inicial",
+    guaranteeText: "Garantía de satisfacción 100%",
+    btnText: "Empieza tu transformación hoy"
   },
   de: {
     termsText: "Allgemeine Geschäftsbedingungen des Tagesmietvertrags",

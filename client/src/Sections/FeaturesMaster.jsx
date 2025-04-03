@@ -127,7 +127,7 @@ const translations = {
   },
 };
 
-const Features = ({ lang }) => {
+const FeaturesMaster = ({ lang }) => {
   return (
     <section className="features w-full h-full flex py-12 lg:py-16 lg:justify-center items-center flex-col gap-2 lg:gap-0 ">
       <div className="">
@@ -165,4 +165,4 @@ const Features = ({ lang }) => {
   );
 };
 
-export default Features;
+export default FeaturesMaster;

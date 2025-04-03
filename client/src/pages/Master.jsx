@@ -3,9 +3,9 @@ import Button from "../components/Button";
 import Card from "../components/Card";
 import BikeCard from "../components/BikeCard";
 import Carousel from "../components/Carousel";
-import Hero from "../Sections/Hero";
-import Divider from "../Sections/Divider";
-import Features from "../Sections/Features";
+import HeroMaster from "../Sections/HeroMaster";
+import DividerMaster from "../Sections/Divider";
+import FeaturesMaster from "../Sections/FeaturesMaster";
 import Features2 from "../Sections/Features2";
 import CarouselSection from "../Sections/CarouselSection";
 import Reviews from "../Sections/Reviews";
@@ -13,16 +13,12 @@ import ContactSection from "../Sections/ContactSection";
 import Footer from "../Sections/Footer";
 import Excellence from "../Sections/Excellence";
 import Guarantee from "../Sections/Guarantee";
-import LastPlaces from "../Sections/LastPlaces";
 
 const Home = ({ lang }) => {
   return (
     <div className="w-full h-max ">
       {/* Hero Section */}
-      <Hero lang={lang} />
-
-      {/* Divider */}
-      <LastPlaces lang={lang} />
+      <HeroMaster lang={lang} />
 
       {/* Footer */}
       <Footer />

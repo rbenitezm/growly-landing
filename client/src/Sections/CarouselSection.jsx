@@ -6,11 +6,18 @@ import { trackEvent } from "../api/FacebookPixel";
 
 const translations = {
   en: {
-    heading: "Explore Andalusia",
-    brokenHeading: "Top-tier range of Triumph models",
-    text: "Book your adventure today! Limited spots available.",
-    subText: "Apply to participate now and claim your Limited-Time discount!",
-    participateBtn: "APPLY TO PARTICIPATE",
+    heading: "Transform your parenting",
+    brokenHeading: "With the Growly method, designed for real families",
+    text: "Start your transformation today! Limited spots available.",
+    subText: "Apply now and access our Limited-Time discount!",
+    participateBtn: "APPLY TO JOIN"
+  },
+  es: {
+    heading: "Transforma tu crianza",
+    brokenHeading: "Con el método Growly, pensado para familias reales",
+    text: "Empieza tu transformación hoy mismo. ¡Plazas limitadas!",
+    subText: "Aplica ahora y accede a nuestro descuento por tiempo limitado.",
+    participateBtn: "APLICA PARA UNIRTE"
   },
   de: {
     heading: "Entdecken Sie Andalusien",
@@ -22,36 +29,43 @@ const translations = {
   },
 };
 
+
 const CarouselData = [
   {
     id: 1,
-    title: "Tiger 1200 GT Pro",
+    title: "Improvisación constante",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Tiger-1200-GT-Pro.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/growly-improvisacion.png",
   },
   {
     id: 2,
-    title: "Triumph Tiger 850",
+    title: "Cansancio emocional",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-850.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/cansancio-emocional.png",
   },
   {
     id: 3,
-    title: "Triumph Tiger 900 GT PRO",
+    title: "Desesperación",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-900-GT-PRO.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/desesperacion.png",
   },
   {
     id: 4,
-    title: "Triumph TIGER 900 RALLY PRO",
+    title: "Culpa",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-TIGER-900-RALLY-PRO.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/culpa.png",
   },
   {
     id: 5,
-    title: "Triumph Tiger 1200 GT PRO",
+    title: "Tristeza",
     imagePath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Carouselimages/Triumph-Tiger-1200-GT-PRO.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/tristeza.png",
+  },
+  {
+    id: 6,
+    title: "Incertidumbre",
+    imagePath:
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/incertidumbre.png"
   },
 ];
 const CarouselSection = ({ lang }) => {
@@ -66,6 +80,9 @@ const CarouselSection = ({ lang }) => {
       if (lang == "de") {
         window.scrollTo(0, 0);
         navigate("/de/quiz");
+      } else if (lang == "es") {
+        window.scrollTo(0, 0);
+        navigate("/es/quiz");
       } else {
         window.scrollTo(0, 0);
         navigate("/quiz");

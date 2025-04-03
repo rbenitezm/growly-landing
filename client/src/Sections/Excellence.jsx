@@ -3,7 +3,10 @@ import ExcellenceLogos from "../components/ExcellenceLogos";
 
 const translations = {
   en: {
-    text: "Excellence in every ride",
+    text: "Excellence in every step of parenting"
+  },
+  es: {
+    text: "Excelencia en cada paso de la crianza"
   },
   de: {
     text: "Exzellenz bei jeder Fahrt",
@@ -19,7 +22,7 @@ const Excellence = ({ lang }) => {
           {translations[lang]?.text || translations["en"].text}
         </h1>
       </div>
-      <ExcellenceLogos />
+      {/*<ExcellenceLogos />*/}
     </section>
   );
 };

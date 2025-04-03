@@ -186,9 +186,9 @@ const SevenDayRangePicker = ({ selectedPackage, lang }) => {
       >
         <div className="w-full flex flex-col justify-center text-center">
           <h2 className="text-3xl lg:text-2xl font-semibold text-gray-800">
-            BOOK NOW!
+            ÚNITE A LA COMUNIDAD!
           </h2>
-          <span className="uppercase">Best price guaranteed</span>
+          <span className="uppercase">Mejor precio garantizado</span>
         </div>
 
         <div className="flex flex-col w-full  px-4 lg:px-0">
@@ -196,7 +196,7 @@ const SevenDayRangePicker = ({ selectedPackage, lang }) => {
             htmlFor=""
             className="text-DemiBold uppercase text-triumph-red text-sm"
           >
-            Enter your email*
+            Introduce tu Email*
           </label>
 
           <input
@@ -213,7 +213,7 @@ const SevenDayRangePicker = ({ selectedPackage, lang }) => {
         </div>
 
         <DatePicker
-          label="Adventure Start Date"
+          label="Comienza el curso"
           value={startDate}
           onChange={handleStartDateChange}
           disablePast

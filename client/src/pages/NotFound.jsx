@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const translations = {
   en: {
-    text: "Our dev team is on its way on their Triumph to fix this.",
+    text: "Our team is working with love and patience to bring everything back on track. We'll be back soon!"
+  },
+  es: {
+    text: "Nuestro equipo está trabajando con cariño y paciencia para que todo vuelva a la normalidad. ¡Volvemos enseguida!"
   },
   de: {
     text: "Unser Entwicklerteam ist mit seinem Triumph unterwegs, um das Problem zu beheben.",
@@ -19,6 +22,8 @@ const NotFound = ({ lang }) => {
     // let link = "";
     if (lang == "de") {
       navigate("/de");
+    } else if (lang == "es") {
+      navigate("/es");
     } else {
       navigate("/");
     }

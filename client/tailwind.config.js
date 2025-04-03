@@ -21,7 +21,9 @@ export default {
       },
       backgroundImage: {
         ContactImage:
-          "url('https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ContactBG.webp')",
+        
+   
+          "url('https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/growly-backgroundContact.png')",
       },
     },
   },

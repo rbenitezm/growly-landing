@@ -3,20 +3,39 @@ import React from "react";
 const translations = {
   en: {
     heading: "Stories That Inspire",
-    subHeading: "Based on 342 reviews",
-    garyTaylor:
-      "Triumph Adventure offers an unforgettable motorcycle adventure. I can't wait to go back!",
-    mattGreene:
-      "What a crew. What a place. Fantastic service, great bikes at really good prices. Brilliant team, this is why motorcyclists are just the best.",
-    andyAndrej:
-      "Perfect Service, extremely nice and helpful staff, motorcycles in very good shape. Highly recommended.",
-    federicoRicci:
-      "Many thanks to all the Triumph staff for the excellent service and attentiveness, especially to Marta and Antonio. The bike was excellent—I really enjoyed it!",
-    charlottePrescott: "Great experience, helpful staff.",
-    alexZolotov:
-      "I had a wonderful experience renting a motorcycle from this shop. The bike was new and capable. I had a chance to visit many cool places in Andalusia. The stuff in the shop was nice and helpful. Many thanks :)",
-    zdravko:
-      "Excellent service, with Antonio being friendly, professional, and knowledgeable. The bike and gear were top-notch, exceeding my expectations. I'll definitely use the company again.",
+    subHeading: "Based on 342 family transformations",
+    lauraMartinez:
+      "Growly has changed everything. Now I parent with calm and confidence—and I see the results every day.",
+    carlosRodriguez:
+      "It gave me the tools I never knew I needed. My connection with my son is stronger than ever.",
+    sandraNunez:
+      "What a team. What a method. Clear, respectful, practical. Parenting stopped being a struggle.",
+    javierMedina:
+      "Growly helped us stop arguing and start parenting as a team. It brought peace to our home.",
+    beatrizMendez:
+      "I thought I was failing as a mom. Now I feel proud, empowered, and connected to my kids.",
+    nataliaSuarez:
+      "The mentors were always there, the content was clear, and the community made me feel I’m not alone.",
+    alejandraCampos:
+      "If you're tired of yelling and guilt, this is the place. Growly helped me raise my kids with love and limits."
+  },
+  es: {
+    heading: "Historias que Inspiran",
+    subHeading: "Basado en 342 transformaciones familiares",
+    lauraMartinez:
+      "Growly lo cambió todo. Ahora educo con calma y seguridad, y lo noto cada día en casa.",
+    carlosRodriguez:
+      "Me dio las herramientas que nunca nadie me enseñó. Hoy tengo una conexión real con mi hijo.",
+    sandraNunez:
+      "Qué equipo. Qué método. Claro, respetuoso y práctico. La crianza dejó de ser una lucha.",
+    javierMedina:
+      "Growly nos ayudó a dejar de discutir y empezar a educar como un equipo. Trajo paz a nuestro hogar.",
+    beatrizMendez:
+      "Sentía que estaba fallando como madre. Ahora me siento orgullosa, segura y conectada con mis hijos.",
+    nataliaSuarez:
+      "Los mentores siempre estuvieron ahí, el contenido fue claro, y la comunidad me hizo sentir acompañada.",
+    alejandraCampos:
+      "Si estás cansada de los gritos y la culpa, este es tu lugar. Growly me enseñó a educar con amor y límites."
   },
   de: {
     heading: "Geschichten, die inspirieren",
@@ -97,12 +116,12 @@ const Reviews = ({ lang }) => {
                 />
               ))}
             </div>
-            <span className="text-Bold">Gary Taylor</span>
+            <span className="text-Bold">Laura Martinez</span>
 
             <span className="block text-sm tracking-tight review">
               {/* Triumph Adventure offers an unforgettable motorcycle adventure. I
               can't wait to go back! */}
-              {translations[lang]?.garyTaylor || translations["en"].garyTaylor}
+              {translations[lang]?.lauraMartinez || translations["en"].lauraMartinez}
             </span>
           </div>
         </div>
@@ -123,8 +142,8 @@ const Reviews = ({ lang }) => {
                   {/* What a crew. What a place. Fantastic service, great bikes at
                   really good prices. Brilliant team, this is why motorcyclists
                   are just the best. */}
-                  {translations[lang]?.mattGreene ||
-                    translations["en"].mattGreene}
+                  {translations[lang]?.carlosRodriguez ||
+                    translations["en"].carlosRodriguez}
                 </span>
               </div>
             </div>
@@ -136,7 +155,7 @@ const Reviews = ({ lang }) => {
                   className="h-12"
                 />
 
-                <span className="text-Bold text-sm">Matt Greene</span>
+                <span className="text-Bold text-sm">Carlos Rodriguez</span>
               </div>
 
               <img
@@ -161,8 +180,8 @@ const Reviews = ({ lang }) => {
                 <span className="block text-sm tracking-tight">
                   {/* Perfect Service, extremely nice and helpful staff, motorcycles
                   in very good shape. Highly recommended. */}
-                  {translations[lang]?.andyAndrej ||
-                    translations["en"].andyAndrej}
+                  {translations[lang]?.sandraNunez ||
+                    translations["en"].sandraNunez}
                 </span>
               </div>
             </div>
@@ -174,7 +193,7 @@ const Reviews = ({ lang }) => {
                   className="h-12"
                 />
 
-                <span className="text-Bold text-sm">Andy Andrej</span>
+                <span className="text-Bold text-sm">Sandra Nuñez</span>
               </div>
 
               <img
@@ -200,8 +219,8 @@ const Reviews = ({ lang }) => {
                   {/* Many thanks to all the Triumph staff for the excellent service
                   and attentiveness, especially to Marta and Antonio. The bike
                   was excellent—I really enjoyed it! */}
-                  {translations[lang]?.federicoRicci ||
-                    translations["en"].federicoRicci}
+                  {translations[lang]?.javierMedina ||
+                    translations["en"].javierMedina}
                 </span>
               </div>
             </div>
@@ -213,7 +232,7 @@ const Reviews = ({ lang }) => {
                   className="h-12"
                 />
 
-                <span className="text-Bold text-sm">Federico Ricci</span>
+                <span className="text-Bold text-sm">Javier Medina</span>
               </div>
 
               <img
@@ -253,12 +272,12 @@ const Reviews = ({ lang }) => {
                 />
               ))}
             </div>
-            <span className="text-Bold">Charlotte Prescott</span>
+            <span className="text-Bold">Beatriz Mendez</span>
 
             <span className="block text-Regular text-xs review">
               {/* Great experience, helpful staff. */}
-              {translations[lang]?.charlottePrescott ||
-                translations["en"].charlottePrescott}
+              {translations[lang]?.beatrizMendez ||
+                translations["en"].beatrizMendez}
             </span>
           </div>
         </div>
@@ -279,8 +298,8 @@ const Reviews = ({ lang }) => {
                 shop. The bike was new and capable. I had a chance to visit many
                 cool places in Andalusia. The stuff in the shop was nice and
                 helpful. Many thanks :) */}
-                {translations[lang]?.alexZolotov ||
-                  translations["en"].alexZolotov}
+                {translations[lang]?.nataliaSuarez ||
+                  translations["en"].nataliaSuarez}
               </span>
             </div>
           </div>
@@ -292,7 +311,7 @@ const Reviews = ({ lang }) => {
                 className="h-12"
               />
 
-              <span className="text-Bold text-sm">Alex Zolotov</span>
+              <span className="text-Bold text-sm">Natalia Suarez</span>
             </div>
 
             <img
@@ -331,7 +350,7 @@ const Reviews = ({ lang }) => {
                 />
               ))}
             </div>
-            <span className="text-Bold">Jack williams</span>
+            <span className="text-Bold">Alejandra Campos</span>
           </div>
         </div>
         {/* div 8 */}
@@ -351,7 +370,7 @@ const Reviews = ({ lang }) => {
                 and knowledgeable. The bike and gear were top-notch, exceeding
                 my expectations. I'll definitely use the company again. */}
 
-                {translations[lang]?.zdravko || translations["en"].zdravko}
+                {translations[lang]?.alejandraCampos || translations["en"].alejandraCampos}
               </span>
             </div>
           </div>
@@ -363,7 +382,7 @@ const Reviews = ({ lang }) => {
                 className="h-12"
               />
 
-              <span className="text-Bold text-sm">Zdravko Zdravkov</span>
+              <span className="text-Bold text-sm">Alejandra Campos</span>
             </div>
 
             <img

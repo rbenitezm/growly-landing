@@ -45,6 +45,8 @@ const QuestionDe = ({ lang }) => {
       setTimeout(() => {
         if (lang == "de") {
           navigate("/de/select-package");
+        } else if (lang == "es") {
+          navigate("/es/select-package");
         } else {
           navigate("/select-package");
         }

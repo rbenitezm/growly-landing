@@ -2,9 +2,14 @@ import React from "react";
 
 const translations = {
   en: {
-    heading: "Book with confidence,",
-    brokenHeading: "Backed by our Adventure Guarantee",
-    text: " If your adventure doesn’t exceed expectations, we’ll refund you—no questions asked.",
+    heading: "Join with confidence,",
+    brokenHeading: "Backed by our Growly Guarantee",
+    text: "If the method doesn’t meet your expectations, we’ll refund you—no questions asked."
+  },
+  es: {
+    heading: "Únete con confianza,",
+    brokenHeading: "Respaldado por nuestra Garantía Growly",
+    text: "Si el método no cumple tus expectativas, te devolvemos el dinero sin hacer preguntas."
   },
   de: {
     heading: "Buchen Sie mit Vertrauen,",

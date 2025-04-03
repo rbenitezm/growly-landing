@@ -5,6 +5,8 @@ const NavBar = ({ lang }) => {
   let link = "";
   if (lang == "de") {
     link = "/de";
+  } else if (lang == "es") {
+    link = "/es"; 
   } else {
     link = "/";
   }
@@ -14,8 +16,8 @@ const NavBar = ({ lang }) => {
       <Link to={link}>
         <div className="logo">
           <img
-            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/logos/LOGO_white.png"
-            alt=""
+            src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/logos/growly-logo.png"
+            alt="Growly"
             className=" w-full h-10 lg:h-14"
           />
         </div>

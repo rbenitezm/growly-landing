@@ -4,8 +4,12 @@ import "./HubspotForm.css";
 
 const translations = {
   en: {
-    formText: "Discover the Perfect Adventure",
-    subText: "Get all the important info about the experience",
+    formTex: "Discover the Perfect Parenting Method",
+    subText: "Get all the essential info about the Growly experience"
+  },
+  es: {
+    formText: "!Un paso más cerca de conocer los secretos!",
+    subText: "Reserva tu plaza para hoy"
   },
   de: {
     formText: "Entdecken Sie das perfekte Abenteuer",
@@ -37,6 +41,19 @@ const HubspotForm = ({ lang }) => {
             onFormSubmitted: () => {
               setTimeout(() => {
                 navigate("/de/select-package");
+              }, 2000);
+            },
+          });
+        } else if (lang === "es") {
+          // TODO: Ask about the values of portalId, formId
+          window.hbspt.forms.create({
+            portalId: "20102221",
+            formId: "74c977d1-ed05-4227-a588-60ae1d90195c",
+            target: "#hubspotForm",
+            css: "",
+            onFormSubmitted: () => {
+              setTimeout(() => {
+                navigate("/es/select-package");
               }, 2000);
             },
           });

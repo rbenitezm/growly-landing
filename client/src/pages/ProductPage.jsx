@@ -23,10 +23,7 @@ const features = {
     "✅ Diseñado para madres y padres con hijos de 2 a 12 años.",
     "✅ Herramientas prácticas para aplicar desde el primer día.",
     "✅ Acompañamiento paso a paso con mentores certificados.",
-    "✅ Acceso online desde cualquier lugar, en cualquier momento.",
-    "✅ Comunidad de familias con los mismos valores.",
-    "✅ Crianza emocionalmente segura—sin castigos ni gritos.",
-    "✅ Método probado con cientos de historias de éxito familiar."
+    "✅ Acceso online a los cursos y a la comunidad desde cualquier lugar, en cualquier momento.",
   ],
   de: [
     // "10 Minuten vom Flughafen Málaga entfernt.",
@@ -73,6 +70,32 @@ const features2 = {
       text: "Top-of-the-Line Triumph Bikes",
     },
   ],
+  es: [
+    {
+      id: 1,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Bike.png",
+      text: "Over 1,500 satisfied parents",
+    },
+    {
+      id: 2,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Check.png",
+      text: "Satisfaction Guarantee",
+    },
+    {
+      id: 3,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Map.png",
+      text: "Masterfully crafted Guidebook",
+    },
+    {
+      id: 4,
+      imgPath:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/ThumbsUp.png",
+      text: "Top-of-the-Line",
+    },
+  ],
   de: [
     {
       id: 1,
@@ -105,40 +128,40 @@ const Images = [
   {
     id: 1,
     imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_1.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/growly-antes-despues-1.png",
   },
   {
     id: 2,
     imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_2.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/growly-antes-despues-2.png",
   },
   {
     id: 3,
     imgPath:
-      "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Generated_3.webp",
+      "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/growly-antes-despues-3.png",
   },
 ];
 
 const translations = {
-  "en": {
+  en: {
     headDesc: "A transformative experience that will forever change the way you connect with your children. Choose a 6-month guided path to strengthen your family bond, through the proven Growly method—created by experts in positive discipline and emotional education.",
     boldPoint: " Step-by-Step Family Guide",
     bannerText: "Six powerful months to create harmony, understanding, and trust at home. With practical tools, expert mentoring, and a method that really works—for a limited-time only!",
     beforeAfter: "Before you know it...",
-    before: "Before: You feel lost, overwhelmed, and disconnected.",
-    after: "After: You lead with love and clarity, building a lifelong bond with your child.",
+    before: "",
+    after: "",
     reviewHeading: "Real families, real change – What our parents are saying",
     reviewSubTextL: "Based on 342 verified transformations"
   },
   es: {
-    "headDesc": "Una experiencia transformadora que cambiará para siempre la forma en la que educas y te relacionas con tus hijos. Recorre un camino de 6 meses guiado paso a paso, con el método Growly, diseñado por expertos en disciplina positiva y educación emocional.",
-    "boldPoint": " Guía Familiar Paso a Paso",
-    "bannerText": "Seis meses para transformar tu hogar con herramientas prácticas, acompañamiento experto y un método probado. Todo con un descuento por tiempo limitado.",
-    "beforeAfter": "Antes de que te des cuenta...",
-    "before": "Antes: Te sentías perdido, agotado y desconectado.",
-    "after": "Después: Lideras con amor y claridad, construyendo un vínculo que dura toda la vida.",
-    "reviewHeading": "Familias reales, cambios reales – Lo que dicen los padres",
-    "reviewSubTextL": "Basado en 342 transformaciones verificadas"
+    headDesc: "Una experiencia transformadora que cambiará para siempre la forma en la que educas y te relacionas con tus hijos. Recorre un camino de 6 meses guiado paso a paso, con el método Growly, diseñado por expertos en disciplina positiva y educación emocional.",
+    boldPoint: " Guía Familiar Paso a Paso",
+    bannerText: "Seis meses para transformar tu hogar con herramientas prácticas, acompañamiento experto y un método probado. Todo con un descuento por tiempo limitado.",
+    beforeAfter: "Antes de que te des cuenta...",
+    before: "",
+    after: "",
+    reviewHeading: "Familias reales, cambios reales – Lo que dicen los padres",
+    reviewSubTextL: "Basado en 342 transformaciones verificadas"
   },
   de: {
     headDesc:
@@ -189,7 +212,7 @@ const ProductPage = ({ lang }) => {
           <div className="">
             <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
               {/* Pack Infalible */}
-              Growly - Pack Infalible de Natacha Foss
+              Growly - Pack Infalible de Disciplina Positiva de Natacha Fouss
             </h2>
             <div className="flex items-center gap-1">
               <img
@@ -201,12 +224,17 @@ const ProductPage = ({ lang }) => {
               <span className="font-semibold">342+ reviews</span>
             </div>
           </div>
-
+          <div className="">
+            <h2 className="text-1xl lg:text-2xl text-ExtraBold tracking-wide lg:tracking-normal">
+              {/* Pack Infalible */}
+              Deja de improvisar. Comienza a criar con un método claro.
+            </h2>
+          </div>
           {/* Description and points */}
           <div className="desc flex gap-3 flex-col">
+          
             <p
-              className="Arial md:leading-6 lg:leading-5 text-base md:text-xl lg:text-sm text-left md:text-justify
-            "
+              className="Arial md:leading-6 lg:leading-5 lg:text-lg md:text-xl lg:text-sm text-left md:text-justify"
             >
               {/* A transformative experience that will forever change the way you
               explore Andalusia. Choose between 3 or 7 magical days aboard the
@@ -214,8 +242,15 @@ const ProductPage = ({ lang }) => {
               together with our master guide, crafted by a team of experts with
               over 10 years of experience, revealing every secret, every curve,
               and every hidden treasure of this land. */}
-              {translations[lang]?.headDesc || translations["en"].headDesc}
+              {/*translations[lang]?.headDesc || translations["en"].headDesc*/}
+              Deja atrás la <b>improvisación</b> y las <b>dudas constantes</b> de la crianza.<br />
+Sabemos que ser padre o madre primerizo no es fácil: te enfrentas a situaciones para las que nadie te preparó, y es normal sentirse perdido. Las preguntas se acumulan: "¿Lo estaré haciendo bien?", "¿Debería ser más firme o más flexible?"<br />
+Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por expertos en disciplina positiva y educación emocional. Poco a poco, las dudas irán desapareciendo, y ganarás la confianza y las herramientas que necesitas para educar con claridad y conectar de verdad con tus hijos.<br />
             </p>
+
+            <p><b>Plazas limitadas.</b> Cuanto antes empieces, antes verás los resultados en casa.</p>
+
+            
             {/* ml-6 lg:ml-10 */}
             <div className="ml-0 lg:ml-6">
               <li className=" list-none text-[14px] md:text-[18px] lg:text-[14px] text-Bold">
@@ -252,7 +287,6 @@ const ProductPage = ({ lang }) => {
         <ExcellenceLogos />
       </section> */}
 
-      <Excellence lang={lang} />
 
       {/* Features 2 */}
       <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">

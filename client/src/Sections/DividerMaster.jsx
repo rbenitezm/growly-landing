@@ -12,7 +12,7 @@ const translations = {
   },
 };
 
-const Divider = ({ lang }) => {
+const DividerMaster = ({ lang }) => {
   return (
     <section className="divider w-full h-16 lg:h-20 bg-triumph-beige flex justify-center items-center">
       <h1 className="uppercase text-lg  lg:text-3xl text-Heavy lg:tracking-wide ">
@@ -23,4 +23,4 @@ const Divider = ({ lang }) => {
   );
 };
 
-export default Divider;
+export default DividerMaster;
