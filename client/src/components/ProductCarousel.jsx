@@ -3,12 +3,13 @@ import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
   const images = [
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20900%20GT%20PRO.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%20900%20Rally%20PRO.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20GT%20PRO.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/Tiger%201200%20Rally%20PRO.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/New%20Images/Tiger-Sport-660.webp",
-    "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/productCarousel/New%20Images/Tiger-Sport-850.webp",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/frustacion-constante.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/cansancio-emocional.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/desesperacion.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/culpa.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/tristeza.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/incertidumbre.png"
+      
   ];
 
   const [mainImage, setMainImage] = useState(images[0]);
