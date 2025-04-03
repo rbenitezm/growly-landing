@@ -2,7 +2,10 @@ import React from "react";
 
 const translations = {
   en: {
-    text: "why follow when you can lead?",
+    text: "Why follow when you can lead your family with confidence?"
+  },
+  es: {
+    text: "¿Por qué seguir cuando puedes liderar la educación de tu familia con confianza?"
   },
   de: {
     text: "WARUM FOLGEN, WENN DU FÜHREN KANNST?",

@@ -77,7 +77,7 @@ const Question = ({ lang }) => {
               id: "jg1401r",
               attributes: {
                 label: "Questionnaire",
-                description: "Ready to build the family connection of a lifetime? 🚀",
+                description: "¿Listo para construir el vínculo familiar de tu vida? 🚀",
               },
             },
             {
@@ -86,8 +86,8 @@ const Question = ({ lang }) => {
               attributes: {
                 classnames: "first-block",
                 required: true,
-                label: "What's your e-mail address?",
-                placeholder: "So we can send you all the details!",
+                label: "¿Cuál es tu correo electrónico?",
+                placeholder: "Así podremos enviarte todos los detalles!",
               },
             },
           ],
@@ -116,33 +116,6 @@ const Question = ({ lang }) => {
             console.log(data);
 
             const updatedFormData = {
-              // fields: [
-              //   {
-              //     name: "excites_rider",
-              //     value: data.answers.excites01.value[0],
-              //   },
-              //   {
-              //     name: "experienced_rider",
-              //     value: data.answers.experience01.value[0],
-              //   },
-              //   {
-              //     name: "typeOf_ride",
-              //     value: data.answers.ride01.value[0],
-              //   },
-              //   {
-              //     name: "tipo_de_carnet_de_moto",
-              //     value: data.answers.licenceType.value[0],
-              //   },
-              //   { name: "equipamiento", value: data.answers.gearReq.value[0] },
-              //   {
-              //     name: "motorcycle_model",
-              //     value: data.answers.bikeModel.value[0],
-              //   },
-              //   { name: "email", value: data.answers.email01.value },
-              //   { name: "firstname", value: data.answers.name01.value },
-              //   { name: "phone", value: data.answers.phone01.value },
-              // ],
-
               fields: [
                 { name: "email", value: data.answers.email01.value },
               ],
@@ -160,7 +133,7 @@ const Question = ({ lang }) => {
                   value: true,
                   subscriptionTypeId: 999,
                   legalBasis: "LEAD",
-                  text: "I agree to allow Example Company to store and process my personal data.",
+                  text: "Acepto que Growly almacene y procese mis datos personales.",
                 },
               },
             };

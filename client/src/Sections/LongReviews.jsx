@@ -4,60 +4,89 @@ import ReviewCard from "../components/ReviewCard";
 const reviews = {
   en: [
     {
-      title:
-        "Triumph Adventure Malaga is simply THE BEST hire company that I've ever dealt with.",
+      title: "Growly helped me become the parent I always wanted to be.",
       content: `
-	<p>Triumph Adventute Malaga is simply THE BEST hire company that I've ever dealt with.  It's so refreshing to have a genuine hire company that wants to make sure you have the best possible experience, on first class bikes, rather than other hire companies who are looking to fleece you in some way.</p>
-<br />
-<p>The whole team are excellent, but a special mention must go to Marta, who is SO awesome to deal with,  and promptly answers any question you may have during the booking process or on handover. We hired Tiger 900GT Pros, which were amazing on the roads around the Sierra Nevada (and much lighter than my own BMW GSA 1250).</p> 
-<br />
-<p>If you're thinking of hiring a bike in southern Spain, I would 100% recommend them.  They can be trusted fully,  and are so friendly to deal with.</p>  
-
-<p>On a previous hire with them last year one of our gang crashed and broke a collar bone,  and the only thing they were concerned about was whether he was OK - nothing else mattered apart from his welfare - the bike damage was simply dealt with by paying the 300 Euro excess of the Premium Insurance we'd taken out.</p> 
-<br />
-<p>Thankfully this year's trip was incident free, and fantastic fun in this amazing area.</p> 
-<br />
-<p>First class service from a first class team!!</p>
-	  `,
-      name: "Simon Rees",
-      image:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png", // Replace with actual profile image URL
-      rating: 5,
+        <p>Before Growly, parenting felt like survival mode. I was reacting all the time and constantly doubting myself.</p>
+        <br />
+        <p>With Growly, everything changed. I learned how to stay calm, connect with my child, and guide with clarity and love.</p>
+        <br />
+        <p>The tools are practical, the mentoring is amazing, and the change is real. I would 100% recommend it to any parent who feels lost or overwhelmed.</p>
+        <br />
+        <p>Now I enjoy parenting again—and so does my child.</p>
+      `,
+      name: "Laura Martinez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png",
+      rating: 5
     },
     {
-      title: "Review of Triumph Adventure Experience Spain Rental Service",
+      title: "From frustration to connection. This method works.",
       content: `
-		<p>Review of Triumph Adventure Experience Spain Rental Service</p>
-		<br />
-		<p>I recently rented a bike from Triumph Adventure Experience Spain, and the entire experience was outstanding! From the moment I arrived, the staff made everything easy and efficient. The rental process was smooth, with clear instructions and options tailored to my riding experience and preferences. The staff were friendly and knowledgeable, answering all my questions and providing great local insights on where to ride.</p>
-		<br />
-		<p>The bike selection was impressive, featuring a range of well-maintained Triumph models ready for any adventure. My bike was in perfect condition, clean, and equipped with everything needed for a safe and enjoyable ride. It performed excellently on both paved roads and off-road trails, giving me a thrilling and versatile experience in Spain's stunning landscapes.</p>
-		<br />
-		<p>The team also went the extra mile to ensure I had the right gear and offered useful tips for the areas I planned to explore. It was clear that they take pride in their service and genuinely care about their customers having an unforgettable adventure.</p>
-		<br />
-		<p>I highly recommend Triumph Adventure Experience Spain’s rental service for anyone looking to explore Spain on a top-quality Triumph motorcycle. It’s a fantastic way to experience</p>
-	  `,
-      name: "Brown Williams",
-      image:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png", // Replace with actual profile image URL
-      rating: 5,
+        <p>I used to raise my voice constantly. I didn’t want to, but I felt helpless.</p>
+        <br />
+        <p>Growly showed me there’s another way. A way to educate without yelling or punishment. It gave me tools I could apply right away—and they actually work.</p>
+        <br />
+        <p>Now, our home feels more peaceful. We argue less, we laugh more, and I feel more confident as a father.</p>
+      `,
+      name: "Carlos Rodríguez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png",
+      rating: 5
     },
     {
-      title:
-        "Review of Triumph Adventure Experience Spain – Triumph Scrambler 400 Rental",
+      title: "Growly gave me the confidence and calm I never had.",
       content: `
-	  <p>Renting a motorcycle from Triumph Adventure Experience Spain was one of the highlights of my trip! The whole process was straightforward and well-organized, making it easy to get on the road without any hassle. The staff were incredibly helpful, ensuring that I had the right bike and gear for my adventure.</p>
-    <br/>
-<p>The selection of Triumph motorcycles was fantastic, with each bike in top-notch condition and ready for action. The one I chose handled beautifully across different terrains, whether cruising on smooth roads or tackling more rugged trails. It was clear that these bikes are maintained with great care.</p>
-<br/>
-<p>Beyond just renting a bike, the team provided excellent recommendations for scenic routes and must-see spots. Their local knowledge made a huge difference, helping me discover incredible places I wouldn’t have found on my own.
-If you’re considering exploring Spain on two wheels, this is the place to go. Professional service, great bikes, and an experience you won’t forget!</p>
-	`,
-      name: "Martine Campens",
-      image:
-        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png", // Replace with actual profile image URL
-      rating: 5,
+        <p>As a single mother, I often felt alone, exhausted, and unsure. Growly changed that.</p>
+        <br/>
+        <p>The sessions were clear, emotional, and full of practical wisdom. I learned how to set limits with love, how to listen, and how to lead with empathy.</p>
+        <br/>
+        <p>Now, I feel strong, supported, and most importantly—connected with my daughter.</p>
+      `,
+      name: "Beatriz Méndez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png",
+      rating: 5
+    }
+  ],
+  es: [
+    {
+      title: "Growly me ayudó a ser la madre que siempre quise ser.",
+      content: `
+        <p>Antes de Growly, la crianza era una lucha diaria. Estaba en modo supervivencia, todo el tiempo reaccionando, llena de dudas.</p>
+        <br />
+        <p>Con Growly aprendí a mantener la calma, conectar con mi hija y educar desde el amor y la firmeza.</p>
+        <br />
+        <p>Las herramientas son claras, los acompañamientos son increíbles y el cambio es profundo. Lo recomendaría al 100% a cualquier madre o padre que se sienta perdido.</p>
+        <br />
+        <p>Ahora disfruto la crianza de nuevo—y mi hija también.</p>
+      `,
+      name: "Laura Martínez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer1.png",
+      rating: 5
     },
+    {
+      title: "Pasé de la frustración a la conexión. Este método funciona.",
+      content: `
+        <p>Solía gritar mucho. No quería hacerlo, pero me sentía impotente.</p>
+        <br />
+        <p>Growly me mostró que hay otra manera. Una forma de educar sin castigos ni gritos. Me dio herramientas prácticas que pude aplicar desde el primer día.</p>
+        <br />
+        <p>Hoy en casa hay más paz, menos conflictos, y más confianza en mí como padre.</p>
+      `,
+      name: "Carlos Rodríguez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer2.png",
+      rating: 5
+    },
+    {
+      title: "Growly me dio la calma y seguridad que nunca tuve.",
+      content: `
+        <p>Como madre soltera, me sentía sola, agotada y perdida. Growly me dio un camino.</p>
+        <br/>
+        <p>Las sesiones son claras, emocionales y muy prácticas. Aprendí a poner límites con respeto, a escuchar de verdad y a liderar con empatía.</p>
+        <br/>
+        <p>Ahora me siento fuerte, acompañada y, sobre todo, conectada con mi hija.</p>
+      `,
+      name: "Beatriz Méndez",
+      image: "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/reviewer3.png",
+      rating: 5
+    }
   ],
   de: [
     {

@@ -4,35 +4,73 @@ const Facilities = {
   en: [
     {
       id: 1,
-      title: "Ultimate location to kickstart",
+      title: "The perfect starting point for conscious parenting",
       Baseimage:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_1.webp",
       overlay: "./src/assets/images/web-svg-icons/1.svg",
     },
     {
       id: 2,
-      title: "State-of-the-art facilities",
+      title: "Practical tools and real-life strategies",
       Baseimage:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_2.webp",
       overlay: "./src/assets/images/web-svg-icons/2.svg",
     },
     {
       id: 3,
-      title: "Expert, Triumph-certified local guides",
+      title: "Expert mentors in positive discipline",
       Baseimage:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_3.webp",
       overlay: "./src/assets/images/web-svg-icons/3.svg",
     },
     {
       id: 4,
-      title: "Seamless Booking Experience",
+      title: "Easy and accessible learning process",
       Baseimage:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_4.webp",
       overlay: "./src/assets/images/web-svg-icons/4.svg",
     },
     {
       id: 5,
-      title: "24/7 customer support",
+      title: "Ongoing support from our Growly community",
+      Baseimage:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_5.webp",
+      overlay: "./src/assets/images/web-svg-icons/5.svg",
+    },
+  ],
+  
+  es: [
+    {
+      id: 1,
+      title: "El punto de partida perfecto para una crianza consciente",
+      Baseimage:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_1.webp",
+      overlay: "./src/assets/images/web-svg-icons/1.svg",
+    },
+    {
+      id: 2,
+      title: "Herramientas prácticas y estrategias reales",
+      Baseimage:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_2.webp",
+      overlay: "./src/assets/images/web-svg-icons/2.svg",
+    },
+    {
+      id: 3,
+      title: "Mentores expertos en disciplina positiva",
+      Baseimage:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_3.webp",
+      overlay: "./src/assets/images/web-svg-icons/3.svg",
+    },
+    {
+      id: 4,
+      title: "Proceso de aprendizaje fácil y accesible",
+      Baseimage:
+        "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_4.webp",
+      overlay: "./src/assets/images/web-svg-icons/4.svg",
+    },
+    {
+      id: 5,
+      title: "Acompañamiento continuo de la comunidad Growly",
       Baseimage:
         "https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/Features_5.webp",
       overlay: "./src/assets/images/web-svg-icons/5.svg",
@@ -79,7 +117,10 @@ const Facilities = {
 
 const translations = {
   en: {
-    text: "Best Motorcycle Tourism Centre in Europe",
+    text: "The best parenting method for real families"
+  },
+  es: {
+    text: "El mejor método de crianza para familias reales"
   },
   de: {
     text: "Bestes Zentrum für Motorradtourismus in Europa",

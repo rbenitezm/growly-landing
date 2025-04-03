@@ -21,6 +21,9 @@ const ReviewPage = ({ lang }) => {
       if (lang == "de") {
         window.scrollTo(0, 0);
         navigate("/de/select-package");
+      } else if (lang == "es") {
+        window.scrollTo(0, 0);
+        navigate("/es/select-package");
       } else {
         window.scrollTo(0, 0);
         navigate("/select-package");

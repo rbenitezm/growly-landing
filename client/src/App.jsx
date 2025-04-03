@@ -12,12 +12,14 @@ import Cart from "./pages/Cart";
 import { initMetaPixel, trackPageView } from "./api/FacebookPixel";
 import ReviewPage from "./pages/ReviewPage";
 import QuestionDe from "./pages/QuestionDe";
+import QuestionEs from "./pages/QuestionEs";
 import NotFound from "./pages/NotFound";
 
 const WrappedApp = () => {
   const location = useLocation();
   const isGerman = location.pathname.startsWith("/de");
-  const lang = isGerman ? "de" : "en";
+  const isSpanish = location.pathname.startsWith("/es");
+  const lang = isSpanish ? "es" : "en";
 
   useEffect(() => {
     initMetaPixel();
@@ -39,6 +41,7 @@ const WrappedApp = () => {
 
           {/* Questionnaire Routes */}
           <Route path="/quiz" element={<Question lang={lang} />}></Route>
+          <Route path="/es/quiz" element={<QuestionEs lang={lang} />}></Route>
           <Route path="/de/quiz" element={<QuestionDe lang={lang} />}></Route>
           {/* Product Page Routes */}
           <Route

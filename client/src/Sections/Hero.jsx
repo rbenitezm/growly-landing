@@ -8,10 +8,16 @@ import { trackEvent } from "../api/FacebookPixel";
 
 const translations = {
   en: {
-    title: "FULL IMMERSION WITH OUR DOCUMENTARY",
-    subtitle: "TRIUMPH ADVENTURE PACKS",
-    detailsBtn: "DETAILS & PRICING",
-    quizBtn: "APPLY TO PARTICIPATE",
+    title: "FULL IMMERSION INTO CONSCIOUS PARENTING",
+    subtitle: "THE GROWLY METHOD",
+    detailsBtn: "SEE DETAILS & PRICING",
+    quizBtn: "APPLY TO JOIN"
+  },
+  es: {
+    title: "INMERSIÓN TOTAL EN LA CRIANZA CONSCIENTE",
+    subtitle: "EL MÉTODO GROWLY",
+    detailsBtn: "VER DETALLES Y PRECIO",
+    quizBtn: "APLICAR PARA UNIRTE"
   },
   de: {
     title: "VOLLE IMMERSION MIT UNSERER DOKUMENTATION",
@@ -48,6 +54,8 @@ const Hero = ({ lang }) => {
     setTimeout(() => {
       if (lang == "de") {
         navigate("/de/quiz");
+      } else if (lang == "es") {
+        navigate("/es/quiz");
       } else {
         navigate("/quiz");
       }
@@ -65,8 +73,10 @@ const Hero = ({ lang }) => {
           “{translations[lang]?.subtitle || translations["en"].subtitle}”
         </span>
       </h2>
-
-      <VideoEmbed />
+    
+     {/* Add images or texts*/}
+     {/* 
+     Uncomment to enable the video <VideoEmbed />*/}
 
       <div className="w-full flex gap-8 lg:gap-40 justify-center ">
         <Button
