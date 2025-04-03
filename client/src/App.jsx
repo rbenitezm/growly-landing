@@ -34,6 +34,7 @@ const WrappedApp = () => {
         <>
           {/* Home page routes */}
           <Route path="/" element={<Home lang={lang} />}></Route>
+          <Route path="/es" element={<Home lang={lang} />}></Route>
           <Route path="/de" element={<Home lang={lang} />}></Route>
 
           {/* Questionnaire Routes */}
@@ -45,12 +46,17 @@ const WrappedApp = () => {
             element={<ProductPage lang={lang} />}
           ></Route>
           <Route
+            path="/es/select-package"
+            element={<ProductPage lang={lang} />}
+          ></Route>
+          <Route
             path="/de/select-package"
             element={<ProductPage lang={lang} />}
           ></Route>
 
           {/* Review Page Routes */}
           <Route path="/reviews" element={<ReviewPage lang={lang} />}></Route>
+          <Route path="/es/reviews" element={<ReviewPage lang={lang} />}></Route>
 
           <Route
             path="/de/reviews"
