@@ -16,8 +16,8 @@ const translations = {
     quizBtn: "APPLY TO JOIN"
   },
   es: {
-    title: "GROWLY",
-    subtitle: "PACK INFALIBLE DE DISCIPLINA POSITIVA",
+    title: "LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.",
+    subtitle: "EXPERTOS REVELAN el método educativo  QUE mejora LA crianza, EN SOLO 15 minutos al día.",
     detailsBtn: "RESERVAR MI PLAZA",
     quizBtn: "APLICAR PARA UNIRTE"
   },
@@ -66,67 +66,184 @@ const Hero = ({ lang }) => {
 
   return (
     <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
-      <h2 className="w-5/6 lg:w-3/4 text-Heavy mt-20 lg:mt-20 text-xl lg:text-4xl font-bold  text-center ">
-        {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
+      {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
+      <div className="flex items-center gap-1 mt-9">
+        <span className=""
+          style={{
+            fontFamily: "Poppins",
+            fontStyle: "italic",
+            fontSize: "50px",
+            fontWeight: "400",
+            lineHeight: "100%",
+            letterSpacing: "0%",
+            horizonatalAlign: "center"
+          }}>LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.</span>
 
-        {translations[lang]?.title || translations["en"].title}
-        <br />
-        <span className="text-Regular text-triumph-red">
-          “{translations[lang]?.subtitle || translations["en"].subtitle}”
+      </div>
+
+
+      <div className="flex items-center gap-1 mt-9">
+        <span
+          style={{
+            fontFamily: "Domine",
+            fontSize: "50px",
+            lineHeight: "80px",
+            fontWeight: "700",
+            letterSpacing: "0%",
+            textAlign: "center",
+            textTransform: "uppercase",
+            textDecorationStyle: "solid",
+            textdecorationOffset: "0%",
+            textDecorationThickness: "0%",
+            textDecorationSkipInk: "auto"
+
+          }}
+        >
+          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE  <span style={{ backgroundColor: "#7AFD9D", color: "#0C46F2" }}>MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
         </span>
-      </h2>
+      </div>
+
+      <div className="flex items-center gap-1 mt-9">
+        <span
+          style={{
+            fontFamily: "Poppins",
+            fontStyle: "italic",
+            fontSize: "50px",
+            lineHeight: "100%",
+            fontWeight: "400",
+            letterSpacing: "0%",
+            textAlign: "center",
+          }}
+        >
+          TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
+        </span>
+      </div>
+
 
       <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
         {/* Carousel */}
-
-
-        {/* Title and Description */}
-        <div className="left px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
-          {/* Title and stars */}
-          <div className="">
-            <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
-              {/* Pack Infalible */}
-              Los 3 secretos que todo padre necesita para dejar de sentirse perdido en la crianza
-            </h2>
-          </div>
-
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold">Si alguna vez te has sentido agotado, superado o sin respuestas frente a los desafíos diarios con tus hijos, esta masterclass gratuita es para ti. Natacha Fouss, experta en Disciplina Positiva, te compartirá los secretos que ya han ayudado a cientos de padres a recuperar la calma, la conexión y el respeto mutuo en casa. <br /><br /> No dejes pasar la oportunidad de transformar tu hogar. Las plazas son limitadas y se están llenando rápido. <br /><br /> Reserva tu lugar hoy y empieza a disfrutar de una crianza más tranquila y segura desde ya mismo.</span>
-          </div>
-        </div>
-
-        {/* Description and points */}
-        <div className="desc flex gap-3 flex-col">
-          <p
-            className="Arial md:leading-6 lg:leading-5 text-base md:text-xl lg:text-sm text-left md:text-justify
-            "
-          >
-            {/* A transformative experience that will forever change the way you
-              explore Andalusia. Choose between 3 or 7 magical days aboard the
-              majestic Triumph Tiger, ready to take you into the unknown,
-              together with our master guide, crafted by a team of experts with
-              over 10 years of experience, revealing every secret, every curve,
-              and every hidden treasure of this land. */}
-            {translations[lang]?.headDesc || translations["en"].headDesc}
-          </p>
-          {/* ml-6 lg:ml-10 */}
-
-        </div>
-
         <div className="right flex-1 ">
           <div className="carousel-container">
             {/* Main Image */}
             <div className="main-image">
-              <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/growly-deja-improvisar.png" alt="Main" className="fade" />
+              <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/home-gif.png" alt="Main" className="fade" />
+            </div>
+            <div className="">
+              <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/forbes.png" alt="Main" className="fade" />
             </div>
           </div>
         </div>
+
+        {/* Title and Description */}
+        <div className="left px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 "
+          style={{
+            backgroundColor: "#FFFFFF", // Fondo gris claro
+            borderRadius: "8px", // Bordes redondeados
+            padding: "1.5rem", // Relleno interno
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" // Sombra suave
+
+          }}>
+          {/* Title and stars */}
+          <div className="">
+            <span
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "40px",
+                fontWeight: "700",
+                color: "#0C46F2",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center"
+              }}>
+              {/* Pack Infalible */}
+              !Accede a la clase GRATIS!
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1 mt-9">
+            <span className="font-semibold"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "17px",
+                color: "#000000",
+                fontWeight: "700",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center"
+              }}><b>En esta clase online 100 % gratuita, descubrirás:</b></span>
+
+          </div>
+          <div className="flex items-center gap-1 mt-9">
+            <span className="font-semibold"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "17px",
+                fontWeight: "400",
+                color: "#000000",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center"
+
+              }}>✔️ Por qué improvisar daña la relación con tus hijos sin que te des cuenta.</span>
+
+          </div>
+          <div className="flex items-center gap-1 mt-9">
+            <span className="font-semibold"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "17px",
+                fontWeight: "400",
+                color: "#000000",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center"
+
+              }}>✔️ Cómo transformar la relación con tus hijos dedicando solo 15 minutos al día.</span>
+
+          </div>
+          <div className="flex items-center gap-1 mt-9">
+            <span className="font-semibold"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "17px",
+                fontWeight: "400",
+                color: "#000000",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center"
+
+              }}>✔️ Cómo transformar la relación con tus hijos dedicando solo 15 minutos al día.</span>
+
+          </div>
+
+
+          <div className="flex items-center gap-1 mt-9">
+            <span className="font-semibold"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "20px",
+                fontWeight: "700",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                horizonatalAlign: "center",
+                fontcase: "uppercase",
+                color: "#0C46F2",
+              }}><b>RELLENA EL FORMULARIO CON TU NOMBRE Y EMAIL</b></span>
+          </div>
+          <div className="mt-6">
+            <HubspotForm lang={lang} />
+          </div>
+        </div>
+
+
+
+
       </section>
 
 
       {/* Add images or texts*/}
       {/* 
-     Uncomment to enable the video <VideoEmbed />*/}
+     Uncomment to enable the video <VideoEmbed />
 
       <div className="w-full flex gap-8 lg:gap-40 justify-center ">
         <Button
@@ -140,7 +257,7 @@ const Hero = ({ lang }) => {
 
       <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
         <HubspotForm lang={lang} />
-      </Modal>
+      </Modal>*/}
     </section>
   );
 };

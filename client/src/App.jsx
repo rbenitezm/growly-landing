@@ -32,7 +32,6 @@ const WrappedApp = () => {
 
   return (
     <div className="App w-full h-screen">
-      <NavBar lang={lang} />
       <Routes>
         <>
           {/* Home page routes */}

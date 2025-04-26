@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 import HubspotForm from "../components/HubspotForm";
 import Modal from "../components/Modal";
@@ -30,21 +30,26 @@ const translations = {
 
 const HeroMaster = ({ lang }) => {
   const navigate = useNavigate();
+  const [showButton, setShowButton] = useState(false); // Estado para controlar la visibilidad del botón
+
+  useEffect(() => {
+    // Espera a que el video de Wistia esté listo
+    window._wq = window._wq || [];
+    window._wq.push({
+      id: "ng37d85bqc", // Reemplaza con el ID de tu video de Wistia
+      onReady: function (video) {
+        // Escucha el progreso del video
+        video.bind("timechange", (time) => {
+          console.log("time changed")
+          if (time >= 10) {
+            setShowButton(true); // Muestra el botón después de 1 minuto
+          }
+        });
+      },
+    });
+  }, []);
 
   const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-
-    trackEvent("DetailsPricing_Click", {
-      label: "Details & Pricing Modal",
-      page: "Home",
-    });
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
 
   function takeToForm() {
     trackEvent("ApplyToParticipate_Click", {
@@ -63,31 +68,86 @@ const HeroMaster = ({ lang }) => {
   }
 
   return (
-    <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
-      <h2 className="w-5/6 lg:w-3/4 text-Heavy mt-20 lg:mt-20 text-xl lg:text-4xl font-bold  text-center ">
-        {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
+    <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 "
+    >
+      <div className="flex items-center gap-1 mt-9">
+        <span className=""
+          style={{
+            fontFamily: "Poppins",
+            fontStyle: "italic",
+            fontSize: "50px",
+            fontWeight: "400",
+            lineHeight: "100%",
+            letterSpacing: "0%",
+            horizonatalAlign: "center"
+          }}>LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.</span>
 
-        {translations[lang]?.title || translations["en"].title}
-        <br />
-        <span className="lg:text-lg text-triumph-red">
-          “{translations[lang]?.subtitle || translations["en"].subtitle}”
-        </span>
-      </h2>
-    
-     
-    <VideoEmbedMaster />
-
-      <div className="w-full flex gap-8 lg:gap-40 justify-center ">
-        <Button
-          title={translations[lang]?.quizBtn || translations["en"].quizBtn}
-          func={takeToForm}
-          id="applyToParticipate"
-        />
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
-        <HubspotForm lang={lang} />
-      </Modal>
+
+      <div className="flex items-center gap-1 mt-9">
+        <span
+          style={{
+            fontFamily: "Domine",
+            fontSize: "50px",
+            lineHeight: "80px",
+            fontWeight: "700",
+            letterSpacing: "0%",
+            textAlign: "center",
+            textTransform: "uppercase",
+            textDecorationStyle: "solid",
+            textdecorationOffset: "0%",
+            textDecorationThickness: "0%",
+            textDecorationSkipInk: "auto"
+
+          }}
+        >
+          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE  <span style={{backgroundColor:"#7AFD9D", color: "#0C46F2"}}>MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
+        </span>
+      </div>
+
+      <div className="flex items-center gap-1 mt-9">
+        <span
+          style={{
+            fontFamily: "Poppins",
+            fontStyle: "italic",
+            fontSize: "50px",
+            lineHeight: "100%",
+            fontWeight: "400",
+            letterSpacing: "0%",
+            textAlign: "center",
+          }}
+        >
+          TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
+        </span>
+      </div>
+
+
+      <VideoEmbedMaster />
+
+
+
+      {showButton && (
+        <>
+          <div className="w-full flex gap-8 lg:gap-40 justify-center ">
+            <span
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "50px",
+                lineHeight: "100%",
+                fontWeight: "700",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >INICIA EL PROCESO DE MEJORA
+            </span>
+          </div>
+          <div className="w-full flex gap-8 lg:gap-40 justify-center ">
+            <Button title="¡CLICK AQUÍ!" func={takeToForm} id="applyToParticipate" />
+          </div>
+        </>
+      )}
+
     </section>
   );
 };

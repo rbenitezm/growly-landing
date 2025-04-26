@@ -58,8 +58,8 @@ const HubspotForm = ({ lang }) => {
           });
         } else {
           window.hbspt.forms.create({
-            portalId: "20102221",
-            formId: "74c977d1-ed05-4227-a588-60ae1d90195c",
+            portalId: "145993063",
+            formId: "9c3a2199-b8e0-48fe-a478-7d4608b2cc52",
             target: "#hubspotForm",
             css: "",
             onFormSubmitted: () => {
@@ -71,23 +71,23 @@ const HubspotForm = ({ lang }) => {
         }
       }
     };
+    console.log("ADddin script")
     document.body.appendChild(script);
   }, []);
 
   return (
-    <div className="bg-white   p-8 flex flex-col  justify-center items-center md:p-12 rounded-lg  w-[350px] lg:w-[650px]">
-      <div className="text-triumph-red text-center">
-        <h1 className="text-ExtraBold  text-2xl md:text-3xl">
-          {/* Discover the Perfect Adventure */}
-          {translations[lang]?.formText || translations["en"].formText}
-        </h1>
-
-        <span className="text-Regular  text-base md:text-lg">
-          {/* Get all the important info about the experience */}
-          {translations[lang]?.subText || translations["en"].subText}
-        </span>
-      </div>
-      <div id="hubspotForm" className="w-max mt-10 text-Medium "></div>
+    <div>
+      <div id="hubspotForm" className=""></div>
+      <div style={{
+        position: "relative",
+        bottom: "90px",
+        left: "0",
+        width: "100%",
+        height: "120px",
+        backgroundColor: "white",
+        zIndex: "9999",
+        pointerEvents: "none",
+      }}></div>
     </div>
   );
 };

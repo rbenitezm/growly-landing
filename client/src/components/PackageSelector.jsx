@@ -4,6 +4,7 @@ import ExpandablePackageCard from "./ExpandablePackageCard";
 import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
 import { trackEvent } from "../api/FacebookPixel";
+import Button from "../components/Button";
 
 const packages = {
   en: [
@@ -100,166 +101,63 @@ const PackageSelector = ({ lang }) => {
   return (
     <div className="flex flex-col gap-4 lg:gap-2  px-0 lg:px-6">
       <div className="package-selector flex flex-col gap-4">
-        {packages[lang].map((pkg) => (
-          <ExpandablePackageCard
-            key={pkg.id}
-            packageData={pkg}
-            isSelected={true}
-            onSelect={handleSelectPackage}
-            isExpanded={true}
-          />
-        ))}
+        <div className="w-full flex gap-8 lg:gap-40 justify-center ">
+
+          <button
+            className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
+            style={{
+              backgroundColor: "#0c46F2", // Fondo gris claro
+              borderRadius: "30px", // Bordes redondeados
+              padding: "1.5rem", // Relleno interno
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",// Sombra suave
+              color: "#FFFFFF",
+              fontFamily: "Poppins",
+              fontWeight: "600",
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "center"
+            }}
+            onClick={handleSelectPackage}
+          >
+            Quiero Mejorar la Crianza
+          </button>
+        </div>
       </div>
 
       <div className="mb-2 lg:mb-0 ">
-        <a
-          href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline text-blue-500 uppercase text-xs"
-        >
-          {/* *Terms and conditions of the daily rental agreement* */}*
-          {translations[lang]?.termsText || translations["en"].termsText}*
-        </a>
+        <div className="text-left">
+          <span
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "18px",
+              fontWeight: "400",
+              color: "#000000",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              horizonatalAlign: "center"
+            }}>
+            Esta es una compra única. Al continuar, acepto la <a
+              href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-blue-500 uppercase text-xs"
+            >política de cancelación</a> y autorizo el cargo correspondiente en mi forma de pago según el precio indicado en esta página.
+          </span>
+        </div>
       </div>
 
-      <button
 
-        className={`btn w-full py-4 rounded-xl bg-triumph-red text-white transition-all duration-300 shadow-3xl`}
-        onClick={handleSelectPackage}
+      <div className="">
         
-      >
-        {/* Adventure in a Click */}
-        {translations[lang]?.btnText || translations["en"].btnText}*
-      </button>
-
-      <div className="flex justify-between mt-3 px-5">
-        <span className="text-xs ">
           <img
-            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Deposit.webp"
+            src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/visas.png"
             alt=""
-            className="mr-2  h-4 w-4 inline "
           />
-          {/* No Deposit Required */}
-          {translations[lang]?.depositText || translations["en"].depositText}
-        </span>
-        <span className="text-xs ">
-          <img
-            src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Tick.webp"
-            alt=""
-            className="mr-2 h-4 w-4 inline "
-          />
-          {/* Money Back Guarantee */}
-          {translations[lang]?.guaranteeText ||
-            translations["en"].guaranteeText}
-        </span>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
-     { /*window.location.href = "https://www.google.es"*/}
-        
-      </Modal>
     </div>
   );
 };
 
 export default PackageSelector;
-
-// const PackageSelector = () => {
-//   const [selectedPackage, setSelectedPackage] = useState(null);
-//   const [isModalOpen, setisModalOpen] = useState(false);
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const toggleAccordion = (index) => {
-//     setActiveIndex(index === activeIndex ? null : index);
-//   };
-
-//   const openModal = () => {
-//     trackEvent("AdventureInAClick_Click", {
-//       label: "Adventure in a Click",
-//       page: "Product Page",
-//     });
-//     setisModalOpen(true);
-//   };
-
-//   const closeModal = () => {
-//     setisModalOpen(false);
-//   };
-
-//   const handleSelectPackage = (id) => {
-//     setSelectedPackage(id);
-//     // console.log(packages[id - 1]);
-//   };
-
-//   return (
-//     <div className="flex gap-4 flex-col px-0 lg:px-6">
-//       <div className="flex flex-col gap-2">
-//         <h2 className="">Select a Package:</h2>
-//         {/* Package Cards */}
-//         <div className="package-selector flex flex-col gap-4 ">
-//           {packages.map((pkg) => (
-//             <PackageCard
-//               key={pkg.id}
-//               packageData={pkg}
-//               isSelected={selectedPackage === pkg.id}
-//               onSelect={handleSelectPackage}
-//             />
-//           ))}
-//         </div>
-//       </div>
-
-//       <div className="">
-//         <div className="mb-2 ">
-//           <a
-//             href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="underline text-blue-500 uppercase text-xs"
-//           >
-//             *Terms and conditions of the daily rental agreement*
-//           </a>
-//         </div>
-
-//         <div className="">
-//           <button
-//             className={`btn w-full py-4 rounded-xl tracking-wider ${
-//               selectedPackage
-//                 ? "bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105"
-//                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
-//             } text-xl text-bold transition-all ease-in-out duration-300 shadow-3xl`}
-//             onClick={selectedPackage ? openModal : null}
-//             disabled={!selectedPackage}
-//             id="advInaClick"
-//           >
-//             Adventure in a click
-//           </button>
-
-//           <div className="flex justify-between mt-3 px-5">
-//             <span className="text-xs ">
-//               <img
-//                 src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Deposit.webp"
-//                 alt=""
-//                 className="mr-2  h-4 w-4 inline "
-//               />
-//               No Deposit Required
-//             </span>
-//             <span className="text-xs ">
-//               <img
-//                 src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/icons/Tick.webp"
-//                 alt=""
-//                 className="mr-2 h-4 w-4 inline "
-//               />
-//               Money Back Guarantee
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-
-//       <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
-//         <SevenDayRangePicker selectedPackage={packages[selectedPackage - 1]} />
-//       </Modal>
-//     </div>
-//   );
-// };
-
-// export default PackageSelector;

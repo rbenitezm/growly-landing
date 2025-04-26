@@ -16,12 +16,16 @@ import Guarantee from "../Sections/Guarantee";
 
 const Home = ({ lang }) => {
   return (
-    <div className="w-full h-max ">
+    <div className="w-full h-max "
+    style={{
+      backgroundColor: "#0C46F2", // Fondo azul
+      color: "white", // Texto blanco para contraste
+      padding: "20px", // Espaciado interno
+      borderRadius: "8px", // Bordes redondeados
+      textAlign: "center", // Centrar el texto
+    }}>
       {/* Hero Section */}
       <HeroMaster lang={lang} />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

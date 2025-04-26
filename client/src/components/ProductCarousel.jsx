@@ -3,14 +3,7 @@ import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
   const images = [
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/growly-improvisacion-constante.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/frustacion-constante.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/cansancio-emocional.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/desesperacion.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/culpa.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/tristeza.png",
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/incertidumbre.png"
-      
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/main-carrusel.png"
   ];
 
   const [mainImage, setMainImage] = useState(images[0]);
@@ -36,25 +29,6 @@ const ProductCarousel = () => {
       {/* Main Image */}
       <div className="main-image">
         <img src={mainImage} alt="Main" className="fade" />
-      </div>
-
-      {/* Thumbnails */}
-      <div className="thumbnails">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`thumbnail-wrapper ${
-              currentIndex === index ? "active" : ""
-            }`}
-            onClick={() => handleThumbnailClick(index)}
-          >
-            <img
-              src={image}
-              alt={`Thumbnail ${index + 1}`}
-              className="thumbnail"
-            />
-          </div>
-        ))}
       </div>
     </div>
   );

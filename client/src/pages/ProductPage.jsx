@@ -197,7 +197,14 @@ const ProductPage = ({ lang }) => {
   };
 
   return (
-    <div className="productPage  w-full min-h-screen  pt-12 lg:pt-16 ">
+    <div className="productPage  w-full min-h-screen  pt-12 lg:pt-16 "
+
+      style={{
+        backgroundColor: "#FFFFFF", // Fondo blanco
+        padding: "20px", // Espaciado interno
+        borderRadius: "8px", // Bordes redondeados
+        textAlign: "center", // Centrar el texto
+      }}>
       {/* Product Section */}
 
       <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
@@ -210,31 +217,82 @@ const ProductPage = ({ lang }) => {
         <div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
           {/* Title and stars */}
           <div className="">
-            <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
-              {/* Pack Infalible */}
-              El método Growly y su Pack Infalible de Disciplina Positiva
-            </h2>
-            <div className="flex items-center gap-1">
-              <img
-                src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/refs/heads/main/images/rating-stars.webp"
-                alt=""
-                className="h-10"
-              />
 
-              <span className="font-semibold">342+ reviews</span>
+            {/* Pack Infalible */}
+            <span className=""
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "50px",
+                fontWeight: "700",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#0C46F2",
+                textAlign: "left"
+              }}> Método Growly: El Pack Infalible de Disciplina Positiva </span>
+
+            <div className="flex items-center gap-1">
+              <span className=""
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "50px",
+                  fontWeight: "700",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#666666"
+                }}>189€</span>
+              <span className=""
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "30px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#84878A",
+                  textDecoration: "line-through"
+                }}>500€</span>
+              <div
+                className=""
+                style={{
+                  backgroundColor: "#7AFD9D", // Fondo verde
+                  borderRadius: "30px", // Bordes redondeados
+                  height: "50px", // Altura del div
+                  display: "flex", // Activa Flexbox
+                  alignItems: "center", // Centra verticalmente el contenido
+                  justifyContent: "center", // Centra horizontalmente el contenido
+                  padding: "1.5rem", // Relleno interno
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra suave
+                }}
+              >
+                <span
+                  className=""
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "30px",
+                    fontWeight: "400",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    color: "#0C46F2",
+                  }}
+                >
+                  Ahorra 311€
+                </span>
+              </div>
             </div>
           </div>
-          <div className="">
-            <h2 className="text-1xl lg:text-2xl text-ExtraBold tracking-wide lg:tracking-normal">
-              {/* Pack Infalible */}
-              Deja de improvisar. Comienza a criar con un método claro.
-            </h2>
-          </div>
+
           {/* Description and points */}
           <div className="desc flex gap-3 flex-col">
 
             <p
-              className="Arial md:leading-6 lg:leading-5 lg:text-lg md:text-xl lg:text-sm text-left md:text-justify"
+              className="text-left md:text-justify"
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "20px",
+                fontWeight: "400",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#000000",
+              }}
             >
               {/* A transformative experience that will forever change the way you
               explore Andalusia. Choose between 3 or 7 magical days aboard the
@@ -243,33 +301,115 @@ const ProductPage = ({ lang }) => {
               over 10 years of experience, revealing every secret, every curve,
               and every hidden treasure of this land. */}
               {/*translations[lang]?.headDesc || translations["en"].headDesc*/}
-              Deja atrás la <b>improvisación</b> y las <b>dudas constantes</b> de la crianza.<br />
-              Sabemos que ser padre o madre primerizo no es fácil: te enfrentas a situaciones para las que nadie te preparó, y es normal sentirse perdido. Las preguntas se acumulan: "¿Lo estaré haciendo bien?", "¿Debería ser más firme o más flexible?"<br />
-              Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por expertos en disciplina positiva y educación emocional. Poco a poco, las dudas irán desapareciendo, y ganarás la confianza y las herramientas que necesitas para educar con claridad y conectar de verdad con tus hijos.<br />
-            </p>
+              <br></br>El Método que está transformando familias en más de 60 Países — Sin Gritos, Sin Castigos y con Resultados Reales.
+              <br></br>Más de 80 años de estudios en psicología adleriana y neurociencia avalan nuestro método. <br></br>Reconocido por la Sociedad Americana Montessori y el prestigioso College NBCC.<br></br></p>
 
-            <p><b>Plazas limitadas.</b> Cuanto antes empieces, antes verás los resultados en casa.</p>
+            <p className="text-left" style={{
+              fontFamily: "Poppins",
+              fontSize: "20px",
+              fontWeight: "700",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              color: "#000000",
+            }}>¿QUÉ INCLUYE EL PACK?</p>
 
 
-            {/* ml-6 lg:ml-10 */}
-            <div className="ml-0 lg:ml-6">
-              <li className=" list-none text-[14px] md:text-[18px] lg:text-[14px] text-Bold">
-                ✅
-                <span className="text-[16px] md:text-[18px] lg:text-[16px] text-Bold">
-                  {translations[lang]?.boldPoint ||
-                    translations["en"].boldPoint}
-                </span>
-              </li>
+            <div className="text-left ml-0 lg:ml-6">
               <ul className="Arial list-none  leading-tight">
-                {features[lang].map((feature) => (
-                  <li
-                    key={feature.id - 1}
-                    className="text-[14px] md:text-[18px] lg:text-[14px] font-medium"
-                  >
-                    {feature}
-                  </li>
-                ))}
+                <li className=" list-none ">
+
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅ <b>Curso completo</b> en video con herramientas prácticas paso a paso
+                  </span>
+                </li>
+                <li className=" list-none ">
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅ Acceso a <b>comunidad privada de padres y expertos</b>
+                  </span>
+                </li>
+                <li className=" list-none ">
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅ Set de <b>52 actividades descargables de fin de semana</b> para reforzar vínculos familiares
+                  </span>
+                </li>
+                <li className=" list-none ">
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅ <b>Talleres mensuales</b> con sesiones de preguntas y respuestas
+                  </span>
+                </li>
+                <li className=" list-none ">
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅ <b>Plantillas y recursos extra</b> que facilitan la implementación del Método en casa
+                  </span>
+                </li>
+                <li className=" list-none ">
+                  <span className=""
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "20px",
+                      fontWeight: "400",
+                      lineHeight: "100%",
+                      letterSpacing: "0%",
+                      color: "#000000",
+                    }}>
+                    ✅  <b>Acceso preferente a campamentos exclusivos</b> para familias comprometidas
+                  </span>
+                </li>
               </ul>
+            </div>
+            <div className="text-left">
+
+              {/* Pack Infalible */}
+              <span className="text-left"
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "15px",
+                  fontWeight: "800",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#000000",
+                  textAlign: "left"
+                }}> Resultados garantizados o se te devuelve el dinero</span>
             </div>
           </div>
 
@@ -279,7 +419,7 @@ const ProductPage = ({ lang }) => {
         </div>
       </section>
 
-      <script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=hSyuf7bW"></script>
+
 
       {/* FAQ Section */}
       <AccordionSection lang={lang} />
