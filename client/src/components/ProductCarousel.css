@@ -9,8 +9,11 @@
 }
 
 .main-image img {
-  width: 500px;
+  width: 100%; /* Ajusta el ancho al contenedor */
   height: 32rem;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  display: block; /* Elimina espacios blancos alrededor de la imagen */
+  
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
@@ -42,6 +45,10 @@
 }
 
 .thumbnail-wrapper {
+  width: 60px; /* Tamaño fijo para las miniaturas */
+  height: 60px;
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  cursor: pointer;
   padding: 3px;
   border: 3px solid transparent;
   transition: border 0.3s ease;
@@ -57,10 +64,11 @@
 }
 
 .thumbnail {
-  width: 65px;
-  height: auto;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que las miniaturas se ajusten sin distorsión */
   display: block;
+  cursor: pointer;
   border-radius: 5px; /* Make the thumbnail images rounded */
 }
 

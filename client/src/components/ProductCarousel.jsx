@@ -3,7 +3,7 @@ import "./ProductCarousel.css";
 
 const ProductCarousel = () => {
   const images = [
-    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/growly-improvisacion.png",
+    "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/growly-improvisacion-constante.png",
     "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/frustacion-constante.png",
     "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/cansancio-emocional.png",
     "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/desesperacion.png",
@@ -26,7 +26,7 @@ const ProductCarousel = () => {
       const nextIndex = (currentIndex + 1) % images.length;
       setMainImage(images[nextIndex]);
       setCurrentIndex(nextIndex);
-    }, 5000);
+    }, 25000);
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [currentIndex, images]);

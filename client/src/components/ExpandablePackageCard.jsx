@@ -12,7 +12,6 @@ const ExpandablePackageCard = ({
         className={`border-2 p-2 md:p-3 lg:p-2 rounded-xl cursor-pointer flex justify-between items-center transition-all ease-in-out duration-300 ${
           isSelected ? "selected border-triumph-red scale-101" : "not-selected"
         }`}
-        onClick={() => onSelect(packageData.id)}
       >
         <div className="flex justify-center items-center gap-2 md:gap-5 lg:gap-5">
           {/* Image div */}

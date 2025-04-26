@@ -16,8 +16,8 @@ const translations = {
     quizBtn: "APPLY TO JOIN"
   },
   es: {
-    title: "PACK INFALIBLE DE DISCIPLINA POSITIVA DE NATACHA FOUSS",
-    subtitle: "EL MÉTODO GROWLY",
+    title: "GROWLY",
+    subtitle: "PACK INFALIBLE DE DISCIPLINA POSITIVA",
     detailsBtn: "RESERVAR MI PLAZA",
     quizBtn: "APLICAR PARA UNIRTE"
   },

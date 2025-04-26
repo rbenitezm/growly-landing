@@ -25,7 +25,7 @@ const packages = {
       id: 1,
       name: "6 Meses",
       duration: 6,
-      title: "Pack Infalible de Disciplina Positiva en 6 Meses",
+      title: "Pack Infalible de Disciplina Positiva",
       price: "189$",
       crossedPrice: "500$",
       content: "Un método paso a paso para crear conexión emocional y disciplina positiva en casa.",
@@ -79,10 +79,10 @@ const PackageSelector = ({ lang }) => {
 
   const openModal = () => {
     trackEvent("AdventureInAClick_Click", {
-      label: "Adventure in a Click",
+      label: "Pack Infalible a Click",
       page: "Product Page",
     });
-    setisModalOpen(true);
+    isModalOpen = true;
   };
 
   const closeModal = () => {
@@ -91,6 +91,7 @@ const PackageSelector = ({ lang }) => {
 
   const handleSelectPackage = (id) => {
     setSelectedPackage(id === selectedPackage ? null : id);
+    window.location.href = "https://www.skool.com/growly-disciplina-positiva-4246/cansado-de-improvisar-cada-dia-con-tus-hijos"
     // console.log(packages[id - 1]);
 
     // console.log(packages[lang][id - 1]);
@@ -103,9 +104,9 @@ const PackageSelector = ({ lang }) => {
           <ExpandablePackageCard
             key={pkg.id}
             packageData={pkg}
-            isSelected={selectedPackage === pkg.id}
+            isSelected={true}
             onSelect={handleSelectPackage}
-            isExpanded={selectedPackage === pkg.id}
+            isExpanded={true}
           />
         ))}
       </div>
@@ -123,13 +124,10 @@ const PackageSelector = ({ lang }) => {
       </div>
 
       <button
-        className={`btn w-full py-4 rounded-xl ${
-          selectedPackage
-            ? "bg-triumph-red text-white"
-            : "bg-gray-300 text-gray-500 cursor-not-allowed"
-        } transition-all duration-300 shadow-3xl`}
-        onClick={selectedPackage ? openModal : null}
-        disabled={!selectedPackage}
+
+        className={`btn w-full py-4 rounded-xl bg-triumph-red text-white transition-all duration-300 shadow-3xl`}
+        onClick={handleSelectPackage}
+        
       >
         {/* Adventure in a Click */}
         {translations[lang]?.btnText || translations["en"].btnText}*
@@ -158,10 +156,8 @@ const PackageSelector = ({ lang }) => {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
-        <SevenDayRangePicker
-          selectedPackage={packages[lang].find((p) => p.id === selectedPackage)}
-          lang={lang}
-        />
+     { /*window.location.href = "https://www.google.es"*/}
+        
       </Modal>
     </div>
   );

@@ -15,7 +15,7 @@ const translations = {
   },
   es: {
     title: "Los 3 secretos que todo padre necesita para dejar de sentirse perdido en la crianza",
-    subtitle: "Natacha Fouss comparte las claves para dejar de improvisar y crear una crianza consciente, exclusivamente en esta masterclass gratuita.",
+    subtitle: "Growly comparte las claves para dejar de improvisar y crear una crianza consciente, exclusivamente en esta masterclass gratuita.",
     detailsBtn: "VER DETALLES Y PRECIO",
     quizBtn: "ÚNETE"
   },
@@ -48,16 +48,16 @@ const HeroMaster = ({ lang }) => {
 
   function takeToForm() {
     trackEvent("ApplyToParticipate_Click", {
-      label: "Apply Form",
+      label: "Select Package",
       page: "Home",
     });
     setTimeout(() => {
       if (lang == "de") {
         navigate("/de/quiz");
       } else if (lang == "es") {
-        navigate("/es/quiz");
+        navigate("/es/select-package");
       } else {
-        navigate("/quiz");
+        navigate("/select-package");
       }
     }, 500);
   }

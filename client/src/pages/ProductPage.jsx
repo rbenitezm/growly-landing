@@ -175,7 +175,7 @@ const translations = {
     reviewHeading:
       "Echte Menschen, echte Ergebnisse <br/> Was unsere Fahrer sagen",
     reviewSubTextL: "Basierend auf 342 Bewertungen",
-  },  
+  },
 };
 
 const ProductPage = ({ lang }) => {
@@ -212,7 +212,7 @@ const ProductPage = ({ lang }) => {
           <div className="">
             <h2 className="text-3xl lg:text-5xl text-ExtraBold tracking-wide lg:tracking-normal">
               {/* Pack Infalible */}
-              Growly - Pack Infalible de Disciplina Positiva de Natacha Fouss
+              El método Growly y su Pack Infalible de Disciplina Positiva
             </h2>
             <div className="flex items-center gap-1">
               <img
@@ -232,7 +232,7 @@ const ProductPage = ({ lang }) => {
           </div>
           {/* Description and points */}
           <div className="desc flex gap-3 flex-col">
-          
+
             <p
               className="Arial md:leading-6 lg:leading-5 lg:text-lg md:text-xl lg:text-sm text-left md:text-justify"
             >
@@ -244,13 +244,13 @@ const ProductPage = ({ lang }) => {
               and every hidden treasure of this land. */}
               {/*translations[lang]?.headDesc || translations["en"].headDesc*/}
               Deja atrás la <b>improvisación</b> y las <b>dudas constantes</b> de la crianza.<br />
-Sabemos que ser padre o madre primerizo no es fácil: te enfrentas a situaciones para las que nadie te preparó, y es normal sentirse perdido. Las preguntas se acumulan: "¿Lo estaré haciendo bien?", "¿Debería ser más firme o más flexible?"<br />
-Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por expertos en disciplina positiva y educación emocional. Poco a poco, las dudas irán desapareciendo, y ganarás la confianza y las herramientas que necesitas para educar con claridad y conectar de verdad con tus hijos.<br />
+              Sabemos que ser padre o madre primerizo no es fácil: te enfrentas a situaciones para las que nadie te preparó, y es normal sentirse perdido. Las preguntas se acumulan: "¿Lo estaré haciendo bien?", "¿Debería ser más firme o más flexible?"<br />
+              Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por expertos en disciplina positiva y educación emocional. Poco a poco, las dudas irán desapareciendo, y ganarás la confianza y las herramientas que necesitas para educar con claridad y conectar de verdad con tus hijos.<br />
             </p>
 
             <p><b>Plazas limitadas.</b> Cuanto antes empieces, antes verás los resultados en casa.</p>
 
-            
+
             {/* ml-6 lg:ml-10 */}
             <div className="ml-0 lg:ml-6">
               <li className=" list-none text-[14px] md:text-[18px] lg:text-[14px] text-Bold">
@@ -278,6 +278,8 @@ Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por e
           </div>
         </div>
       </section>
+
+      <script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=hSyuf7bW"></script>
 
       {/* FAQ Section */}
       <AccordionSection lang={lang} />
@@ -338,7 +340,13 @@ Con el método Growly recorrerás un camino de 6 meses, guiado paso a paso por e
                   {/* After */}
                 </span>
               </div>
-              <img src={img.imgPath} alt="" className=" lg:w-96" />
+              <img src={img.imgPath} alt="" className=" lg:w-96" style={{
+                width: "100%", // Ajusta el ancho al contenedor
+                height: "25rem", // Mantiene la proporción de la imagen
+                objectFit: "cover", // Asegura que la imagen cubra el contenedor
+                borderRadius: "8px", // Opcional: esquinas redondeadas
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Opcional: sombra
+              }} />
             </div>
           ))}
         </div>

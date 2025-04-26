@@ -8,8 +8,8 @@ const translations = {
     subText: "Get all the essential info about the Growly experience"
   },
   es: {
-    formText: "!Un paso más cerca de conocer los secretos!",
-    subText: "Reserva tu plaza para hoy"
+    formText: "Reserva tu plaza hoy",
+    subText: "!Un paso más cerca de conocer los secretos!"
   },
   de: {
     formText: "Entdecken Sie das perfekte Abenteuer",
@@ -45,10 +45,9 @@ const HubspotForm = ({ lang }) => {
             },
           });
         } else if (lang === "es") {
-          // TODO: Ask about the values of portalId, formId
           window.hbspt.forms.create({
-            portalId: "20102221",
-            formId: "74c977d1-ed05-4227-a588-60ae1d90195c",
+            portalId: "145993063",
+            formId: "9c3a2199-b8e0-48fe-a478-7d4608b2cc52",
             target: "#hubspotForm",
             css: "",
             onFormSubmitted: () => {
