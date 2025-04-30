@@ -86,7 +86,8 @@ const HubspotForm = ({ lang }) => {
         height: "120px",
         backgroundColor: "white",
         zIndex: "9999",
-        pointerEvents: "none",
+        pointerEvents: "none !important",
+        cursor: "default !important",
       }}></div>
     </div>
   );

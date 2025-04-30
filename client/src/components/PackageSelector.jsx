@@ -99,9 +99,9 @@ const PackageSelector = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-2  px-0 lg:px-6">
+    <div className="desc flex gap-3 flex-col">
       <div className="package-selector flex flex-col gap-4">
-        <div className="w-full flex gap-8 lg:gap-40 justify-center ">
+        <div className="w-full flex gap-8 lg:gap-40 justify-left">
 
           <button
             className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
@@ -116,7 +116,7 @@ const PackageSelector = ({ lang }) => {
               fontSize: "32px",
               lineHeight: "100%",
               letterSpacing: "0%",
-              textAlign: "center"
+              textAlign: "left"
             }}
             onClick={handleSelectPackage}
           >
@@ -135,7 +135,7 @@ const PackageSelector = ({ lang }) => {
               color: "#000000",
               lineHeight: "100%",
               letterSpacing: "0%",
-              horizonatalAlign: "center"
+              horizontalAlign: "center"
             }}>
             Esta es una compra única. Al continuar, acepto la <a
               href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"

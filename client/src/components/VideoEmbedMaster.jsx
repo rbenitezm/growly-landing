@@ -17,7 +17,7 @@ const VideoEmbedMaster = () => {
   return (
     <div
       className="wistia_embed wistia_async_ng37d85bqc"
-      style={{ height: "360px", width: "640px" }}
+      style={{ height: "720px", width: "1080px" }}
     ></div>
   );
 

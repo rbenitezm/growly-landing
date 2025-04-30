@@ -67,12 +67,12 @@ const Hero = ({ lang }) => {
   return (
     <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
       {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
-      <div className="flex items-center gap-1 mt-9">
+      <div className="flex items-center gap-1">
         <span className=""
           style={{
             fontFamily: "Poppins",
             fontStyle: "italic",
-            fontSize: "50px",
+            fontSize: "25px",
             fontWeight: "400",
             lineHeight: "100%",
             letterSpacing: "0%",
@@ -82,12 +82,12 @@ const Hero = ({ lang }) => {
       </div>
 
 
-      <div className="flex items-center gap-1 mt-9">
+      <div className="flex items-center gap-1">
         <span
           style={{
             fontFamily: "Domine",
-            fontSize: "50px",
-            lineHeight: "80px",
+            fontSize: "40px",
+            lineHeight: "60px",
             fontWeight: "700",
             letterSpacing: "0%",
             textAlign: "center",
@@ -103,12 +103,12 @@ const Hero = ({ lang }) => {
         </span>
       </div>
 
-      <div className="flex items-center gap-1 mt-9">
+      <div className="flex items-center gap-1">
         <span
           style={{
             fontFamily: "Poppins",
             fontStyle: "italic",
-            fontSize: "50px",
+            fontSize: "25px",
             lineHeight: "100%",
             fontWeight: "400",
             letterSpacing: "0%",

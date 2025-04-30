@@ -227,10 +227,11 @@ const ProductPage = ({ lang }) => {
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#0C46F2",
-                textAlign: "left"
+                textAlign: "left",
+                display:"block"
               }}> Método Growly: El Pack Infalible de Disciplina Positiva </span>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1" style={{ marginTop: "30px" }}>
               <span className=""
                 style={{
                   fontFamily: "Montserrat",
@@ -289,7 +290,7 @@ const ProductPage = ({ lang }) => {
                 fontFamily: "Poppins",
                 fontSize: "20px",
                 fontWeight: "400",
-                lineHeight: "100%",
+                lineHeight: "25px",
                 letterSpacing: "0%",
                 color: "#000000",
               }}
@@ -315,7 +316,7 @@ const ProductPage = ({ lang }) => {
 
 
             <div className="text-left ml-0 lg:ml-6">
-              <ul className="Arial list-none  leading-tight">
+              <ul className="Arial list-none  leading-tight" style={{ lineHeight: "25px" }}>
                 <li className=" list-none ">
 
                   <span className=""
@@ -398,18 +399,22 @@ const ProductPage = ({ lang }) => {
               </ul>
             </div>
             <div className="text-left">
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
 
-              {/* Pack Infalible */}
-              <span className="text-left"
-                style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "15px",
-                  fontWeight: "800",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: "#000000",
-                  textAlign: "left"
-                }}> Resultados garantizados o se te devuelve el dinero</span>
+                {/* Pack Infalible */}
+                <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/ok_red.png" />
+
+                <span className="text-left"
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "15px",
+                    fontWeight: "800",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    color: "#000000",
+                    textAlign: "left"
+                  }}> Resultados garantizados o se te devuelve el dinero</span>
+              </div>
             </div>
           </div>
 
@@ -451,7 +456,7 @@ const ProductPage = ({ lang }) => {
           6 Meses Pack Infalible
         </h2>
         <span className="text-Medium text-lg lg:text-xl ">*/}
-          {/* Seven unforgettable days with a Triumph Tiger, plus our incredible
+      {/* Seven unforgettable days with a Triumph Tiger, plus our incredible
           guidebook packed with every detail to make your journey seamless and
           unforgettable, with a Limited-Time Discount!{" "} */}
       {/*     {translations[lang]?.bannerText || translations["en"].bannerText}
@@ -465,7 +470,7 @@ const ProductPage = ({ lang }) => {
           {translations[lang]?.beforeAfter || translations["en"].beforeAfter}
         </h2> */}
 
-        {/* <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
+      {/* <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
           {Images.map((img) => (
             <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
               <div className="flex">

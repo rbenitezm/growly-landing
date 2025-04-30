@@ -6,7 +6,7 @@ export const initMetaPixel = () => {
     debug: true, // Enable this to see Pixel debugging in the console
   };
 
-  ReactPixel.init("1293386828548879", {}, options);
+ // ReactPixel.init("1293386828548879", {}, options);
 };
 
 export const trackPageView = () => {
