@@ -421,8 +421,8 @@ const ProductPage = ({ lang }) => {
 
 
 
-      {/* FAQ Section */}
-      <AccordionSection lang={lang} />
+      {/* FAQ Section 
+      <AccordionSection lang={lang} />*/}
 
       {/* Awards Logos */}
       {/* <section className="py-8 lg:py-16 flex  justify-center gap-2 ">
@@ -430,7 +430,7 @@ const ProductPage = ({ lang }) => {
       </section> */}
 
 
-      {/* Features 2 */}
+      {/* Features 2 
       <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
         {features2[lang].map((feat) => (
           <div className=" flex flex-col text-center items-center gap-4">
@@ -442,42 +442,41 @@ const ProductPage = ({ lang }) => {
             </span>
           </div>
         ))}
-      </section>
+      </section>*/}
 
-      {/* Banner */}
+      {/* Banner 
 
       <section className="mt-5 py-16 px-8 lg:px-56 flex flex-col justify-center items-center gap-5 bg-triumph-black text-white text-center ">
         <h2 className="text-Heavy text-2xl lg:text-3xl">
           6 Meses Pack Infalible
         </h2>
-        <span className="text-Medium text-lg lg:text-xl ">
+        <span className="text-Medium text-lg lg:text-xl ">*/}
           {/* Seven unforgettable days with a Triumph Tiger, plus our incredible
           guidebook packed with every detail to make your journey seamless and
           unforgettable, with a Limited-Time Discount!{" "} */}
-          {translations[lang]?.bannerText || translations["en"].bannerText}
+      {/*     {translations[lang]?.bannerText || translations["en"].bannerText}
         </span>
-      </section>
+      </section>*/}
 
       {/* Before you know it// */}
 
-      <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
+      {/*  <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
         <h2 className="text-Heavy text-2xl lg:text-3xl">
-          {/* Before you know it... */}
           {translations[lang]?.beforeAfter || translations["en"].beforeAfter}
-        </h2>
+        </h2> */}
 
-        <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
+        {/* <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
           {Images.map((img) => (
             <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
               <div className="flex">
                 <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
-                  {/* Before */}
+                 
                   {translations[lang]?.before || translations["en"].before}
                 </span>
                 <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
                   {translations[lang]?.after || translations["en"].after}
 
-                  {/* After */}
+                 
                 </span>
               </div>
               <img src={img.imgPath} alt="" className=" lg:w-96" style={{
@@ -488,11 +487,11 @@ const ProductPage = ({ lang }) => {
                 boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Opcional: sombra
               }} />
             </div>
-          ))}
+          ))
         </div>
-      </section>
+      </section> */}
 
-      {/* Reviews */}
+      {/* Reviews 
       <section className="lg:mt-5 py-10 lg:py-16 lg:px-56 flex flex-col justify-center items-center  gap-5 ">
         <div className=" w-max">
           <h1
@@ -503,8 +502,7 @@ const ProductPage = ({ lang }) => {
                 translations["en"].reviewSubTextL,
             }}
           >
-            {/* {translations[lang]?.reviewHeading ||
-              translations["en"].reviewHeading} */}
+            
           </h1>
           <div className=" flex items-center justify-center gap-2 lg:gap-6 mt-5">
             <div className="stars flex gap-1 lg:gap-2">
@@ -518,7 +516,7 @@ const ProductPage = ({ lang }) => {
               ))}
             </div>
             <p className="text-medium text-base lg:text-3xl">
-              {/* Based on 342 reviews */}
+             
               {translations[lang]?.reviewSubTextL ||
                 translations["en"].reviewSubTextL}
             </p>
@@ -527,10 +525,10 @@ const ProductPage = ({ lang }) => {
         <div className="">
           <LongReviews lang={lang} />
         </div>
-      </section>
+      </section>*/}
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer
+      <Footer /> */}
 
       {/* <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="white">
         <div className="p-6 md:p-0 lg:p-0 popUp lg:h-[350px] lg:w-[500px]  flex flex-col justify-center items-center text-center gap-6 lg:gap-6 text-white uppercase rounded-lg">
