@@ -3,6 +3,7 @@ import ProductCarousel from "../components/ProductCarousel";
 import PackageSelector from "../components/PackageSelector";
 import ExcellenceLogos from "../components/ExcellenceLogos";
 import Footer from "../Sections/Footer";
+import Header from "../Sections/Header";
 import LongReviews from "../Sections/LongReviews";
 import AccordionSection from "../Sections/AccordionSection";
 import Excellence from "../Sections/Excellence";
@@ -207,6 +208,8 @@ const ProductPage = ({ lang }) => {
       }}>
       {/* Product Section */}
 
+      {<Header />}
+
       <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
         {/* Carousel */}
         <div className="left flex-1 ">
@@ -228,7 +231,7 @@ const ProductPage = ({ lang }) => {
                 letterSpacing: "0%",
                 color: "#0C46F2",
                 textAlign: "left",
-                display:"block"
+                display: "block"
               }}> Método Growly: El Pack Infalible de Disciplina Positiva </span>
 
             <div className="flex items-center gap-1" style={{ marginTop: "30px" }}>
@@ -290,7 +293,7 @@ const ProductPage = ({ lang }) => {
                 fontFamily: "Poppins",
                 fontSize: "20px",
                 fontWeight: "400",
-                lineHeight: "25px",
+                lineHeight: "30px",
                 letterSpacing: "0%",
                 color: "#000000",
               }}
@@ -304,25 +307,25 @@ const ProductPage = ({ lang }) => {
               {/*translations[lang]?.headDesc || translations["en"].headDesc*/}
               <br></br>El Método que está transformando familias en más de 60 Países — Sin Gritos, Sin Castigos y con Resultados Reales.
               <br></br>Más de 80 años de estudios en psicología adleriana y neurociencia avalan nuestro método. <br></br>Reconocido por la Sociedad Americana Montessori y el prestigioso College NBCC.<br></br></p>
-
+            <br></br>
             <p className="text-left" style={{
               fontFamily: "Poppins",
               fontSize: "20px",
               fontWeight: "700",
-              lineHeight: "100%",
+              lineHeight: "30px",
               letterSpacing: "0%",
               color: "#000000",
             }}>¿QUÉ INCLUYE EL PACK?</p>
 
 
             <div className="text-left ml-0 lg:ml-6">
-              <ul className="Arial list-none  leading-tight" style={{ lineHeight: "25px" }}>
+              <ul className="Arial list-none  leading-tight" style={{ lineHeight: "30px" }}>
                 <li className=" list-none ">
 
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -335,7 +338,7 @@ const ProductPage = ({ lang }) => {
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -348,7 +351,7 @@ const ProductPage = ({ lang }) => {
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -361,7 +364,7 @@ const ProductPage = ({ lang }) => {
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -374,7 +377,7 @@ const ProductPage = ({ lang }) => {
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -387,7 +390,7 @@ const ProductPage = ({ lang }) => {
                   <span className=""
                     style={{
                       fontFamily: "Poppins",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "400",
                       lineHeight: "100%",
                       letterSpacing: "0%",
@@ -424,116 +427,1292 @@ const ProductPage = ({ lang }) => {
         </div>
       </section>
 
+      {/* Caos to Armony section*/}
 
+      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
 
-      {/* FAQ Section 
-      <AccordionSection lang={lang} />*/}
+        {/* Title and Description */}
+        <div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
+          {/* Title and stars */}
+          <div className="">
 
-      {/* Awards Logos */}
-      {/* <section className="py-8 lg:py-16 flex  justify-center gap-2 ">
-        <ExcellenceLogos />
-      </section> */}
+            {/* Pack Infalible */}
+            <span className=""
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "60px",
+                fontWeight: "600",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#0C46F2",
+                textAlign: "center",
+                display: "block"
+              }}> Del caos a la armonía <br></br>con solo 15 minutos al día </span>
 
+            <div
+              className="features-container"
+              style={{
+                display: "grid", // Usamos grid para organizar las imágenes
+                gridTemplateColumns: "repeat(2, 1fr)", // Dos columnas
+                gap: "20px", // Espaciado entre los elementos
+                marginTop: "40px", // Separación superior
+              }}
+            >
+              {/* Curso completo */}
+              <div style={{
+                display: "flex", // Activa Flexbox
+                flexDirection: "column", // Alinea los elementos en columna
+                alignItems: "center", // Centra los elementos horizontalmente
+                textAlign: "center", // Centra el texto
+              }}>
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/capitulos-34.png" // Reemplaza con la URL de la imagen
+                  alt="Curso completo"
+                  style={{ width: "370px", height: "220px" }}
+                />
+                <h3 style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "800",
+                  fontStyle: "italic",
+                  lineHeight: "40px",
+                  letterSpacing: "0%",
+                  color: "#0C46F2",
+                  verticalAlign: "middle"
+                }}>
+                  Curso completo de <br></br>34 capítulos
+                </h3>
+                <p style={{
+                  fontFamily: "Montserrat",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  lineHeight: "20px",
+                  letterSpacing: "0%",
+                  color: "#0C46F2",
+                  verticalAlign: "middle"
+                }}>
+                  17 lecciones explicativas <br /> 17 actividades prácticas
+                </p>
+              </div>
 
-      {/* Features 2 
-      <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
-        {features2[lang].map((feat) => (
-          <div className=" flex flex-col text-center items-center gap-4">
-            <div className="img">
-              <img src={feat.imgPath} alt="" className="h-10" />
+              {/* Guías descargables */}
+              <div style={{
+                display: "flex", // Activa Flexbox
+                flexDirection: "column", // Alinea los elementos en columna
+                alignItems: "center", // Centra los elementos horizontalmente
+                textAlign: "center", // Centra el texto
+              }}>
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/guias.png"
+                  alt="Guías descargables"
+                  style={{ width: "370px", height: "220px" }}
+                />
+                <h3 style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "800",
+                  fontStyle: "italic",
+                  lineHeight: "40px",
+                  letterSpacing: "0%",
+                  color: "#0C46F2",
+                  verticalAlign: "middle"
+                }}>
+                  Guías <br></br>descargables
+                </h3>
+                <p style={{
+                   fontFamily: "Montserrat",
+                   fontSize: "20px",
+                   fontWeight: "400",
+                   lineHeight: "20px",
+                   letterSpacing: "0%",
+                   color: "#0C46F2",
+                   verticalAlign: "middle"
+                }}>
+                  52 actividades para cada fin de semana del año <br /> Ejercicios prácticos
+                  para aplicar en familia
+                </p>
+              </div>
+
+              {/* Acceso exclusivo a la Comunidad */}
+              <div style={{
+                display: "flex", // Activa Flexbox
+                flexDirection: "column", // Alinea los elementos en columna
+                alignItems: "center", // Centra los elementos horizontalmente
+                textAlign: "center", // Centra el texto
+              }}>
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/acceso-exclusivo.png"
+                  alt="Acceso exclusivo a la Comunidad"
+                  style={{ width: "370px", height: "220px" }}
+                />
+                <h3 style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "800",
+                  fontStyle: "italic",
+                  lineHeight: "40px",
+                  letterSpacing: "0%",
+                  color: "#0C46F2",
+                  verticalAlign: "middle"
+                }}>
+                  Acceso exclusivo a la <br></br>Comunidad
+                </h3>
+                <p style={{
+                   fontFamily: "Montserrat",
+                   fontSize: "20px",
+                   fontWeight: "400",
+                   lineHeight: "20px",
+                   letterSpacing: "0%",
+                   color: "#0C46F2",
+                   verticalAlign: "middle"
+                }}>
+                  Apoyo directo de nuestros formadores <br /> Resolución de dudas y
+                  acompañamiento continuo
+                </p>
+              </div>
+
+              {/* Campamentos y Talleres */}
+              <div
+                style={{
+                  display: "flex", // Activa Flexbox
+                  flexDirection: "column", // Alinea los elementos en columna
+                  alignItems: "center", // Centra los elementos horizontalmente
+                  textAlign: "center", // Centra el texto
+                }}
+              >
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/campamentos.png"
+                  alt="Campamentos y Talleres"
+                  style={{ width: "370px", height: "220px" }}
+                />
+                <h3
+                  style={{
+                    fontFamily: "Poppins",
+                    fontSize: "30px",
+                    fontWeight: "800",
+                    fontStyle: "italic",
+                    lineHeight: "40px",
+                    letterSpacing: "0%",
+                    color: "#0C46F2",
+                    verticalAlign: "middle"
+                  }}
+                >
+                  Campamentos y <br /> Talleres
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: "20px",
+                    fontWeight: "400",
+                    lineHeight: "20px",
+                    letterSpacing: "0%",
+                    color: "#0C46F2",
+                    verticalAlign: "middle"
+                  }}
+                >
+                  Talleres de reprogramación de creencias limitantes <br /> Acceso exclusivo
+                  a campamentos formativos
+                </p>
+              </div>
             </div>
-            <span className="text-Medium text-base md:text-xs lg:text-base">
-              {feat.text}
-            </span>
+
           </div>
-        ))}
-      </section>*/}
 
-      {/* Banner 
+        </div>
+      </section>
 
-      <section className="mt-5 py-16 px-8 lg:px-56 flex flex-col justify-center items-center gap-5 bg-triumph-black text-white text-center ">
-        <h2 className="text-Heavy text-2xl lg:text-3xl">
-          6 Meses Pack Infalible
-        </h2>
-        <span className="text-Medium text-lg lg:text-xl ">*/}
-      {/* Seven unforgettable days with a Triumph Tiger, plus our incredible
-          guidebook packed with every detail to make your journey seamless and
-          unforgettable, with a Limited-Time Discount!{" "} */}
-      {/*     {translations[lang]?.bannerText || translations["en"].bannerText}
-        </span>
-      </section>*/}
+
+      {/* Why this method works*/}
+
+      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 " style={{ marginTop: "10%" }}>
+
+        {/* Title and Description */}
+        <div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
+          <div className="">
+
+            {/* Pack Infalible */}
+            <span className=""
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "60px",
+                fontWeight: "600",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#0C46F2",
+                textAlign: "center"
+              }}> ¿Por qué este método funciona? </span>
+
+            <div className="" style={{ marginTop: "30px" }}>
+              <span className=""
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "600",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#84878A",
+                  textAlign: "center"
+                }}>Herramientas prácticas, estrategias paso a paso y soporte exclusivo</span>
+            </div>
+          </div>
+
+          {/* Title and stars */}
+          <div className="">
+
+            <div
+              className="why-method-works"
+              style={{
+                textAlign: "center",
+                marginTop: "60px",
+              }}
+            >
+
+
+              {/* Contenedor de los bloques */}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  gap: "50px",
+                  flexWrap: "wrap", // Permite que los bloques se ajusten en pantallas pequeñas
+                }}
+              >
+                {/* Bloque 1 */}
+                <div
+                  style={{
+                    backgroundColor: "#0C46F2",
+                    borderRadius: "30px",
+                    padding: "20px",
+                    flex: "1",
+                    width: "250px",
+                    color: "#FFFFFF",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "Poppins",
+                      backgroundColor: "#7AFD9D", // 
+                      color: "#0C46F2", // 
+                      borderRadius: "50%", // Hace el círculo
+                      width: "75px",
+                      height: "75px",
+                      display: "flex",
+                      alignItems: "center", // Centra verticalmente el contenido
+                      justifyContent: "center", // Centra horizontalmente el contenido
+                      fontWeight: "700",
+                      fontSize: "40px",
+                      lineHeight: "120%",
+                      position: "absolute", // Posiciona el círculo dentro del contenedor
+                      top: "-25px", // Mueve el círculo hacia arriba
+                      left: "-45px", // Mueve el círculo hacia la izquierda
+                    }}
+                  >
+                    1
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "30px",
+                      fontWeight: "700",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                      color: "#FFFFFF",
+                      textAlign: "center"
+                    }}
+                  >
+                    <br></br>Manejo de conflictos sin gritos ni castigos
+                  </h3>
+                </div>
+
+                {/* Bloque 2 */}
+                <div
+                  style={{
+                    backgroundColor: "#0C46F2",
+                    borderRadius: "30px",
+                    padding: "20px",
+                    flex: "1",
+                    width: "250px",
+                    color: "#FFFFFF",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "Poppins",
+                      backgroundColor: "#7AFD9D", // 
+                      color: "#0C46F2", // 
+                      borderRadius: "50%", // Hace el círculo
+                      width: "75px",
+                      height: "75px",
+                      display: "flex",
+                      alignItems: "center", // Centra verticalmente el contenido
+                      justifyContent: "center", // Centra horizontalmente el contenido
+                      fontWeight: "700",
+                      fontSize: "40px",
+                      lineHeight: "120%",
+                      position: "absolute", // Posiciona el círculo dentro del contenedor
+                      top: "-25px", // Mueve el círculo hacia arriba
+                      left: "-45px", // Mueve el círculo hacia la izquierda
+                    }}
+                  >
+                    2
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "30px",
+                      fontWeight: "700",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                      color: "#FFFFFF",
+                      textAlign: "center"
+                    }}
+                  >
+                    <br></br>Enseñar valores sin imposiciones
+                  </h3>
+                </div>
+
+                {/* Bloque 3 */}
+                <div
+                  style={{
+                    backgroundColor: "#0C46F2",
+                    borderRadius: "30px",
+                    padding: "20px",
+                    flex: "1",
+                    width: "250px",
+                    color: "#FFFFFF",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "Poppins",
+                      backgroundColor: "#7AFD9D", // 
+                      color: "#0C46F2", // 
+                      borderRadius: "50%", // Hace el círculo
+                      width: "75px",
+                      height: "75px",
+                      display: "flex",
+                      alignItems: "center", // Centra verticalmente el contenido
+                      justifyContent: "center", // Centra horizontalmente el contenido
+                      fontWeight: "700",
+                      fontSize: "40px",
+                      lineHeight: "120%",
+                      position: "absolute", // Posiciona el círculo dentro del contenedor
+                      top: "-25px", // Mueve el círculo hacia arriba
+                      left: "-45px", // Mueve el círculo hacia la izquierda
+                    }}
+                  >
+                    3
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "30px",
+                      fontWeight: "700",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                      color: "#FFFFFF",
+                      textAlign: "center"
+                    }}
+                  >
+                    <br></br>Crear un ambiente de respeto, escucha y colaboración
+                  </h3>
+                </div>
+
+                {/* Bloque 4 */}
+                <div
+                  style={{
+                    backgroundColor: "#0C46F2",
+                    borderRadius: "30px",
+                    padding: "20px",
+                    flex: "1",
+                    width: "250px",
+                    color: "#FFFFFF",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "Poppins",
+                      backgroundColor: "#7AFD9D", // 
+                      color: "#0C46F2", // 
+                      borderRadius: "50%", // Hace el círculo
+                      width: "75px",
+                      height: "75px",
+                      display: "flex",
+                      alignItems: "center", // Centra verticalmente el contenido
+                      justifyContent: "center", // Centra horizontalmente el contenido
+                      fontWeight: "700",
+                      fontSize: "40px",
+                      lineHeight: "120%",
+                      position: "absolute", // Posiciona el círculo dentro del contenedor
+                      top: "-25px", // Mueve el círculo hacia arriba
+                      left: "-45px", // Mueve el círculo hacia la izquierda
+                    }}
+                  >
+                    4
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "Poppins",
+                      fontSize: "30px",
+                      fontWeight: "700",
+                      lineHeight: "120%",
+                      letterSpacing: "0%",
+                      color: "#FFFFFF",
+                      textAlign: "center"
+                    }}
+                  >
+                    <br></br>Validado por educadores, psicólogos y miles de familias
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 " style={{ marginTop: "10%" }}>
+  <div
+          className="testimonials-section  w-full"
+          style={{
+            backgroundColor: "#0C46F2", // Fondo azul
+            color: "#FFFFFF", // Texto blanco
+            textAlign: "center",
+            padding: "5vh 5vw",
+            borderRadius: "8px", // Bordes redondeados
+          }}
+        >
+          {/* Título */}
+          <h2
+            style={{
+              fontFamily: "Poppins",
+              fontSize: "60px",
+              fontWeight: "600",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              color: "#FFFFFF",
+              textAlign: "center"
+            }}
+          >
+            💬 Lo que dicen otros padres <br></br>que ya vivieron la experiencia
+          </h2>
+
+          {/* Subtítulo */}
+          <p
+            style={{
+              fontFamily: "Poppins",
+              fontSize: "18px",
+              fontWeight: "400",
+              marginBottom: "30px",
+            }}
+          >
+            <br></br><br></br>Ellos ya lo probaron, ahora te toca a ti
+          </p>
+
+          {/* Contenedor de testimonios */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "20px",
+              flexWrap: "wrap", // Ajusta las tarjetas en pantallas pequeñas
+              marginBottom: "30px",
+            }}
+          >
+            {/* Testimonio 1 */}
+            <div
+              style={{
+                backgroundColor: "#FFFFFF", // Fondo blanco
+                color: "#000000", // Texto negro
+                borderRadius: "12px",
+                padding: "20px",
+                width: "250px", // Ancho fijo
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra
+              }}
+            >
+              <p style={{ fontFamily: "Poppins", fontSize: "16px", fontWeight: "400" }}>
+                ⭐⭐⭐⭐⭐
+              </p>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "14px",
+                  fontWeight: "700",
+                  marginTop: "10px",
+                }}
+              >
+                Ivonne
+              </p>
+            </div>
+
+            {/* Testimonio 2 */}
+            <div
+              style={{
+                backgroundColor: "#FFFFFF",
+                color: "#000000",
+                borderRadius: "12px",
+                padding: "20px",
+                width: "250px",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <p style={{ fontFamily: "Poppins", fontSize: "16px", fontWeight: "400" }}>
+                ⭐⭐⭐⭐⭐
+              </p>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "14px",
+                  fontWeight: "700",
+                  marginTop: "10px",
+                }}
+              >
+                Pedro
+              </p>
+            </div>
+
+            {/* Testimonio 3 */}
+            <div
+              style={{
+                backgroundColor: "#FFFFFF",
+                color: "#000000",
+                borderRadius: "12px",
+                padding: "20px",
+                width: "250px",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <p style={{ fontFamily: "Poppins", fontSize: "16px", fontWeight: "400" }}>
+                ⭐⭐⭐⭐⭐
+              </p>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "14px",
+                  fontWeight: "700",
+                  marginTop: "10px",
+                }}
+              >
+                Juan
+              </p>
+            </div>
+          </div>
+
+          {/* Botón */}
+          <button
+            className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
+            style={{
+              backgroundColor: "#FFFFFF",
+              borderRadius: "30px", // Bordes redondeados
+              padding: "1.5rem", // Relleno interno
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",// Sombra suave
+              color: "#0C46F2", // Texto azul
+              fontFamily: "Poppins",
+              fontWeight: "600",
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "left"
+            }}
+
+          >
+            Quiero Mejorar la Crianza
+          </button>
+        </div>
+      </section>
+
+
+
+      {/* Avalado por */
+        <section className="mt-5 py-16 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
+          <div
+            className="endorsed-section"
+            style={{
+              textAlign: "center",
+              padding: "40px 20px", // Espaciado interno
+              backgroundColor: "#FFFFFF", // Fondo blanco
+            }}
+          >
+            {/* Título */}
+            <h2
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "60px",
+                fontWeight: "600",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#0C46F2",
+                textAlign: "center"
+              }}
+            >
+              Avalado por:<br></br><br></br>
+            </h2>
+
+            {/* Contenedor de logos */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap", // Ajusta los logos en pantallas pequeñas
+                gap: "100px", // Espaciado entre logos
+              }}
+            >
+              {/* Logo 1 */}
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/positive-discipline.png"
+                alt="Positive Discipline Association"
+                style={{ width: "142px", height: "auto" }}
+              />
+
+              {/* Logo 2 */}
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/education-provider.jpg"
+                alt="NBCC"
+                style={{ width: "142px", height: "auto" }}
+              />
+
+              {/* Logo 3 */}
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/american-sociacity.jpg"
+                alt="North American Society of Adlerian Psychology"
+                style={{ width: "142px", height: "auto" }}
+              />
+            </div>
+            <br></br><br></br>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap", // Ajusta los logos en pantallas pequeñas
+                gap: "20px", // Espaciado entre logos
+              }}
+            >
+
+              {/* Logo 4 */}
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/asociation-individualy.png"
+                alt="IAIP"
+                style={{ width: "442px", height: "auto" }}
+              />
+
+              {/* Logo 5 */}
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/montesory.jpg"
+                alt="American Montessori Society"
+                style={{ width: "442px", height: "auto" }}
+              />
+            </div>
+          </div>
+        </section>}
+
+      {/* Banner */}
+
+      <section className="mt-5 py-16 px-8 lg:px-56 flex flex-col justify-center items-center gap-5 text-white text-center ">
+
+        <div
+          className="experts-section"
+          style={{
+            textAlign: "center",
+            padding: "40px 20px", // Espaciado interno
+            backgroundColor: "#FFFFFF", // Fondo blanco
+          }}
+        >
+          {/* Título */}
+          <h2
+            style={{
+              fontFamily: "Poppins",
+              fontSize: "60px",
+              fontWeight: "600",
+              lineHeight: "100px",
+              letterSpacing: "0%",
+              color: "#0C46F2",
+              textAlign: "center"
+            }}
+          >
+            Basado en prácticas probadas por psicólogos, educadores y familias<br></br><br></br>
+          </h2>
+
+          {/* Contenedor de expertos */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexWrap: "wrap", // Ajusta las tarjetas en pantallas pequeñas
+              gap: "40px", // Espaciado entre tarjetas
+            }}
+          >
+            {/* Experto 1 */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%", // Hace la imagen circular
+                  overflow: "hidden",
+                  border: "4px solid #7AFD9D", // Borde verde
+                  margin: "0 auto", // Centra la imagen
+                }}
+              >
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/adler.jpg"
+                  alt="Alfred Adler"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  marginTop: "10px",
+                  color: "#000000"
+                }}
+              >
+                Alfred Adler
+              </h3>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  color: "#000000",
+                }}
+              >
+                (Psicología Adleriana)
+              </p>
+            </div>
+
+            {/* Experto 2 */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  border: "4px solid #7AFD9D",
+                  margin: "0 auto",
+                }}
+              >
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/dreikus.jpg"
+                  alt="Rudolf Dreikurs"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  marginTop: "10px",
+                  color: "#000000"
+                }}
+              >
+                Rudolf Dreikurs
+              </h3>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  color: "#000000",
+                }}
+              >
+                (Psicología Adleriana)
+              </p>
+            </div>
+
+            {/* Experto 3 */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  border: "4px solid #7AFD9D",
+                  margin: "0 auto",
+                }}
+              >
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/nelsen.jpg"
+                  alt="Jane Nelsen"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  marginTop: "10px",
+                  color: "#000000"
+                }}
+              >
+                Jane Nelsen
+              </h3>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  color: "#000000",
+                }}
+              >
+                (Neuropsiquiatra)
+              </p>
+            </div>
+
+            {/* Experto 4 */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  border: "4px solid #7AFD9D",
+                  margin: "0 auto",
+                }}
+              >
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/maria.jpg"
+                  alt="María Montessori"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+              <h3
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "30px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  marginTop: "10px",
+                  color: "#000000"
+                }}
+              >
+                María Montessori
+              </h3>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "20px",
+                  fontWeight: "400",
+                  lineHeight: "100%",
+                  color: "#000000",
+                }}
+              >
+                (Médica y Pedagoga)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Before you know it// */}
 
-      {/*  <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
-        <h2 className="text-Heavy text-2xl lg:text-3xl">
-          {translations[lang]?.beforeAfter || translations["en"].beforeAfter}
-        </h2> */}
-
-      {/* <div className="mt-5 w-full flex flex-col md:flex-row lg:flex-row justify-center gap-0 lg:gap-32 ">
-          {Images.map((img) => (
-            <div className="p-5 md:p-5 lg:p-0 " key={img.id}>
-              <div className="flex">
-                <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
-                 
-                  {translations[lang]?.before || translations["en"].before}
-                </span>
-                <span className="flex-1 text-xl text-Bold text-triumph-red text-center">
-                  {translations[lang]?.after || translations["en"].after}
-
-                 
-                </span>
-              </div>
-              <img src={img.imgPath} alt="" className=" lg:w-96" style={{
-                width: "100%", // Ajusta el ancho al contenedor
-                height: "25rem", // Mantiene la proporción de la imagen
-                objectFit: "cover", // Asegura que la imagen cubra el contenedor
-                borderRadius: "8px", // Opcional: esquinas redondeadas
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Opcional: sombra
-              }} />
-            </div>
-          ))
-        </div>
-      </section> */}
-
-      {/* Reviews 
-      <section className="lg:mt-5 py-10 lg:py-16 lg:px-56 flex flex-col justify-center items-center  gap-5 ">
-        <div className=" w-max">
-          <h1
-            className="text-2xl lg:text-6xl text-Heavy text-triumph-red text-center"
-            dangerouslySetInnerHTML={{
-              __html:
-                translations[lang]?.reviewHeading ||
-                translations["en"].reviewSubTextL,
+      <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
+        <div
+          className="overwhelmed-parents-section"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            padding: "40px 20px",
+            backgroundColor: "#FFFFFF", // Fondo blanco
+          }}
+        >
+          {/* Contenedor principal */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "20px",
+              maxWidth: "1200px",
+              width: "100%",
             }}
           >
-            
-          </h1>
-          <div className=" flex items-center justify-center gap-2 lg:gap-6 mt-5">
-            <div className="stars flex gap-1 lg:gap-2">
-              {[...Array(5)].map((_, index) => (
-                <img
-                  key={index}
-                  src="https://raw.githubusercontent.com/uddeshyasonkar/taesfunnelassets/12f1d19c3c42cbfaea95ce0f0ea988b57f4b8672/images/web-svg-icons/star.svg"
-                  alt="star"
-                  className="h-5 lg:h-8"
-                />
-              ))}
+            {/* Texto */}
+            <div style={{ flex: "1", textAlign: "left" }}>
+              <h2
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "60px",
+                  fontWeight: "600",
+                  lineHeight: "120%",
+                  color: "#0C46F2"
+                }}
+              >
+                ¿Por qué tantos padres se sienten desbordados?
+              </h2>
+              <p
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "25px",
+                  fontWeight: "400",
+                  lineHeight: "120%",
+                  color: "#000000",
+                }}
+              >
+                La improvisación en la crianza puede generar más conflictos que
+                soluciones. Vivimos en un mundo con valores materialistas, abuso de la
+                tecnología, jornadas laborales interminables y la creencia de que
+                equivocarse es fracasar.
+                <br />
+                <br />
+                La realidad es que ser padre es el único trabajo que aprendemos sobre la
+                marcha...
+              </p>
+              <br></br><br></br>
             </div>
-            <p className="text-medium text-base lg:text-3xl">
-             
-              {translations[lang]?.reviewSubTextL ||
-                translations["en"].reviewSubTextL}
-            </p>
-          </div>
-        </div>
-        <div className="">
-          <LongReviews lang={lang} />
-        </div>
-      </section>*/}
 
-      {/* Footer
-      <Footer /> */}
+            {/* Imágenes */}
+            <div
+              style={{
+                flex: "1",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                position: "relative", // Habilita el posicionamiento relativo
+              }}
+            >
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-top.jpg"
+                alt="Padres desbordados"
+                style={{
+                  width: "535px",
+                  height: "314px",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra
+                }}
+              />
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-botton.jpg"
+                alt="Familia en conflicto"
+                style={{
+                  width: "275px",
+                  height: "233px",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra
+                  position: "relative", // Posicionamiento relativo
+                  top: "-30px", // Mueve la imagen un 10% hacia arriba
+                  right: "-100px"
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Botón */}
+          <button
+            className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
+            style={{
+              backgroundColor: "#0c46F2", // Fondo gris claro
+              borderRadius: "30px", // Bordes redondeados
+              padding: "1.5rem", // Relleno interno
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",// Sombra suave
+              color: "#FFFFFF",
+              fontFamily: "Poppins",
+              fontWeight: "600",
+              fontSize: "32px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "left"
+            }}
+
+          >
+            Quiero Mejorar la Crianza
+          </button>
+        </div>
+      </section>
+
+      {/* Reviews */
+        <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
+          <div
+            className="control-section"
+            style={{
+              textAlign: "center",
+              padding: "40px 20px",
+              backgroundColor: "#FFFFFF", // Fondo blanco
+            }}
+          >
+            {/* Título */}
+            <h2
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "60px",
+                fontWeight: "600",
+                lineHeight: "100%",
+                color: "#0C46F2", // Azul
+                marginBottom: "20px",
+              }}
+            >
+              Lo han silenciado durante años porque... <br />
+              pone el control de la crianza en tus manos
+            </h2>
+
+            {/* Subtítulo */}
+            <p
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "24px",
+                fontWeight: "400",
+                lineHeight: "150%",
+                color: "#000000", // Negro
+                marginBottom: "50px",
+              }}
+            >
+              El Método que está transformando familias en más de 60 Países <br></br>— Sin Gritos,
+              Sin Castigos y con Resultados Reales. <br></br>Más de 80 años de estudios en
+              psicología adleriana y neurociencia avalan nuestro método. <br />
+              <b>
+                Reconocido por la Sociedad Americana Montessori y el prestigioso College
+                NBCC.
+              </b>
+            </p>
+
+            {/* Bloque 1 */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "20px",
+              }}
+            >
+
+              <div
+                style={{
+                  backgroundColor: "#7AFD9D", // Fondo verde
+                  borderRadius: "30px", // Bordes redondeados
+                  padding: "10px 20px", // Espaciado interno
+
+                  width: "510px",
+                  height: "89px",
+                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
+                  display: "flex", // Activa Flexbox
+                  alignItems: "center", // Centra verticalmente el contenido
+                  justifyContent: "center", // Centra horizontalmente el contenido
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "Poppins",
+                    backgroundColor: "#0C46F2", // Azul
+                    color: "#FFFFFF", // Blanco
+                    borderRadius: "50%", // Hace el círculo
+                    width: "82px",
+                    height: "82px",
+                    display: "flex",
+                    alignItems: "center", // Centra verticalmente el contenido
+                    justifyContent: "center", // Centra horizontalmente el contenido
+                    fontWeight: "700",
+                    fontSize: "60px",
+                    lineHeight: "120%",
+                    position: "absolute", // Posiciona el círculo dentro del contenedor
+                    top: "-25px", // Mueve el círculo hacia arriba
+                    left: "-45px", // Mueve el círculo hacia la izquierda
+                  }}
+                >
+                  1
+                </div>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    color: "#0C46F2", // Azul
+                    lineHeight: "100%",
+                    margin: 0,
+                    textAlign: "center", // Alinea el texto al centro
+                  }}
+                >
+                  Enseñar valores sin imposiciones
+                </p>
+              </div>
+
+
+
+              {/* Bloque 2 */}
+              <div
+                style={{
+                  backgroundColor: "#7AFD9D", // Fondo verde
+                  borderRadius: "30px", // Bordes redondeados
+                  padding: "10px 20px", // Espaciado interno
+
+                  width: "645px",
+                  height: "89px",
+                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
+                  display: "flex", // Activa Flexbox
+                  alignItems: "center", // Centra verticalmente el contenido
+                  justifyContent: "center", // Centra horizontalmente el contenido
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "Poppins",
+                    backgroundColor: "#0C46F2", // Azul
+                    color: "#FFFFFF", // Blanco
+                    borderRadius: "50%", // Hace el círculo
+                    width: "82px",
+                    height: "82px",
+                    display: "flex",
+                    alignItems: "center", // Centra verticalmente el contenido
+                    justifyContent: "center", // Centra horizontalmente el contenido
+                    fontWeight: "700",
+                    fontSize: "60px",
+                    lineHeight: "120%",
+                    position: "absolute", // Posiciona el círculo dentro del contenedor
+                    top: "-25px", // Mueve el círculo hacia arriba
+                    left: "-45px", // Mueve el círculo hacia la izquierda
+                  }}
+                >
+                  2
+                </div>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    color: "#0C46F2", // Azul
+                    lineHeight: "100%",
+                    margin: 0,
+
+                    textAlign: "center", // Alinea el texto al centro
+                  }}
+                >
+                  Manejo de conflictos sin gritos ni castigos
+                </p>
+              </div>
+
+              {/* Bloque 3 */}
+              <div
+                style={{
+                  backgroundColor: "#7AFD9D", // Fondo verde
+                  borderRadius: "30px", // Bordes redondeados
+                  padding: "10px 20px", // Espaciado interno
+
+                  width: "767px",
+                  height: "89px",
+                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
+                  display: "flex", // Activa Flexbox
+                  alignItems: "center", // Centra verticalmente el contenido
+                  justifyContent: "center", // Centra horizontalmente el contenido
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "Poppins",
+                    backgroundColor: "#0C46F2", // Azul
+                    color: "#FFFFFF", // Blanco
+                    borderRadius: "50%", // Hace el círculo
+                    width: "82px",
+                    height: "82px",
+                    display: "flex",
+                    alignItems: "center", // Centra verticalmente el contenido
+                    justifyContent: "center", // Centra horizontalmente el contenido
+                    fontWeight: "700",
+                    fontSize: "60px",
+                    lineHeight: "120%",
+                    position: "absolute", // Posiciona el círculo dentro del contenedor
+                    top: "-25px", // Mueve el círculo hacia arriba
+                    left: "-45px", // Mueve el círculo hacia la izquierda
+                  }}
+                >
+                  3
+                </div>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    color: "#0C46F2", // Azul
+                    lineHeight: "100%",
+                    margin: 0,
+
+                    textAlign: "center", // Alinea el texto al centro
+                  }}
+                >
+                  Crear un ambiente de respeto, escucha y colaboración
+                </p>
+              </div>
+
+              {/* Bloque 4 */}
+              <div
+                style={{
+                  backgroundColor: "#7AFD9D", // Fondo verde
+                  borderRadius: "30px", // Bordes redondeados
+                  padding: "10px 20px", // Espaciado interno
+
+                  width: "767px",
+                  height: "89px",
+                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
+                  display: "flex", // Activa Flexbox
+                  alignItems: "center", // Centra verticalmente el contenido
+                  justifyContent: "center", // Centra horizontalmente el contenido
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "Poppins",
+                    backgroundColor: "#0C46F2", // Azul
+                    color: "#FFFFFF", // Blanco
+                    borderRadius: "50%", // Hace el círculo
+                    width: "82px",
+                    height: "82px",
+                    display: "flex",
+                    alignItems: "center", // Centra verticalmente el contenido
+                    justifyContent: "center", // Centra horizontalmente el contenido
+                    fontWeight: "700",
+                    fontSize: "60px",
+                    lineHeight: "120%",
+                    position: "absolute", // Posiciona el círculo dentro del contenedor
+                    top: "-25px", // Mueve el círculo hacia arriba
+                    left: "-45px", // Mueve el círculo hacia la izquierda
+                  }}
+                >
+                  4
+                </div>
+                <p
+                  style={{
+                    fontFamily: "Poppins",
+                    fontSize: "24px",
+                    fontWeight: "600",
+                    color: "#0C46F2", // Azul
+                    lineHeight: "100%",
+                    margin: 0,
+
+                    textAlign: "center", // Alinea el texto al centro
+                  }}
+                >
+                  Validado por educadores, psicólogos y miles de familias
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>}
+
+      {/* Footer 
+      */}
+      {<Footer />}
 
       {/* <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="white">
         <div className="p-6 md:p-0 lg:p-0 popUp lg:h-[350px] lg:w-[500px]  flex flex-col justify-center items-center text-center gap-6 lg:gap-6 text-white uppercase rounded-lg">
