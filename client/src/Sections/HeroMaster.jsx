@@ -68,87 +68,56 @@ const HeroMaster = ({ lang }) => {
   }
 
   return (
-    <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 "
+<section className="hero w-full h-max flex flex-col items-center py-8 lg:py-12 lg:p-16 gap-6 lg:gap-8">
+  <div className="flex items-center justify-center">
+    <span
+      className="font-poppins italic text-center text-[20px] lg:text-[25px] font-normal leading-[100%]"
+      style={{ fontFamily: "Poppins" }}
     >
-      <div className="flex items-center gap-1">
-        <span className=""
-          style={{
-            fontFamily: "Poppins",
-            fontStyle: "italic",
-            fontSize: "25px",
-            fontWeight: "400",
-            lineHeight: "100%",
-            letterSpacing: "0%",
-            horizonatalAlign: "center"
-          }}>LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.</span>
+      LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.
+    </span>
+  </div>
 
-      </div>
+  <div className="flex items-center justify-center">
+    <span
+      className="font-domine text-center text-[30px] lg:text-[40px] font-bold uppercase leading-[40px] lg:leading-[60px]"
+      style={{ fontFamily: "Domine" }}
+    >
+      EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE{" "}
+      <span className="bg-[#7AFD9D] text-[#0C46F2] px-1">
+        MEJORA LA CRIANZA
+      </span>
+      , EN SOLO <u>15 MINUTOS</u> AL DÍA.
+    </span>
+  </div>
 
+  <div className="flex items-center justify-center">
+    <span
+      className="font-poppins italic text-center text-[20px] lg:text-[25px] font-normal leading-[100%]"
+      style={{ fontFamily: "Poppins" }}
+    >
+      TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
+    </span>
+  </div>
 
-      <div className="flex items-center gap-1">
+  <VideoEmbedMaster />
+
+  {showButton && (
+    <>
+      <div className="w-full flex justify-center">
         <span
-          style={{
-            fontFamily: "Domine",
-            fontSize: "40px",
-            lineHeight: "60px",
-            fontWeight: "700",
-            letterSpacing: "0%",
-            textAlign: "center",
-            textTransform: "uppercase",
-            textDecorationStyle: "solid",
-            textdecorationOffset: "0%",
-            textDecorationThickness: "0%",
-            textDecorationSkipInk: "auto"
-
-          }}
+          className="font-poppins text-center text-[35px] lg:text-[50px] font-bold leading-[100%]"
+          style={{ fontFamily: "Poppins" }}
         >
-          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE  <span style={{backgroundColor:"#7AFD9D", color: "#0C46F2"}}>MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
+          INICIA EL PROCESO DE MEJORA
         </span>
       </div>
-
-      <div className="flex items-center gap-1">
-        <span
-          style={{
-            fontFamily: "Poppins",
-            fontStyle: "italic",
-            fontSize: "25px",
-            lineHeight: "100%",
-            fontWeight: "400",
-            letterSpacing: "0%",
-            textAlign: "center",
-          }}
-        >
-          TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
-        </span>
+      <div className="w-full flex justify-center">
+        <Button title="¡CLICK AQUÍ!" func={takeToForm} id="applyToParticipate" />
       </div>
-
-
-      <VideoEmbedMaster />
-
-
-
-      {showButton && (
-        <>
-          <div className="w-full flex gap-8 lg:gap-40 justify-center ">
-            <span
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "50px",
-                lineHeight: "100%",
-                fontWeight: "700",
-                letterSpacing: "0%",
-                textAlign: "center",
-              }}
-            >INICIA EL PROCESO DE MEJORA
-            </span>
-          </div>
-          <div className="w-full flex gap-8 lg:gap-40 justify-center ">
-            <Button title="¡CLICK AQUÍ!" func={takeToForm} id="applyToParticipate" />
-          </div>
-        </>
-      )}
-
-    </section>
+    </>
+  )}
+</section>
   );
 };
 

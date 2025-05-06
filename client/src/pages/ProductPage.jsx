@@ -27,13 +27,6 @@ const features = {
     "✅ Acceso online a los cursos y a la comunidad desde cualquier lugar, en cualquier momento.",
   ],
   de: [
-    // "10 Minuten vom Flughafen Málaga entfernt.",
-    // "Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
-    // "Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
-    // "Top- & Seitenkoffer inklusive.",
-    // "24/7 Pannenhilfe.",
-    // "Vollkaskoversicherung.",
-    // "Kostenlose Schließfächer & Gepäckaufbewahrung.",
     "✅ 10 Minuten vom Flughafen Málaga entfernt.",
     "✅ Keine Kaution, kein Aufwand – einfach buchen, ankommen und losfahren.",
     "✅ Von Stiefeln bis Helmen – erstklassige Ausrüstung verfügbar.",
@@ -298,13 +291,6 @@ const ProductPage = ({ lang }) => {
                 color: "#000000",
               }}
             >
-              {/* A transformative experience that will forever change the way you
-              explore Andalusia. Choose between 3 or 7 magical days aboard the
-              majestic Triumph Tiger, ready to take you into the unknown,
-              together with our master guide, crafted by a team of experts with
-              over 10 years of experience, revealing every secret, every curve,
-              and every hidden treasure of this land. */}
-              {/*translations[lang]?.headDesc || translations["en"].headDesc*/}
               <br></br>El Método que está transformando familias en más de 60 Países — Sin Gritos, Sin Castigos y con Resultados Reales.
               <br></br>Más de 80 años de estudios en psicología adleriana y neurociencia avalan nuestro método. <br></br>Reconocido por la Sociedad Americana Montessori y el prestigioso College NBCC.<br></br></p>
             <br></br>
@@ -319,104 +305,49 @@ const ProductPage = ({ lang }) => {
 
 
             <div className="text-left ml-0 lg:ml-6">
-              <ul className="Arial list-none  leading-tight" style={{ lineHeight: "30px" }}>
-                <li className=" list-none ">
-
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
+              <ul className="list-none space-y-2 leading-tight">
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
                     ✅ <b>Curso completo</b> en video con herramientas prácticas paso a paso
                   </span>
                 </li>
-                <li className=" list-none ">
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
                     ✅ Acceso a <b>comunidad privada de padres y expertos</b>
                   </span>
                 </li>
-                <li className=" list-none ">
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
                     ✅ Set de <b>52 actividades descargables de fin de semana</b> para reforzar vínculos familiares
                   </span>
                 </li>
-                <li className=" list-none ">
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
                     ✅ <b>Talleres mensuales</b> con sesiones de preguntas y respuestas
                   </span>
                 </li>
-                <li className=" list-none ">
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
                     ✅ <b>Plantillas y recursos extra</b> que facilitan la implementación del Método en casa
                   </span>
                 </li>
-                <li className=" list-none ">
-                  <span className=""
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}>
-                    ✅  <b>Acceso preferente a campamentos exclusivos</b> para familias comprometidas
+                <li>
+                  <span className="font-poppins text-sm md:text-base text-black">
+                    ✅ <b>Acceso preferente a campamentos exclusivos</b> para familias comprometidas
                   </span>
                 </li>
               </ul>
             </div>
-            <div className="text-left">
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-
-                {/* Pack Infalible */}
-                <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/ok_red.png" />
-
-                <span className="text-left"
-                  style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "15px",
-                    fontWeight: "800",
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    color: "#000000",
-                    textAlign: "left"
-                  }}> Resultados garantizados o se te devuelve el dinero</span>
+            <div className="text-left mt-4">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/ok_red.png"
+                  alt="Ok icon"
+                  className="w-4 h-4"
+                />
+                <span className="font-montserrat text-xs md:text-sm font-extrabold text-black">
+                  Resultados garantizados o se te devuelve el dinero
+                </span>
               </div>
             </div>
           </div>
@@ -437,181 +368,72 @@ const ProductPage = ({ lang }) => {
           <div className="">
 
             {/* Pack Infalible */}
-            <span className=""
+            <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
               style={{
                 fontFamily: "Poppins",
-                fontSize: "60px",
-                fontWeight: "600",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "#0C46F2",
-                textAlign: "center",
-                display: "block"
-              }}> Del caos a la armonía <br></br>con solo 15 minutos al día </span>
+              }}
+            >Del caos a la armonía <br></br>con solo 15 minutos al día </h2>
 
             <div
-              className="features-container"
-              style={{
-                display: "grid", // Usamos grid para organizar las imágenes
-                gridTemplateColumns: "repeat(2, 1fr)", // Dos columnas
-                gap: "20px", // Espaciado entre los elementos
-                marginTop: "40px", // Separación superior
-              }}
+              className="features-container grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10"
             >
               {/* Curso completo */}
-              <div style={{
-                display: "flex", // Activa Flexbox
-                flexDirection: "column", // Alinea los elementos en columna
-                alignItems: "center", // Centra los elementos horizontalmente
-                textAlign: "center", // Centra el texto
-              }}>
+              <div className="flex flex-col items-center text-center">
                 <img
-                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/capitulos-34.png" // Reemplaza con la URL de la imagen
+                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/capitulos-34.png"
                   alt="Curso completo"
-                  style={{ width: "370px", height: "220px" }}
+                  className="w-[370px] h-[220px] mx-auto"
                 />
-                <h3 style={{
-                  fontFamily: "Poppins",
-                  fontSize: "30px",
-                  fontWeight: "800",
-                  fontStyle: "italic",
-                  lineHeight: "40px",
-                  letterSpacing: "0%",
-                  color: "#0C46F2",
-                  verticalAlign: "middle"
-                }}>
-                  Curso completo de <br></br>34 capítulos
+                <h3 className="font-poppins text-2xl lg:text-[30px] font-extrabold italic text-blue-600 mt-2">
+                  Curso completo de <br />34 capítulos
                 </h3>
-                <p style={{
-                  fontFamily: "Montserrat",
-                  fontSize: "20px",
-                  fontWeight: "400",
-                  lineHeight: "20px",
-                  letterSpacing: "0%",
-                  color: "#0C46F2",
-                  verticalAlign: "middle"
-                }}>
+                <p className="font-montserrat text-lg lg:text-[20px] font-normal text-blue-600 mt-1">
                   17 lecciones explicativas <br /> 17 actividades prácticas
                 </p>
               </div>
 
               {/* Guías descargables */}
-              <div style={{
-                display: "flex", // Activa Flexbox
-                flexDirection: "column", // Alinea los elementos en columna
-                alignItems: "center", // Centra los elementos horizontalmente
-                textAlign: "center", // Centra el texto
-              }}>
+              <div className="flex flex-col items-center text-center">
                 <img
                   src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/guias.png"
                   alt="Guías descargables"
-                  style={{ width: "370px", height: "220px" }}
+                  className="w-[370px] h-[220px] mx-auto"
                 />
-                <h3 style={{
-                  fontFamily: "Poppins",
-                  fontSize: "30px",
-                  fontWeight: "800",
-                  fontStyle: "italic",
-                  lineHeight: "40px",
-                  letterSpacing: "0%",
-                  color: "#0C46F2",
-                  verticalAlign: "middle"
-                }}>
-                  Guías <br></br>descargables
+                <h3 className="font-poppins text-2xl lg:text-[30px] font-extrabold italic text-blue-600 mt-2">
+                  Guías <br />descargables
                 </h3>
-                <p style={{
-                   fontFamily: "Montserrat",
-                   fontSize: "20px",
-                   fontWeight: "400",
-                   lineHeight: "20px",
-                   letterSpacing: "0%",
-                   color: "#0C46F2",
-                   verticalAlign: "middle"
-                }}>
-                  52 actividades para cada fin de semana del año <br /> Ejercicios prácticos
-                  para aplicar en familia
+                <p className="font-montserrat text-lg lg:text-[20px] font-normal text-blue-600 mt-1">
+                  52 actividades para cada fin de semana del año <br /> Ejercicios prácticos para aplicar en familia
                 </p>
               </div>
 
               {/* Acceso exclusivo a la Comunidad */}
-              <div style={{
-                display: "flex", // Activa Flexbox
-                flexDirection: "column", // Alinea los elementos en columna
-                alignItems: "center", // Centra los elementos horizontalmente
-                textAlign: "center", // Centra el texto
-              }}>
+              <div className="flex flex-col items-center text-center">
                 <img
                   src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/acceso-exclusivo.png"
                   alt="Acceso exclusivo a la Comunidad"
-                  style={{ width: "370px", height: "220px" }}
+                  className="w-[370px] h-[220px] mx-auto"
                 />
-                <h3 style={{
-                  fontFamily: "Poppins",
-                  fontSize: "30px",
-                  fontWeight: "800",
-                  fontStyle: "italic",
-                  lineHeight: "40px",
-                  letterSpacing: "0%",
-                  color: "#0C46F2",
-                  verticalAlign: "middle"
-                }}>
-                  Acceso exclusivo a la <br></br>Comunidad
+                <h3 className="font-poppins text-2xl lg:text-[30px] font-extrabold italic text-blue-600 mt-2">
+                  Acceso exclusivo a la <br />Comunidad
                 </h3>
-                <p style={{
-                   fontFamily: "Montserrat",
-                   fontSize: "20px",
-                   fontWeight: "400",
-                   lineHeight: "20px",
-                   letterSpacing: "0%",
-                   color: "#0C46F2",
-                   verticalAlign: "middle"
-                }}>
-                  Apoyo directo de nuestros formadores <br /> Resolución de dudas y
-                  acompañamiento continuo
+                <p className="font-montserrat text-lg lg:text-[20px] font-normal text-blue-600 mt-1">
+                  Apoyo directo de nuestros formadores <br /> Resolución de dudas y acompañamiento continuo
                 </p>
               </div>
 
               {/* Campamentos y Talleres */}
-              <div
-                style={{
-                  display: "flex", // Activa Flexbox
-                  flexDirection: "column", // Alinea los elementos en columna
-                  alignItems: "center", // Centra los elementos horizontalmente
-                  textAlign: "center", // Centra el texto
-                }}
-              >
+              <div className="flex flex-col items-center text-center">
                 <img
                   src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/campamentos.png"
                   alt="Campamentos y Talleres"
-                  style={{ width: "370px", height: "220px" }}
+                  className="w-[370px] h-[220px] mx-auto"
                 />
-                <h3
-                  style={{
-                    fontFamily: "Poppins",
-                    fontSize: "30px",
-                    fontWeight: "800",
-                    fontStyle: "italic",
-                    lineHeight: "40px",
-                    letterSpacing: "0%",
-                    color: "#0C46F2",
-                    verticalAlign: "middle"
-                  }}
-                >
+                <h3 className="font-poppins text-2xl lg:text-[30px] font-extrabold italic text-blue-600 mt-2">
                   Campamentos y <br /> Talleres
                 </h3>
-                <p
-                  style={{
-                    fontFamily: "Montserrat",
-                    fontSize: "20px",
-                    fontWeight: "400",
-                    lineHeight: "20px",
-                    letterSpacing: "0%",
-                    color: "#0C46F2",
-                    verticalAlign: "middle"
-                  }}
-                >
-                  Talleres de reprogramación de creencias limitantes <br /> Acceso exclusivo
-                  a campamentos formativos
+                <p className="font-montserrat text-lg lg:text-[20px] font-normal text-blue-600 mt-1">
+                  Talleres de reprogramación de creencias limitantes <br /> Acceso exclusivo a campamentos formativos
                 </p>
               </div>
             </div>
@@ -878,7 +700,7 @@ const ProductPage = ({ lang }) => {
 
 
       <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 " style={{ marginTop: "10%" }}>
-  <div
+        <div
           className="testimonials-section  w-full"
           style={{
             backgroundColor: "#0C46F2", // Fondo azul
@@ -889,15 +711,10 @@ const ProductPage = ({ lang }) => {
           }}
         >
           {/* Título */}
-          <h2
+          <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
             style={{
               fontFamily: "Poppins",
-              fontSize: "60px",
-              fontWeight: "600",
-              lineHeight: "100%",
-              letterSpacing: "0%",
               color: "#FFFFFF",
-              textAlign: "center"
             }}
           >
             💬 Lo que dicen otros padres <br></br>que ya vivieron la experiencia
@@ -1040,15 +857,9 @@ const ProductPage = ({ lang }) => {
             }}
           >
             {/* Título */}
-            <h2
+            <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
               style={{
                 fontFamily: "Poppins",
-                fontSize: "60px",
-                fontWeight: "600",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "#0C46F2",
-                textAlign: "center"
               }}
             >
               Avalado por:<br></br><br></br>
@@ -1126,15 +937,10 @@ const ProductPage = ({ lang }) => {
           }}
         >
           {/* Título */}
-          <h2
+          <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
             style={{
               fontFamily: "Poppins",
-              fontSize: "60px",
-              fontWeight: "600",
-              lineHeight: "100px",
-              letterSpacing: "0%",
-              color: "#0C46F2",
-              textAlign: "center"
+
             }}
           >
             Basado en prácticas probadas por psicólogos, educadores y familias<br></br><br></br>
@@ -1325,105 +1131,45 @@ const ProductPage = ({ lang }) => {
         </div>
       </section>
 
-      {/* Before you know it// */}
-
-      <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black ">
-        <div
-          className="overwhelmed-parents-section"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            padding: "40px 20px",
-            backgroundColor: "#FFFFFF", // Fondo blanco
-          }}
-        >
-          {/* Contenedor principal */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              gap: "20px",
-              maxWidth: "1200px",
-              width: "100%",
-            }}
-          >
+      <section className="mt-5 py-16 px-8 lg:px-32 flex flex-col justify-center items-center gap-5 text-black">
+        <div className="overwhelmed-parents-section flex flex-col items-center text-center p-10 bg-white">
+          {/* Contenedor principal: en móvil se apila (flex-col) y en lg se alínea en fila */}
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-5 max-w-7xl w-full">
             {/* Texto */}
-            <div style={{ flex: "1", textAlign: "left" }}>
-              <h2
+            <div className="flex-1 text-left">
+              <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
                 style={{
-                  fontFamily: "Poppins",
-                  fontSize: "60px",
-                  fontWeight: "600",
-                  lineHeight: "120%",
-                  color: "#0C46F2"
+                  fontFamily: "Poppins"
                 }}
               >
                 ¿Por qué tantos padres se sienten desbordados?
               </h2>
-              <p
+              <p className="font-poppins text-base lg:text-[25px] font-normal leading-relaxed text-black"
                 style={{
-                  fontFamily: "Poppins",
-                  fontSize: "25px",
-                  fontWeight: "400",
-                  lineHeight: "120%",
-                  color: "#000000",
-                }}
-              >
-                La improvisación en la crianza puede generar más conflictos que
-                soluciones. Vivimos en un mundo con valores materialistas, abuso de la
-                tecnología, jornadas laborales interminables y la creencia de que
-                equivocarse es fracasar.
-                <br />
-                <br />
-                La realidad es que ser padre es el único trabajo que aprendemos sobre la
-                marcha...
+                  fontFamily: "Poppins"
+                }}>
+                La improvisación en la crianza puede generar más conflictos que soluciones. Vivimos en un mundo con valores materialistas, abuso de la tecnología, jornadas laborales interminables y la creencia de que equivocarse es fracasar.
+                <br /><br />
+                La realidad es que ser padre es el único trabajo que aprendemos sobre la marcha...
               </p>
-              <br></br><br></br>
             </div>
-
             {/* Imágenes */}
-            <div
-              style={{
-                flex: "1",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                position: "relative", // Habilita el posicionamiento relativo
-              }}
-            >
+            <div className="flex-1 flex flex-col gap-3 relative">
               <img
                 src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-top.jpg"
                 alt="Padres desbordados"
-                style={{
-                  width: "535px",
-                  height: "314px",
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra
-                }}
+                className="w-full max-w-md rounded-lg shadow-lg"
               />
               <img
                 src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-botton.jpg"
                 alt="Familia en conflicto"
-                style={{
-                  width: "275px",
-                  height: "233px",
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra
-                  position: "relative", // Posicionamiento relativo
-                  top: "-30px", // Mueve la imagen un 10% hacia arriba
-                  right: "-100px"
-                }}
+                className="w-full max-w-sm rounded-lg shadow-lg relative -top-5 -right-10 lg:-top-5 lg:-right-10"
               />
             </div>
           </div>
-
           {/* Botón */}
           <button
-            className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
+            className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
             style={{
               backgroundColor: "#0c46F2", // Fondo gris claro
               borderRadius: "30px", // Bordes redondeados
@@ -1436,13 +1182,13 @@ const ProductPage = ({ lang }) => {
               lineHeight: "100%",
               letterSpacing: "0%",
               textAlign: "left"
-            }}
-
-          >
+            }}>
             Quiero Mejorar la Crianza
           </button>
         </div>
       </section>
+      {/* Before you know it// */}
+
 
       {/* Reviews */
         <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
@@ -1455,14 +1201,9 @@ const ProductPage = ({ lang }) => {
             }}
           >
             {/* Título */}
-            <h2
+            <h2 className="font-poppins text-4xl lg:text-[60px] font-semibold leading-tight text-[#0C46F2]"
               style={{
                 fontFamily: "Poppins",
-                fontSize: "60px",
-                fontWeight: "600",
-                lineHeight: "100%",
-                color: "#0C46F2", // Azul
-                marginBottom: "20px",
               }}
             >
               Lo han silenciado durante años porque... <br />
@@ -1490,219 +1231,40 @@ const ProductPage = ({ lang }) => {
             </p>
 
             {/* Bloque 1 */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "20px",
-              }}
-            >
-
-              <div
-                style={{
-                  backgroundColor: "#7AFD9D", // Fondo verde
-                  borderRadius: "30px", // Bordes redondeados
-                  padding: "10px 20px", // Espaciado interno
-
-                  width: "510px",
-                  height: "89px",
-                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
-                  display: "flex", // Activa Flexbox
-                  alignItems: "center", // Centra verticalmente el contenido
-                  justifyContent: "center", // Centra horizontalmente el contenido
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "Poppins",
-                    backgroundColor: "#0C46F2", // Azul
-                    color: "#FFFFFF", // Blanco
-                    borderRadius: "50%", // Hace el círculo
-                    width: "82px",
-                    height: "82px",
-                    display: "flex",
-                    alignItems: "center", // Centra verticalmente el contenido
-                    justifyContent: "center", // Centra horizontalmente el contenido
-                    fontWeight: "700",
-                    fontSize: "60px",
-                    lineHeight: "120%",
-                    position: "absolute", // Posiciona el círculo dentro del contenedor
-                    top: "-25px", // Mueve el círculo hacia arriba
-                    left: "-45px", // Mueve el círculo hacia la izquierda
-                  }}
-                >
-                  1
+            <div className="flex flex-col items-center gap-5">
+              {/* Bloque 1 */}
+              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[510px] h-[89px] relative flex items-center justify-center">
+              <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[60px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
+              1
                 </div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontSize: "24px",
-                    fontWeight: "600",
-                    color: "#0C46F2", // Azul
-                    lineHeight: "100%",
-                    margin: 0,
-                    textAlign: "center", // Alinea el texto al centro
-                  }}
-                >
+                <p className="font-poppins text-[24px] font-semibold text-[#0C46F2] m-0 text-center">
                   Enseñar valores sin imposiciones
                 </p>
               </div>
-
-
-
               {/* Bloque 2 */}
-              <div
-                style={{
-                  backgroundColor: "#7AFD9D", // Fondo verde
-                  borderRadius: "30px", // Bordes redondeados
-                  padding: "10px 20px", // Espaciado interno
-
-                  width: "645px",
-                  height: "89px",
-                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
-                  display: "flex", // Activa Flexbox
-                  alignItems: "center", // Centra verticalmente el contenido
-                  justifyContent: "center", // Centra horizontalmente el contenido
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "Poppins",
-                    backgroundColor: "#0C46F2", // Azul
-                    color: "#FFFFFF", // Blanco
-                    borderRadius: "50%", // Hace el círculo
-                    width: "82px",
-                    height: "82px",
-                    display: "flex",
-                    alignItems: "center", // Centra verticalmente el contenido
-                    justifyContent: "center", // Centra horizontalmente el contenido
-                    fontWeight: "700",
-                    fontSize: "60px",
-                    lineHeight: "120%",
-                    position: "absolute", // Posiciona el círculo dentro del contenedor
-                    top: "-25px", // Mueve el círculo hacia arriba
-                    left: "-45px", // Mueve el círculo hacia la izquierda
-                  }}
-                >
+              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[645px] h-[89px] relative flex items-center justify-center">
+                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[60px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
                   2
                 </div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontSize: "24px",
-                    fontWeight: "600",
-                    color: "#0C46F2", // Azul
-                    lineHeight: "100%",
-                    margin: 0,
-
-                    textAlign: "center", // Alinea el texto al centro
-                  }}
-                >
+                <p className="font-poppins text-[24px] font-semibold text-[#0C46F2] m-0 text-center">
                   Manejo de conflictos sin gritos ni castigos
                 </p>
               </div>
-
               {/* Bloque 3 */}
-              <div
-                style={{
-                  backgroundColor: "#7AFD9D", // Fondo verde
-                  borderRadius: "30px", // Bordes redondeados
-                  padding: "10px 20px", // Espaciado interno
-
-                  width: "767px",
-                  height: "89px",
-                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
-                  display: "flex", // Activa Flexbox
-                  alignItems: "center", // Centra verticalmente el contenido
-                  justifyContent: "center", // Centra horizontalmente el contenido
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "Poppins",
-                    backgroundColor: "#0C46F2", // Azul
-                    color: "#FFFFFF", // Blanco
-                    borderRadius: "50%", // Hace el círculo
-                    width: "82px",
-                    height: "82px",
-                    display: "flex",
-                    alignItems: "center", // Centra verticalmente el contenido
-                    justifyContent: "center", // Centra horizontalmente el contenido
-                    fontWeight: "700",
-                    fontSize: "60px",
-                    lineHeight: "120%",
-                    position: "absolute", // Posiciona el círculo dentro del contenedor
-                    top: "-25px", // Mueve el círculo hacia arriba
-                    left: "-45px", // Mueve el círculo hacia la izquierda
-                  }}
-                >
+              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
+                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[60px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
                   3
                 </div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontSize: "24px",
-                    fontWeight: "600",
-                    color: "#0C46F2", // Azul
-                    lineHeight: "100%",
-                    margin: 0,
-
-                    textAlign: "center", // Alinea el texto al centro
-                  }}
-                >
+                <p className="font-poppins text-[24px] font-semibold text-[#0C46F2] m-0 text-center">
                   Crear un ambiente de respeto, escucha y colaboración
                 </p>
               </div>
-
               {/* Bloque 4 */}
-              <div
-                style={{
-                  backgroundColor: "#7AFD9D", // Fondo verde
-                  borderRadius: "30px", // Bordes redondeados
-                  padding: "10px 20px", // Espaciado interno
-
-                  width: "767px",
-                  height: "89px",
-                  position: "relative", // Habilita el posicionamiento relativo para el contenedor,
-                  display: "flex", // Activa Flexbox
-                  alignItems: "center", // Centra verticalmente el contenido
-                  justifyContent: "center", // Centra horizontalmente el contenido
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "Poppins",
-                    backgroundColor: "#0C46F2", // Azul
-                    color: "#FFFFFF", // Blanco
-                    borderRadius: "50%", // Hace el círculo
-                    width: "82px",
-                    height: "82px",
-                    display: "flex",
-                    alignItems: "center", // Centra verticalmente el contenido
-                    justifyContent: "center", // Centra horizontalmente el contenido
-                    fontWeight: "700",
-                    fontSize: "60px",
-                    lineHeight: "120%",
-                    position: "absolute", // Posiciona el círculo dentro del contenedor
-                    top: "-25px", // Mueve el círculo hacia arriba
-                    left: "-45px", // Mueve el círculo hacia la izquierda
-                  }}
-                >
+              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
+                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[60px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
                   4
                 </div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontSize: "24px",
-                    fontWeight: "600",
-                    color: "#0C46F2", // Azul
-                    lineHeight: "100%",
-                    margin: 0,
-
-                    textAlign: "center", // Alinea el texto al centro
-                  }}
-                >
+                <p className="font-poppins text-[24px] font-semibold text-[#0C46F2] m-0 text-center">
                   Validado por educadores, psicólogos y miles de familias
                 </p>
               </div>
