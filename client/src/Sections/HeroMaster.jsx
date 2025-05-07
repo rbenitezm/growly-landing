@@ -69,36 +69,27 @@ const HeroMaster = ({ lang }) => {
 
   return (
 <section className="hero w-full h-max flex flex-col items-center py-8 lg:py-12 lg:p-16 gap-6 lg:gap-8">
-  <div className="flex items-center justify-center">
-    <span
-      className="font-poppins italic text-center text-[20px] lg:text-[25px] font-normal leading-[100%]"
-      style={{ fontFamily: "Poppins" }}
-    >
-      LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.
-    </span>
-  </div>
+   {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
+   <div className="flex flex-col items-center gap-4">
+        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
+          style={{
+            fontFamily: "Poppins"
+          }}>
+          LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.
+        </span>
 
-  <div className="flex items-center justify-center">
-    <span
-      className="font-domine text-center text-[30px] lg:text-[40px] font-bold uppercase leading-[40px] lg:leading-[60px]"
-      style={{ fontFamily: "Domine" }}
-    >
-      EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE{" "}
-      <span className="bg-[#7AFD9D] text-[#0C46F2] px-1">
-        MEJORA LA CRIANZA
-      </span>
-      , EN SOLO <u>15 MINUTOS</u> AL DÍA.
-    </span>
-  </div>
+        <span className="text-center font-domine text-xl sm:text-3xl md:text-[40px] font-bold uppercase  tracking-normal"
+          style={{ textDecorationStyle: "solid", fontFamily: "Domine" }}>
+          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE <span className="bg-[#7AFD9D] text-[#0C46F2] px-1">MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
+        </span>
 
-  <div className="flex items-center justify-center">
-    <span
-      className="font-poppins italic text-center text-[20px] lg:text-[25px] font-normal leading-[100%]"
-      style={{ fontFamily: "Poppins" }}
-    >
-      TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
-    </span>
-  </div>
+        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
+          style={{
+            fontFamily: "Poppins"
+          }}>
+          TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
+        </span>
+      </div>
 
   <VideoEmbedMaster />
 
@@ -106,7 +97,7 @@ const HeroMaster = ({ lang }) => {
     <>
       <div className="w-full flex justify-center">
         <span
-          className="font-poppins text-center text-[35px] lg:text-[50px] font-bold leading-[100%]"
+          className="font-poppins text-center text-[25px] lg:text-[30px] font-bold leading-[100%]"
           style={{ fontFamily: "Poppins" }}
         >
           INICIA EL PROCESO DE MEJORA

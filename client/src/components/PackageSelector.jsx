@@ -99,24 +99,20 @@ const PackageSelector = ({ lang }) => {
   };
 
   return (
-    <div className="desc flex gap-3 flex-col">
+    <div className="desc flex flex-col gap-3">
       <div className="package-selector flex flex-col gap-4">
-        <div className="w-full flex gap-8 lg:gap-40 justify-left">
-
+        <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-40">
           <button
-            className=" p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-triumph-red text-white hover:bg-triumph-red-hover hover:scale-105 transition-all ease-in-out duration-300  shadow-custom-shadow"
+            className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0c46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
             style={{
-              backgroundColor: "#0c46F2", // Fondo gris claro
-              borderRadius: "30px", // Bordes redondeados
-              padding: "1.5rem", // Relleno interno
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",// Sombra suave
-              color: "#FFFFFF",
+              borderRadius: "30px",
+              padding: "1.5rem",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
               fontFamily: "Poppins",
               fontWeight: "600",
-              fontSize: "32px",
+              fontSize: "15px",
               lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "left"
+              letterSpacing: "0%"
             }}
             onClick={handleSelectPackage}
           >
@@ -124,38 +120,36 @@ const PackageSelector = ({ lang }) => {
           </button>
         </div>
       </div>
-
-      <div className="mb-2 lg:mb-0 ">
+      <div>
+        <img
+          src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/visas.png"
+          alt=""
+          className="object-contain"
+        />
+      </div>
+      <div className="mb-2 lg:mb-0">
         <div className="text-left">
           <span
+            className="font-montserrat text-[16px] font-normal text-black leading-[100%] tracking-normal"
             style={{
               fontFamily: "Montserrat",
-              fontSize: "18px",
-              fontWeight: "400",
-              color: "#000000",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              horizontalAlign: "center"
-            }}>
-            Esta es una compra única. Al continuar, acepto la <a
+            }}
+          >
+            Esta es una compra única. Al continuar, acepto la{" "}
+            <a
               href="https://triumphadventure.es/en/terms-and-conditions-of-the-7-day-adventure-pack-rental-agreement/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-blue-500 uppercase text-xs"
-            >política de cancelación</a> y autorizo el cargo correspondiente en mi forma de pago según el precio indicado en esta página.
+            >
+              política de cancelación
+            </a>{" "}
+            y autorizo el cargo correspondiente en mi forma de pago según el precio indicado en esta página.
           </span>
         </div>
       </div>
 
-
-      <div className="">
-        
-          <img
-            src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/visas.png"
-            alt=""
-          />
-      </div>
-
+      
     </div>
   );
 };

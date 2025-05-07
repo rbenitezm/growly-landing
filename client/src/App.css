@@ -1,0 +1,41 @@
+@keyframes slideMobile {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Aplica la animación solo en móvil */
+  .animate-slide-mobile {
+    animation: slideMobile 10s linear infinite;
+  }
+  
+  @media (min-width: 640px) {
+    .animate-slide-mobile {
+      animation: none;
+    }
+  }
+
+  /* HubspotForm.css */
+#hubspotForm .hs-form-field label {
+    color: #0C46F2 !important;
+    font-family: "Poppins", sans-serif;
+  }
+
+#hsfc-Button {
+    background-color: #0C46F2 !important;
+    color: rgb(233, 12, 12) !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+  

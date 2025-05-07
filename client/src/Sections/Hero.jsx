@@ -67,60 +67,29 @@ const Hero = ({ lang }) => {
   return (
     <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
       {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
-      <div className="flex items-center gap-1">
-        <span className=""
+      <div className="flex flex-col items-center gap-4">
+        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
           style={{
-            fontFamily: "Poppins",
-            fontStyle: "italic",
-            fontSize: "25px",
-            fontWeight: "400",
-            lineHeight: "100%",
-            letterSpacing: "0%",
-            horizonatalAlign: "center"
-          }}>LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.</span>
-
-      </div>
-
-
-      <div className="flex items-center gap-1">
-        <span
-          style={{
-            fontFamily: "Domine",
-            fontSize: "40px",
-            lineHeight: "60px",
-            fontWeight: "700",
-            letterSpacing: "0%",
-            textAlign: "center",
-            textTransform: "uppercase",
-            textDecorationStyle: "solid",
-            textdecorationOffset: "0%",
-            textDecorationThickness: "0%",
-            textDecorationSkipInk: "auto"
-
-          }}
-        >
-          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE  <span style={{ backgroundColor: "#7AFD9D", color: "#0C46F2" }}>MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
+            fontFamily: "Poppins"
+          }}>
+          LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.
         </span>
-      </div>
 
-      <div className="flex items-center gap-1">
-        <span
+        <span className="text-center font-domine text-xl sm:text-3xl md:text-[40px] font-bold uppercase  tracking-normal"
+          style={{ textDecorationStyle: "solid", fontFamily: "Domine" }}>
+          EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE <span className="bg-[#7AFD9D] text-[#0C46F2] px-1">MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
+        </span>
+
+        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
           style={{
-            fontFamily: "Poppins",
-            fontStyle: "italic",
-            fontSize: "25px",
-            lineHeight: "100%",
-            fontWeight: "400",
-            letterSpacing: "0%",
-            textAlign: "center",
-          }}
-        >
+            fontFamily: "Poppins"
+          }}>
           TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
         </span>
       </div>
 
 
-      <section className="mt-14 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
+      <section className="mt-5 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
         {/* Carousel */}
         <div className="right flex-1 ">
           <div className="carousel-container">
@@ -135,106 +104,70 @@ const Hero = ({ lang }) => {
         </div>
 
         {/* Title and Description */}
-        <div className="left px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 "
+        <div
+          className="left px-6 flex-1 flex flex-col gap-2"
           style={{
             backgroundColor: "#FFFFFF", // Fondo gris claro
             borderRadius: "8px", // Bordes redondeados
             padding: "1.5rem", // Relleno interno
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" // Sombra suave
-
-          }}>
+          }}
+        >
           {/* Title and stars */}
-          <div className="">
+          <div>
             <span
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "40px",
-                fontWeight: "700",
-                color: "#0C46F2",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center"
-              }}>
-              {/* Pack Infalible */}
-              !Accede a la clase GRATIS!
+              className="block text-center font-poppins font-bold text-[40px] text-[#0C46F2] leading-[100%]"
+              style={{ fontFamily: "Poppins" }}
+            >
+              ¡Accede a la clase GRATIS!
             </span>
           </div>
 
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "17px",
-                color: "#000000",
-                fontWeight: "700",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center"
-              }}><b>En esta clase online 100 % gratuita, descubrirás:</b></span>
-
+          <div className="flex items-center gap-1 mt-2">
+            <span
+              className="block text-center font-poppins font-semibold text-[17px] text-black"
+              style={{ fontFamily: "Poppins" }}
+            >
+              <b>En esta clase online 100% gratuita, descubrirás:</b>
+            </span>
           </div>
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "17px",
-                fontWeight: "400",
-                color: "#000000",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center"
-
-              }}>✔️ Por qué improvisar daña la relación con tus hijos sin que te des cuenta.</span>
-
+          <div className="flex items-center gap-1 mt-2">
+            <span
+              className="block text-center font-poppins font-normal text-[17px] text-black"
+              style={{ fontFamily: "Poppins" }}
+            >
+              ✔️ Por qué improvisar daña la relación con tus hijos sin que te des cuenta.
+            </span>
           </div>
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "17px",
-                fontWeight: "400",
-                color: "#000000",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center"
-
-              }}>✔️ Cómo transformar la relación con tus hijos dedicando solo 15 minutos al día.</span>
-
+          <div className="flex items-center gap-1 mt-2">
+            <span
+              className="block text-center font-poppins font-normal text-[17px] text-black"
+              style={{ fontFamily: "Poppins" }}
+            >
+              ✔️ Las claves que usan los mejores educadores para lograr respeto sin castigos.
+            </span>
           </div>
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "17px",
-                fontWeight: "400",
-                color: "#000000",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center"
-
-              }}>✔️ Cómo transformar la relación con tus hijos dedicando solo 15 minutos al día.</span>
-
+          <div className="flex items-center gap-1 mt-2">
+            <span
+              className="block text-center font-poppins font-normal text-[17px] text-black"
+              style={{ fontFamily: "Poppins" }}
+            >
+              ✔️ Cómo transformar la relación con tus hijos dedicando solo 15 minutos al día.
+            </span>
           </div>
 
-
-          <div className="flex items-center gap-1 mt-9">
-            <span className="font-semibold"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "20px",
-                fontWeight: "700",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                horizonatalAlign: "center",
-                fontcase: "uppercase",
-                color: "#0C46F2",
-              }}><b>RELLENA EL FORMULARIO CON TU NOMBRE Y EMAIL</b></span>
+          <div className="flex items-center gap-1 mt-2">
+            <span
+              className="block text-center font-poppins font-semibold text-[20px] uppercase text-[#0C46F2]"
+              style={{ fontFamily: "Poppins" }}
+            >
+              <b>RELLENA EL FORMULARIO CON TU NOMBRE Y EMAIL</b>
+            </span>
           </div>
           <div className="mt-6">
             <HubspotForm lang={lang} />
           </div>
         </div>
-
 
 
 
