@@ -61,7 +61,7 @@ const HubspotForm = ({ lang }) => {
             portalId: "145993063",
             formId: "9c3a2199-b8e0-48fe-a478-7d4608b2cc52",
             target: "#hubspotForm",
-            css: "",
+            css: "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/css/HubspotForm.css",
             onFormSubmitted: () => {
               setTimeout(() => {
                 navigate("/select-package");
@@ -77,7 +77,7 @@ const HubspotForm = ({ lang }) => {
 
   return (
     <div>
-      <div id="hubspotForm" className=""></div>
+      <div id="hubspotForm" className="hubspotForm"></div>
       <div style={{
         position: "relative",
         bottom: "90px",
