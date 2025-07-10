@@ -11,7 +11,7 @@ import { setFormDataReducer } from "../redux/formDataSlice";
 
 const QuestionDe = ({ lang }) => {
   const [formData, setFormData] = useState({});
-  const HUBSPOT_PORTAL_ID = "20102221";
+  const HUBSPOT_PORTAL_ID = "1";
 
   // const HUBSPOT_FORM_GUID = "eacfabb0-75e0-4416-8532-de300564026c";
   // const HUBSPOT_FORM_GUID = "81b13a3b-ac72-4afa-8a81-a7c341dff40c";

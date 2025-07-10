@@ -1,119 +1,112 @@
-import React, { useState } from "react";
-import Button from "../components/Button";
-import HubspotForm from "../components/HubspotForm";
-import Modal from "../components/Modal";
-import { useNavigate } from "react-router-dom";
-import VideoEmbed from "../components/VideoEmbed";
-import { trackEvent } from "../api/FacebookPixel";
-import ProductCarousel from "../components/ProductCarousel";
-import LastPlaces from "./LastPlaces";
-
-const translations = {
-  en: {
-    title: "FULL IMMERSION INTO CONSCIOUS PARENTING",
-    subtitle: "THE GROWLY METHOD",
-    detailsBtn: "SEE DETAILS & PRICING",
-    quizBtn: "APPLY TO JOIN"
-  },
-  es: {
-    title: "LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.",
-    subtitle: "EXPERTOS REVELAN el método educativo  QUE mejora LA crianza, EN SOLO 15 minutos al día.",
-    detailsBtn: "RESERVAR MI PLAZA",
-    quizBtn: "APLICAR PARA UNIRTE"
-  },
-  de: {
-    title: "VOLLE IMMERSION MIT UNSERER DOKUMENTATION",
-    subtitle: "TRIUMPH ADVENTURE PACKS",
-    // TRIUMPH ADVENTURE PACKS
-    detailsBtn: "DETAILS & PREISE",
-    quizBtn: "JETZT BEWERBEN",
-  },
-};
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { trackEvent } from '../api/FacebookPixel';
+import KlaviyoFormHandler from './KlaviyoFormHandler';
 
 const Hero = ({ lang }) => {
   const navigate = useNavigate();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [isModalOpen, setModalOpen] = useState(false);
+  const submitToHubspot = async (e) => {
+    e.preventDefault();
 
-  const openModal = () => {
-    setModalOpen(true);
+    const portalId = "145993063";
+    const formGuid = "9c3a2199-b8e0-48fe-a478-7d4608b2cc52";
+    const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
-    trackEvent("DetailsPricing_Click", {
-      label: "Details & Pricing Modal",
-      page: "Home",
-    });
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  function takeToForm() {
-    trackEvent("ApplyToParticipate_Click", {
-      label: "Apply Form",
-      page: "Home",
-    });
-    setTimeout(() => {
-      if (lang == "de") {
-        navigate("/de/quiz");
-      } else if (lang == "es") {
-        navigate("/es/quiz");
-      } else {
-        navigate("/quiz");
+    const payload = {
+      submittedAt: Date.now(),
+      fields: [
+        { name: "firstname", value: name },
+        { name: "email", value: email }
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title
       }
-    }, 500);
-  }
+    };
+
+    setIsSubmitting(true);
+    try {
+      // Opcional: rastrea el evento
+      trackEvent("Form_Submission", { name, email, lang });
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      console.log("Submission result:", result);
+      // Redirecciona según el idioma
+      if (lang === "es") {
+        navigate("/es/master");
+      } else {
+        navigate("master");
+      }
+    } catch (error) {
+      console.error("Error submitting to HubSpot:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8 ">
-      {/* FULL IMMERSION WITH OUR DOCUMENTARY */}
+    <section className="hero w-full h-max flex py-8 lg:py-12 lg:p-16 lg:justify-center items-center flex-col gap-6 lg:gap-8">
+      {/* Títulos y Descripción */}
       <div className="flex flex-col items-center gap-4">
-        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
-          style={{
-            fontFamily: "Poppins"
-          }}>
+        <span
+          className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
+          style={{ fontFamily: 'Poppins' }}
+        >
           LO HAN CALLADO POR AÑOS... PORQUE DA EL CONTROL A LAS FAMILIAS, NO AL SISTEMA.
         </span>
-
-        <span className="text-center font-domine text-xl sm:text-3xl md:text-[40px] font-bold uppercase  tracking-normal"
-          style={{ textDecorationStyle: "solid", fontFamily: "Domine" }}>
+        <span
+          className="text-center font-domine text-xl sm:text-3xl md:text-[40px] font-bold uppercase tracking-normal"
+          style={{ textDecorationStyle: 'solid', fontFamily: 'Domine' }}
+        >
           EXPERTOS REVELAN EL MÉTODO EDUCATIVO QUE <span className="bg-[#7AFD9D] text-[#0C46F2] px-1">MEJORA LA CRIANZA</span>, EN SOLO <u>15 MINUTOS</u> AL DÍA.
         </span>
-
-        <span className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
-          style={{
-            fontFamily: "Poppins"
-          }}>
+        <span
+          className="text-center font-poppins italic text-sm sm:text-lg md:text-[25px] font-normal leading-[100%]"
+          style={{ fontFamily: 'Poppins' }}
+        >
           TODO EN UNA MASTERCLASS EXCLUSIVA DE 15 MINUTOS
         </span>
       </div>
 
-
-      <section className="mt-5 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1 ">
-        {/* Carousel */}
-        <div className="right flex-1 ">
+      <section className="mt-5 lg:px-16 flex flex-col lg:flex-row justify-center gap-10 lg:gap-1">
+        {/* Carousel / Imagenes */}
+        <div className="right flex-1">
           <div className="carousel-container">
-            {/* Main Image */}
             <div className="main-image">
-              <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/home-gif.png" alt="Main" className="fade" />
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/client/public/images/GrowlyGif.gif"
+                alt="Main"
+                className="fade"
+              />
             </div>
-            <div className="">
-              <img src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/forbes.png" alt="Main" className="fade" />
+            <div>
+              <img
+                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/forbes.png"
+                alt="Main"
+                className="fade"
+              />
             </div>
           </div>
         </div>
 
-        {/* Title and Description */}
+        {/* Panel con formulario */}
         <div
           className="left px-6 flex-1 flex flex-col gap-2"
           style={{
-            backgroundColor: "#FFFFFF", // Fondo gris claro
-            borderRadius: "8px", // Bordes redondeados
-            padding: "1.5rem", // Relleno interno
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" // Sombra suave
+            backgroundColor: "#FFFFFF",
+            borderRadius: "8px",
+            padding: "1.5rem",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
           }}
         >
-          {/* Title and stars */}
           <div>
             <span
               className="block text-center font-poppins font-bold text-[40px] text-[#0C46F2] leading-[100%]"
@@ -156,41 +149,11 @@ const Hero = ({ lang }) => {
             </span>
           </div>
 
-          <div className="flex items-center gap-1 mt-2">
-            <span
-              className="block text-center font-poppins font-semibold text-[20px] uppercase text-[#0C46F2]"
-              style={{ fontFamily: "Poppins" }}
-            >
-              <b>RELLENA EL FORMULARIO CON TU NOMBRE Y EMAIL</b>
-            </span>
-          </div>
-          <div className="mt-6">
-            <HubspotForm lang={lang} />
-          </div>
+          
+          <KlaviyoFormHandler />
+
         </div>
-
-
-
       </section>
-
-
-      {/* Add images or texts*/}
-      {/* 
-     Uncomment to enable the video <VideoEmbed />
-
-      <div className="w-full flex gap-8 lg:gap-40 justify-center ">
-        <Button
-          title={
-            translations[lang]?.detailsBtn || translations["en"].detailsBtn
-          }
-          func={openModal}
-          id="detailsAndpricing"
-        />
-      </div>
-
-      <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="black">
-        <HubspotForm lang={lang} />
-      </Modal>*/}
     </section>
   );
 };

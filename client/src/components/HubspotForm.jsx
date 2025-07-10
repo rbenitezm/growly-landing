@@ -33,7 +33,7 @@ const HubspotForm = ({ lang }) => {
         // });
 
         if (lang === "de") {
-          window.hbspt.forms.create({
+          /*window.hbspt.forms.create({
             portalId: "20102221",
             formId: "ab7be1c1-4f52-45ed-8b2b-a8e442c70755",
             target: "#hubspotForm",
@@ -43,7 +43,7 @@ const HubspotForm = ({ lang }) => {
                 navigate("/de/select-package");
               }, 2000);
             },
-          });
+          });*/
         } else if (lang === "es") {
           window.hbspt.forms.create({
             portalId: "145993063",
@@ -61,7 +61,7 @@ const HubspotForm = ({ lang }) => {
             portalId: "145993063",
             formId: "9c3a2199-b8e0-48fe-a478-7d4608b2cc52",
             target: "#hubspotForm",
-            css: "https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/css/HubspotForm.css",
+            css: "",
             onFormSubmitted: () => {
               setTimeout(() => {
                 navigate("/select-package");

@@ -11,9 +11,6 @@ import Modal from "../components/Modal";
 import Button from "../components/Button";
 import PricingPlans from "./PricingPlans";
 import { GlobalContext } from '../components/GlobalContext';
-import { useSearchParams } from 'react-router-dom';
-import  KlaviyoFormBuyHandler  from "../Sections/KlaviyoFormBuyHandler";
-import {  handleSelectPackage } from "../components/PackageSelector"
 
 const features = {
   en: [
@@ -177,18 +174,9 @@ const translations = {
   },
 };
 
-const ProductPage = ({ lang }) => {
+const ThankYouPage = ({ lang }) => {
   const [isModalOpen, setisModalOpen] = useState(false);
-  
-  let { email } = useContext(GlobalContext);
-  const [searchParams] = useSearchParams();
-
-  if (!email) {
-    const urlEmail = searchParams.get('email');
-    if (urlEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(urlEmail)) {
-      email = urlEmail;
-    }
-  }
+  const { email } = useContext(GlobalContext);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -241,45 +229,24 @@ const ProductPage = ({ lang }) => {
               }}>
               Método Growly: Pack Infalible de Disciplina Positiva
             </span>
-
-            <div className="flex items-center gap-1 mt-7">
-              <span className="font-montserrat font-bold text-[28px] lg:text-[38px] leading-[100%] text-[#666666]"
-                style={{
-                  fontFamily: "Montserrat",
-                }}>
-                189$
-              </span>
-              <span className="font-montserrat font-normal text-[24px] lg:text-[30px] leading-[100%] text-[#84878A] line-through"
-                style={{
-                  fontFamily: "Montserrat",
-                }}>
-                500$
-              </span>
-              <div className="bg-[#7AFD9D] rounded-[30px] h-[50px] flex items-center justify-center px-6 shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-                <span className="font-montserrat font-normal text-[24px] lg:text-[30px] leading-[100%] text-[#0C46F2]"
-                  style={{
-                    fontFamily: "Montserrat",
-                  }}>
-                  Ahorra 311$
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Description and points */}
           <div className="desc flex flex-col gap-3">
-            <p className="text-left md:text-justify font-poppins font-normal text-base md:text-lg leading-7 text-black"
+
+            <p className="text-left font-poppins text-base md:text-lg leading-7 text-black"
               style={{
                 fontFamily: "Poppins",
               }}>
-              El Método que está transformando familias en más de 60 Países — Sin Gritos, Sin Castigos y con Resultados Reales.
-              <br></br><b>Más de 80 años de estudios en psicología adleriana y neurociencia avalan nuestro método.</b>
+              <br></br>¡Gracias por tu compra,
+              Tu transformación en la crianza empieza hoy.
             </p>
-            <p className="text-left font-poppins font-bold text-base md:text-lg leading-7 text-black"
+            <p className="text-left font-poppins text-base md:text-lg leading-7 text-black"
               style={{
                 fontFamily: "Poppins",
               }}>
-              ¿QUÉ INCLUYE EL PACK?
+              Hemos recibido tu pedido del Pack Infalible de Disciplina Positiva.
+              Tu acceso estará activo en las próximas 24/48 horas. Te explicamos qué hacer ahora.
             </p>
             <div className="text-left ml-0 lg:ml-6">
               <ul className="list-none space-y-2 leading-tight">
@@ -288,7 +255,7 @@ const ProductPage = ({ lang }) => {
                     style={{
                       fontFamily: "Poppins",
                     }}>
-                    ✅ <strong>Curso completo</strong> en video con herramientas prácticas paso a paso
+                    <strong>1️⃣</strong> Regístrate en Skool
                   </span>
                 </li>
                 <li>
@@ -296,7 +263,7 @@ const ProductPage = ({ lang }) => {
                     style={{
                       fontFamily: "Poppins",
                     }}>
-                    ✅ Acceso a <strong>comunidad privada de padres y expertos</strong>
+                    <strong>2️⃣</strong> Únete a la comunidad Growly
                   </span>
                 </li>
                 <li>
@@ -304,72 +271,143 @@ const ProductPage = ({ lang }) => {
                     style={{
                       fontFamily: "Poppins",
                     }}>
-                    ✅ Pack de <strong>52 actividades de fin de semana</strong> para reforzar vínculos familiares
-                  </span>
-                </li>
-                <li>
-                  <span className="font-poppins text-sm md:text-base text-black"
-                    style={{
-                      fontFamily: "Poppins",
-                    }}>
-                    ✅ <strong>Talleres mensuales</strong> con sesiones de preguntas y respuestas
-                  </span>
-                </li>
-                <li>
-                  <span className="font-poppins text-sm md:text-base text-black"
-                    style={{
-                      fontFamily: "Poppins",
-                    }}>
-                    ✅ <strong>Plantillas y recursos extra</strong> que facilitan la implementación del método en casa
-                  </span>
-                </li>
-                <li>
-                  <span className="font-poppins text-sm md:text-base text-black"
-                    style={{
-                      fontFamily: "Poppins",
-                    }}>
-                    ✅ <strong>Acceso preferente a campamentos exclusivos</strong> para familias comprometidas
+                    3️⃣ Accede al curso completo
                   </span>
                 </li>
               </ul>
             </div>
             <div className="text-left mt-4">
               <div className="flex items-center gap-2">
-                <img
-                  src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/ok_red.png"
-                  alt="Ok icon"
-                  className="w-6 h-6"
-                />
-                <span className="font-montserrat text-base md:text-lg font-extrabold text-black"
-                  style={{
-                    fontFamily: "Montserrat",
-                  }}>
-                  Resultados garantizados o se te devuelve el dinero
-                </span>
+
               </div>
             </div>
           </div>
           <div className="package mt-2 lg:mt-2">
-            <PackageSelector lang={lang} />
+            <div className="desc flex flex-col gap-3">
+              <div className="package-selector flex flex-col gap-4">
+                <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-40">
+                  <button
+                    className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0c46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
+                    style={{
+                      borderRadius: "30px",
+                      padding: "1.5rem",
+                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                      fontFamily: "Poppins",
+                      fontWeight: "600",
+                      fontSize: "15px",
+                      lineHeight: "100%",
+                      letterSpacing: "0%"
+                    }}
+                    onClick={() => window.location.href = 'https://www.skool.com/growly-disciplina-positiva-4246'}
+                  >
+                    EMPEZAR AHORA
+                  </button>
+                </div></div></div>
+          </div>
+        </div>
+      </section >
+
+      <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
+        <div
+          className="control-section"
+          style={{
+            textAlign: "center",
+            backgroundColor: "#FFFFFF", // Fondo blanco
+          }}
+        >
+          {/* Título */}
+          <h2 className="font-poppins text-2xl lg:text-[38px] font-semibold leading-tight text-[#0C46F2]"
+            style={{
+              fontFamily: "Poppins",
+              marginBottom: "20px"
+            }}
+          >
+            Recibirás un correo muy pronto
+          </h2>
+
+          {/* Subtítulo */}
+
+
+          {/* Bloque 1 */}
+          <div className="flex flex-col items-center gap-5">
+            {/* Bloque 1 */}
+            <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
+              <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
+                1
+              </div>
+              <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
+                style={{
+                  fontFamily: "Poppins"
+                }}>
+                En las próximas 24/48 horas recibirás un correo con el acceso completo.
+              </p>
+            </div>
+            {/* Bloque 2 */}
+            <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
+              <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
+                2
+              </div>
+              <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
+                style={{
+                  fontFamily: "Poppins"
+                }}>
+                Revisa tu bandeja de entrada o carpeta de promociones.
+              </p>
+            </div>
+            {/* Bloque 3 */}
+            <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
+              <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
+                3
+              </div>
+              <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
+                style={{
+                  fontFamily: "Poppins"
+                }}>
+                Si tienes cualquier duda, contáctanos a growly@growly.online
+              </p>
+            </div>
+
+            <div className="desc flex flex-col gap-3">
+              <div className="package-selector flex flex-col gap-4">
+                <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-40">
+                  <button
+                    className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0c46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
+                    style={{
+                      borderRadius: "30px",
+                      padding: "1.5rem",
+                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                      fontFamily: "Poppins",
+                      fontWeight: "600",
+                      fontSize: "15px",
+                      lineHeight: "100%",
+                      letterSpacing: "0%"
+                    }}
+                    onClick={() => window.location.href = 'https://www.skool.com/growly-disciplina-positiva-4246'}
+                  >
+                    EMPEZAR AHORA
+                  </button>
+                </div></div></div>
           </div>
         </div>
       </section>
 
+
+
       {/* Caos to Armony section*/}
 
-      <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32  ">
+      < section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32  " >
 
         {/* Title and Description */}
-        <div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 ">
+        < div className="right px-6 lg:px-0 flex-1 flex flex-col lg:flex-col gap-2 lg:gap-0 " >
           {/* Title and stars */}
-          <div className="">
+          < div className="" >
 
             {/* Pack Infalible */}
-            <h2 className="font-poppins text-4xl lg:text-[38px] font-semibold leading-tight text-[#0C46F2]"
+            < h2 className="font-poppins text-4xl lg:text-[38px] font-semibold leading-tight text-[#0C46F2]"
               style={{
                 fontFamily: "Poppins",
               }}
-            >Del caos a la armonía <br></br>con solo 15 minutos al día </h2>
+            > ¿Qué incluye el Pack? </h2 >
 
             <div
               className="features-container grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10"
@@ -435,20 +473,21 @@ const ProductPage = ({ lang }) => {
               </div>
             </div>
 
-          </div>
+          </div >
 
-        </div>
-      </section>
+        </div >
+      </section >
+
 
 
       {/* Why this method works*/}
 
-      <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
+      < section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 " >
 
         {/* Title and Description */}
-        <div className="right px-6 lg:px-0 flex-1 flex flex-col gap-4">
+        < div className="right px-6 lg:px-0 flex-1 flex flex-col gap-4" >
           {/* Título principal */}
-          <div>
+          < div >
             <span className="font-poppins text-center text-[28px] md:text-[38px] font-semibold leading-[100%] text-[#0C46F2]"
               style={{
                 fontFamily: "Poppins",
@@ -463,10 +502,10 @@ const ProductPage = ({ lang }) => {
                 Herramientas prácticas, estrategias paso a paso y soporte exclusivo
               </span>
             </div>
-          </div>
+          </div >
 
           {/* Bloques informativos */}
-          <div className="why-method-works mt-16 text-center">
+          < div className="why-method-works mt-16 text-center" >
             <div className="flex flex-wrap justify-center gap-6 md:gap-12">
               {/* Bloque 1 */}
               <div className="relative bg-[#0C46F2] rounded-[30px] p-5 w-[350px] text-white">
@@ -532,86 +571,13 @@ const ProductPage = ({ lang }) => {
                 </h3>
               </div>
             </div>
-          </div>
-        </div>
+          </div >
+        </div >
 
 
-      </section>
+      </section >
 
 
-      <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
-        <div className="testimonials-section w-full bg-[#0C46F2] text-white text-center rounded-lg py-2 px-5 md:py-16 md:px-10">
-          {/* Título */}
-          <h2 className="font-poppins text-4xl lg:text-[38px] font-semibold leading-tight text-white"
-            style={{
-              fontFamily: "Poppins",
-            }}>
-            💬 Lo que dicen otros padres <br />que ya vivieron la experiencia
-          </h2>
-
-          {/* Subtítulo */}
-          <p className="font-poppins text-base md:text-lg font-normal mb-8"
-            style={{
-              fontFamily: "Poppins",
-            }}>
-            <br /><br />Ellos ya lo probaron, ahora te toca a ti
-          </p>
-
-          {/* Contenedor de testimonios */}
-          <div className="flex justify-center flex-wrap gap-5 md:gap-8 mb-8">
-            {/* Testimonio 1 */}
-            <div className="bg-white text-black rounded-lg p-5 w-[250px] shadow-md">
-              <video
-                controls
-                className="w-full max-w-xl rounded-lg shadow-lg"
-                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio1.mov"
-                poster="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio1-poster.png"
-              >
-                Tu navegador no soporta la etiqueta de video.
-              </video>
-              <p className="font-poppins text-sm md:text-base font-normal">⭐⭐⭐⭐⭐</p>
-              <p className="font-poppins text-sm md:text-base font-bold mt-2"
-                style={{
-                  fontFamily: "Poppins",
-                }}>Ana</p>
-            </div>
-            {/* Testimonio 2 */}
-            <div className="bg-white text-black rounded-lg p-5 w-[250px] shadow-md">
-              <video
-                controls
-                className="w-full max-w-xl rounded-lg shadow-lg"
-                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio2.mov"
-                poster="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio2-poster.png"
-              >
-                Tu navegador no soporta la etiqueta de video.
-              </video>
-              <p className="font-poppins text-sm md:text-base font-normal">⭐⭐⭐⭐⭐</p>
-              <p className="font-poppins text-sm md:text-base font-bold mt-2"
-                style={{
-                  fontFamily: "Poppins",
-                }}>Enrique</p>
-            </div>
-            {/* Testimonio 3 */}
-            <div className="bg-white text-black rounded-lg p-5 w-[250px] shadow-md">
-              <video
-                controls
-                className="w-full max-w-xl rounded-lg shadow-lg"
-                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio3.mp4"
-                poster="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/Videos/testimonio3-poster.png"
-              >
-                Tu navegador no soporta la etiqueta de video.
-              </video>
-              <p className="font-poppins text-sm md:text-base font-normal">⭐⭐⭐⭐⭐</p>
-              <p className="font-poppins text-sm md:text-base font-bold mt-2"
-                style={{
-                  fontFamily: "Poppins",
-                }}>Juan</p>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
 
       <section className="flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
         <div
@@ -621,21 +587,26 @@ const ProductPage = ({ lang }) => {
             backgroundColor: "#FFFFFF", // Fondo blanco
           }}
         >
-          <button
-            className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider text-white bg-[#0C46F2] hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
-            style={{
-              borderRadius: "30px",
-              padding: "1.5rem",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              fontFamily: "Poppins",
-              fontWeight: "600",
-              fontSize: "15px",
-              lineHeight: "100%",
-              letterSpacing: "0%"
-            }}
-            onClick={() => handleSelectPackage(1, email)}>
-            Quiero Mejorar la Crianza
-          </button>
+          <div className="desc flex flex-col gap-3">
+              <div className="package-selector flex flex-col gap-4">
+                <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-40">
+                  <button
+                    className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0c46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
+                    style={{
+                      borderRadius: "30px",
+                      padding: "1.5rem",
+                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                      fontFamily: "Poppins",
+                      fontWeight: "600",
+                      fontSize: "15px",
+                      lineHeight: "100%",
+                      letterSpacing: "0%"
+                    }}
+                    onClick={() => window.location.href = 'https://www.skool.com/growly-disciplina-positiva-4246'}
+                  >
+                    EMPEZAR AHORA
+                  </button>
+                </div></div></div>
         </div>
       </section>
 
@@ -717,7 +688,8 @@ const ProductPage = ({ lang }) => {
             >
             </div>
           </div>
-        </section>}
+        </section>
+      }
 
       {/* Banner */}
 
@@ -818,45 +790,7 @@ const ProductPage = ({ lang }) => {
         </div>
       </section>
 
-      <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32">
-        <div className="overwhelmed-parents-section flex flex-col items-center text-center p-5 bg-white">
-          {/* Contenedor principal: en móvil se apila (flex-col) y en lg se alínea en fila */}
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-5 max-w-7xl w-full">
-            {/* Texto */}
-            <div className="flex-1 text-left">
-              <h2 className="font-poppins text-4xl lg:text-[38px] font-semibold leading-tight text-[#0C46F2]"
-                style={{
-                  fontFamily: "Poppins"
-                }}
-              >
-                ¿Por qué tantos padres se sienten desbordados?
-              </h2>
-              <p className="font-poppins text-base lg:text-[25px] font-normal leading-relaxed text-black"
-                style={{
-                  fontFamily: "Poppins"
-                }}>
-                La improvisación en la crianza puede generar más conflictos que soluciones. <br></br><br></br>
-                Vivimos en un mundo con valores materialistas, abuso de la tecnología, jornadas laborales interminables ...
-                <br /><br />
-                La paternidad no debería ser una tarea que improvisamos cada día.
-              </p>
-            </div>
-            {/* Imágenes */}
-            <div className="flex-1 flex flex-col gap-3 relative">
-              <img
-                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-top.jpg"
-                alt="Padres desbordados"
-                className="w-full max-w-md rounded-lg shadow-lg"
-              />
-              <img
-                src="https://raw.githubusercontent.com/rbenitezm/growly-landing/growly-landing/client/src/assets/images/productCarousel/padres-botton.jpg"
-                alt="Familia en conflicto"
-                className="w-3/4 max-w-sm rounded-lg shadow-lg relative -top-5 -right-10 lg:-top-5 lg:-right-10"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <section className="flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
         <div
@@ -866,122 +800,35 @@ const ProductPage = ({ lang }) => {
             backgroundColor: "#FFFFFF", // Fondo blanco
           }}
         >
-          <button
-            className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider text-white bg-[#0C46F2] hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
-            style={{
-              borderRadius: "30px",
-              padding: "1.5rem",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              fontFamily: "Poppins",
-              fontWeight: "600",
-              fontSize: "15px",
-              lineHeight: "100%",
-              letterSpacing: "0%"
-            }}
-            onClick={() => handleSelectPackage(1, email)}>
-            Quiero Mejorar la Crianza
-          </button>
+          <div className="desc flex flex-col gap-3">
+              <div className="package-selector flex flex-col gap-4">
+                <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-40">
+                  <button
+                    className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0c46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
+                    style={{
+                      borderRadius: "30px",
+                      padding: "1.5rem",
+                      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                      fontFamily: "Poppins",
+                      fontWeight: "600",
+                      fontSize: "15px",
+                      lineHeight: "100%",
+                      letterSpacing: "0%"
+                    }}
+                    onClick={() => window.location.href = 'https://www.skool.com/growly-disciplina-positiva-4246'}
+                  >
+                    EMPEZAR AHORA
+                  </button>
+                </div></div></div>
+                <br></br>
         </div>
       </section>
       {/* Before you know it// */}
 
-      {/* Reviews */
-        <section className="mt-5 py-5 flex flex-col md:flex-row lg:flex-row justify-center gap-12 md:gap-8 lg:gap-32 ">
-          <div
-            className="control-section"
-            style={{
-              textAlign: "center",
-              backgroundColor: "#FFFFFF", // Fondo blanco
-            }}
-          >
-            {/* Título */}
-            <h2 className="font-poppins text-2xl lg:text-[38px] font-semibold leading-tight text-[#0C46F2]"
-              style={{
-                fontFamily: "Poppins",
-                marginBottom: "20px"
-              }}
-            >
-              Lo han callado por años porque ... da el control <br />
-              a las familias, no al sistema
-            </h2>
-
-            {/* Subtítulo */}
-
-
-            {/* Bloque 1 */}
-            <div className="flex flex-col items-center gap-5">
-              {/* Bloque 1 */}
-              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
-                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
-                  1
-                </div>
-                <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
-                  style={{
-                    fontFamily: "Poppins"
-                  }}>
-                  La crianza no debería ser una improvisación diaria
-                </p>
-              </div>
-              {/* Bloque 2 */}
-              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
-                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
-                  2
-                </div>
-                <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
-                  style={{
-                    fontFamily: "Poppins"
-                  }}>
-                  Educar con un método es posible y mucho más efectivo
-                </p>
-              </div>
-              {/* Bloque 3 */}
-              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
-                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
-                  3
-                </div>
-                <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
-                  style={{
-                    fontFamily: "Poppins"
-                  }}>
-                  Educar sin herramientas es como construir sin planos
-                </p>
-              </div>
-              {/* Bloque 4 */}
-              <div className="bg-[#7AFD9D] rounded-[30px] px-5 py-2 w-full lg:w-[767px] h-[129px] relative flex items-center justify-center">
-                <div className="font-poppins bg-[#0C46F2] text-white rounded-full w-12 h-12 lg:w-[82px] lg:h-[82px] flex items-center justify-center font-bold text-xl lg:text-[38px] leading-[120%] absolute -top-4 lg:-top-6 -left-6 lg:-left-11">
-                  4
-                </div>
-                <p className="font-poppins text-[18px] lg:text-[25px] font-semibold text-[#0C46F2] m-0 text-center"
-                  style={{
-                    fontFamily: "Poppins"
-                  }}>
-                  Cuando dejas de improvisar, empiezas a conectar
-                </p>
-              </div>
-              <button
-                className="p-3 rounded-lg text-[0.7rem] lg:text-base font-semibold tracking-wider bg-[#0C46F2] text-white hover:scale-105 transition-all ease-in-out duration-300 shadow-custom-shadow text-center"
-                style={{
-                  borderRadius: "30px",
-                  padding: "1.5rem",
-                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                  fontFamily: "Poppins",
-                  fontWeight: "600",
-                  fontSize: "15px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%"
-                }}
-                onClick={() => handleSelectPackage(1, email)}>
-                Quiero Mejorar la Crianza
-              </button>
-            </div>
-          </div>
-        </section>}
 
       {/* Footer 
       */}
       {<Footer />}
-
-      <KlaviyoFormBuyHandler />
 
       {/* <Modal isOpen={isModalOpen} onClose={closeModal} btnColor="white">
         <div className="p-6 md:p-0 lg:p-0 popUp lg:h-[350px] lg:w-[500px]  flex flex-col justify-center items-center text-center gap-6 lg:gap-6 text-white uppercase rounded-lg">
@@ -1004,8 +851,8 @@ const ProductPage = ({ lang }) => {
           </a>
         </div>
       </Modal> */}
-    </div>
+    </div >
   );
 };
 
-export default ProductPage;
+export default ThankYouPage;

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PackageCard from "./PackageCard";
 import ExpandablePackageCard from "./ExpandablePackageCard";
 import Modal from "./Modal";
 import SevenDayRangePicker from "./SevenDayRangePicker";
 import { trackEvent } from "../api/FacebookPixel";
 import Button from "../components/Button";
+import { GlobalContext } from "../components/GlobalContext";
+import { useSearchParams } from 'react-router-dom';
 
 const packages = {
   en: [
@@ -74,6 +76,61 @@ const translations = {
   },
 };
 
+export const handleSelectPackage = (id, email) => {
+  console.log("handleSelectPackage called with id:", id, "and email:", email);
+  if (!window._learnq) return;
+
+  window._learnq.push([
+    "track",
+    "Started Checkout",
+    {
+      value: 189, // Precio o valor de la compra
+      itemNames: ["Pack Infalible Disciplina Positiva"],
+      "Checkout URL": window.location.href,
+      email: email || "cliente@example.com", // Puedes recibirlo como prop o sacarlo de un form
+    },
+  ]);
+
+
+  const formContainer = document.querySelector('.klaviyo-form-TUiu5w');
+  const formKlaviyo = formContainer?.querySelector('form');
+  if (formKlaviyo) {
+    const inputs = formKlaviyo.querySelectorAll('input');
+    // AUTORRELLENO
+    inputs.forEach((input) => {
+      if (input.autocomplete === 'email' && email) {
+        input.focus();
+        input.value = email;
+        // Dispara el evento input para que Klaviyo lo detecte
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+        input.blur();
+      }
+    });
+    const button = formKlaviyo.querySelector('button');
+    if (button) {
+      setTimeout(() => {
+        button.click();
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "/checkout.php";
+      
+        const emailInput = document.createElement("input");
+        emailInput.type = "hidden";
+        emailInput.name = "email";
+        emailInput.value = email;
+      
+        form.appendChild(emailInput);
+        document.body.appendChild(form);
+        form.submit(); // 🔹 Se envía a checkout.php
+      }, 300); // espera
+    }
+  }
+
+
+
+};
+
 const PackageSelector = ({ lang }) => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
@@ -90,13 +147,16 @@ const PackageSelector = ({ lang }) => {
     setisModalOpen(false);
   };
 
-  const handleSelectPackage = (id) => {
-    setSelectedPackage(id === selectedPackage ? null : id);
-    window.location.href = "https://www.skool.com/growly-disciplina-positiva-4246/cansado-de-improvisar-cada-dia-con-tus-hijos"
-    // console.log(packages[id - 1]);
+  let { email } = useContext(GlobalContext);
+  const [searchParams] = useSearchParams();
 
-    // console.log(packages[lang][id - 1]);
-  };
+  if (!email) {
+
+    const urlEmail = searchParams.get('email');
+    if (urlEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(urlEmail)) {
+      email = urlEmail;
+    }
+  }
 
   return (
     <div className="desc flex flex-col gap-3">
@@ -114,10 +174,11 @@ const PackageSelector = ({ lang }) => {
               lineHeight: "100%",
               letterSpacing: "0%"
             }}
-            onClick={handleSelectPackage}
+            onClick={() => handleSelectPackage(1, email)}
           >
             Quiero Mejorar la Crianza
           </button>
+
         </div>
       </div>
       <div>
@@ -149,7 +210,7 @@ const PackageSelector = ({ lang }) => {
         </div>
       </div>
 
-      
+
     </div>
   );
 };

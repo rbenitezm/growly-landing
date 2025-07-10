@@ -15,6 +15,9 @@ import QuestionDe from "./pages/QuestionDe";
 import QuestionEs from "./pages/QuestionEs";
 import NotFound from "./pages/NotFound";
 import Master from "./pages/Master";
+import { GlobalProvider } from './components/GlobalContext';
+import ThankYouPage from "./pages/ThankYouPage";
+
 
 const WrappedApp = () => {
   const location = useLocation();
@@ -62,6 +65,11 @@ const WrappedApp = () => {
             element={<ProductPage lang={lang} />}
           ></Route>
 
+          <Route
+            path="/thank-you"
+            element={<ThankYouPage lang={lang} />}
+          ></Route>
+
           {/* Review Page Routes */}
           <Route path="/reviews" element={<ReviewPage lang={lang} />}></Route>
           <Route path="/es/reviews" element={<ReviewPage lang={lang} />}></Route>
@@ -81,9 +89,11 @@ const WrappedApp = () => {
 
 function App() {
   return (
-    <BrowserRouter>
-      <WrappedApp />
-    </BrowserRouter>
+    <GlobalProvider>
+      <BrowserRouter>
+        <WrappedApp />
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { GlobalContext } from '../components/GlobalContext';
+
 import Button from "../components/Button";
 import HubspotForm from "../components/HubspotForm";
 import Modal from "../components/Modal";
@@ -31,17 +33,19 @@ const translations = {
 const HeroMaster = ({ lang }) => {
   const navigate = useNavigate();
   const [showButton, setShowButton] = useState(false); // Estado para controlar la visibilidad del botón
+  const { email } = useContext(GlobalContext);
+
 
   useEffect(() => {
     // Espera a que el video de Wistia esté listo
     window._wq = window._wq || [];
     window._wq.push({
-      id: "ng37d85bqc", // Reemplaza con el ID de tu video de Wistia
+      id: "t16p8exx4a", // Reemplaza con el ID de tu video de Wistia t16p8exx4a
       onReady: function (video) {
         // Escucha el progreso del video
         video.bind("timechange", (time) => {
           console.log("time changed")
-          if (time >= 10) {
+          if (time >= 840) {
             setShowButton(true); // Muestra el botón después de 1 minuto
           }
         });
